@@ -31,13 +31,13 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#06172F' }}>
         {/* Background Image */}
         <img
-          src="/hero.webp"
-          alt="Jood Building Contracting Hero Background"
+          src="/hero-villa.webp"
+          alt="Modern villa built by Jood Building Contracting"
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
         {/* Navy brand overlay */}
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#0B2D5B]/55 via-[#0B2D5B]/30 to-[#071F40]/60" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#071F40]/50 via-[#0B2D5B]/25 to-[#071F40]/55" />
 
         {/* Left Edge Social — Instagram only */}
         <div className="hidden xl:flex flex-col items-center gap-6 absolute left-8 top-1/2 -translate-y-1/2 z-20">
