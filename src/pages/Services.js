@@ -1,242 +1,262 @@
-
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import Icon from '../components/Icon';
 import Reveal from '../components/Reveal';
-import TiltCard from '../components/TiltCard';
-import SectionHeading from '../components/SectionHeading';
-import Marquee from '../components/Marquee';
-import ServiceCard from '../components/ServiceCard';
-import PackageCard from '../components/PackageCard';
-import Counter from '../components/Counter';
-import CTA from '../components/CTA';
-import SectionFlip from '../components/SectionFlip';
 
-import { navLinks, heroImages, services, servicePackages, whyChooseUs } from '../data/content';
+import { navLinks } from '../data/content';
 
-const processSteps = [
-  { step: '01', icon: 'phone', title: 'Consultation', desc: 'We listen to your vision, budget, and timeline during a free consultation.' },
-  { step: '02', icon: 'palette', title: 'Design & Plan', desc: 'Our designers craft a tailored plan with 3D visuals and material selection.' },
-  { step: '03', icon: 'hammer', title: 'Execution', desc: 'Certified professionals bring the design to life with strict quality control.' },
-  { step: '04', icon: 'sparkles', title: 'Handover & Care', desc: 'We walk you through the finish and stay on for maintenance and aftercare.' },
+const J = '/images/jood/';
+
+/* ---------- Design & Construction pillars ---------- */
+function PlanIcon() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="8" y="8" width="48" height="48" rx="3" />
+      <path d="M8 26h22v30M30 40h26M42 8v18M42 26h14" />
+      <circle cx="19" cy="17" r="3" />
+    </svg>
+  );
+}
+function BlueprintIcon() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M10 54V22l22-14 22 14v32z" />
+      <path d="M10 54h44M24 54V36h16v18M32 8v6" />
+      <path d="M4 58l8-8M60 58l-8-8" />
+    </svg>
+  );
+}
+function CraneIcon() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M18 58V10M24 58V10M18 10h40M18 16h34M52 16v14" />
+      <path d="M18 22l6 6M24 22l-6 6M18 34l6 6M24 34l-6 6" />
+      <rect x="46" y="30" width="12" height="10" />
+      <path d="M10 58h22M8 10h10" />
+    </svg>
+  );
+}
+
+const pillars = [
+  {
+    icon: <PlanIcon />,
+    title: 'Planning Tailored to Your Project',
+    desc: 'Every project begins with a clear brief. We sit with you to understand your goals, budget, plot and timeline — whether it is a private villa, a residential or commercial building, or a warehouse — and turn them into a practical plan that is ready to build.',
+  },
+  {
+    icon: <BlueprintIcon />,
+    title: 'Architectural Design, Engineering & Approvals',
+    desc: 'Our architects and engineers prepare detailed architectural, structural and MEP drawings, and we manage the authority approvals and NOCs for you. The result is a design that balances appearance, function, cost and long-term durability.',
+  },
+  {
+    icon: <CraneIcon />,
+    title: 'Construction, Fit-Out & Turnkey Delivery',
+    desc: 'As a UAE building contractor, we turn approved drawings into finished villas, buildings and warehouses. From foundations and structure to finishing and handover, our site teams work to a clear programme, with quality materials and strict quality control.',
+  },
 ];
+
+/* ---------- Showcase ---------- */
+const showcase = [
+  { image: `${J}villa-luxury.webp`, title: 'Luxury Villa', tag: 'Villas' },
+  { image: `${J}residential-tower.webp`, title: 'Residential Tower', tag: 'Buildings' },
+  { image: `${J}warehouse-exterior.webp`, title: 'Logistics Warehouse', tag: 'Warehouses' },
+  { image: `${J}villa-signature.webp`, title: 'Signature Mansion', tag: 'Villas' },
+  { image: `${J}commercial-building.webp`, title: 'Commercial Building', tag: 'Buildings' },
+  { image: `${J}villa-community.webp`, title: 'Villa Community', tag: 'Villas' },
+  { image: `${J}warehouse-steel-frame.webp`, title: 'Steel-Frame Warehouse', tag: 'Warehouses' },
+];
+
+/* ---------- Journey ---------- */
+const journey = [
+  { title: 'Concept & Planning', image: `${J}design-planning.webp`, desc: 'Brief, site study, budget and programme agreed with you.' },
+  { title: 'Design & Approvals', image: '/images/about-story-site.webp', desc: 'Architectural, structural and MEP drawings, plus authority approvals.' },
+  { title: 'Construction', image: `${J}design-build-hero.webp`, desc: 'Foundations, structure and MEP, built to a clear schedule.' },
+  { title: 'Finishing & Handover', image: `${J}villa-dusk.webp`, desc: 'Finishes, testing, snagging and a smooth handover of your keys.' },
+];
+
+function JourneySlider() {
+  const [active, setActive] = useState(0);
+  const timer = useRef(null);
+
+  useEffect(() => {
+    timer.current = setInterval(() => setActive((a) => (a + 1) % journey.length), 6000);
+    return () => clearInterval(timer.current);
+  }, []);
+
+  const go = (i) => {
+    clearInterval(timer.current);
+    setActive((i + journey.length) % journey.length);
+  };
+
+  return (
+    <div className="relative w-full h-[70vh] min-h-[460px] max-h-[760px] overflow-hidden bg-[#06172F]">
+      {journey.map((s, i) => (
+        <img
+          key={s.title}
+          src={s.image}
+          alt={s.title}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === active ? 'opacity-100' : 'opacity-0'}`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
+
+      <button
+        type="button"
+        onClick={() => go(active - 1)}
+        aria-label="Previous step"
+        className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/35 backdrop-blur text-white flex items-center justify-center hover:bg-[#3E6FB5] transition-colors"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
+      </button>
+      <button
+        type="button"
+        onClick={() => go(active + 1)}
+        aria-label="Next step"
+        className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/35 backdrop-blur text-white flex items-center justify-center hover:bg-[#3E6FB5] transition-colors"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
+      </button>
+
+      <div className="absolute bottom-0 left-0 right-0 px-5 md:px-24 pb-8 md:pb-12">
+        <p className="text-white/85 text-sm md:text-base max-w-xl mb-6 min-h-[3rem]">{journey[active].desc}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4">
+          {journey.map((s, i) => (
+            <button
+              key={s.title}
+              type="button"
+              onClick={() => go(i)}
+              className="text-left group"
+            >
+              <span className="block h-[2px] bg-white/30 mb-3 overflow-hidden">
+                <span className={`block h-full bg-white transition-all duration-700 ${i === active ? 'w-full' : 'w-0'}`} />
+              </span>
+              <span className={`font-serif text-base md:text-2xl font-light transition-colors ${i === active ? 'text-white' : 'text-white/55 group-hover:text-white/80'}`}>
+                {s.title}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function ServicesPage() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
+    <div className="font-sans overflow-x-hidden bg-white text-[#0B2D5B]">
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
-      {/* ================= CUSTOM SERVICES HERO ================= */}
-      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
-        {/* Background Image */}
+      {/* ================= HERO ================= */}
+      <section className="relative h-[92vh] min-h-[560px] overflow-hidden">
         <img
-          src="/images/jood/design-build-hero.webp"
-          alt="Services Hero Background"
+          src={`${J}villa-luxury.webp`}
+          alt="Villa built by Jood Building Contracting"
           className="absolute inset-0 w-full h-full object-cover"
         />
-
-        <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
-          
-          {/* Centered Content with Radial Gradient Backdrop */}
-          <div
-            className="w-full max-w-3xl flex flex-col items-center"
-            style={{
-              background: 'radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0) 75%)',
-              padding: '3rem 2rem',
-              borderRadius: '100px',
-            }}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/70 to-transparent" />
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <h1
+            className="font-serif text-white text-center font-light leading-[1.05] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-5xl"
+            style={{ textShadow: '0 2px 18px rgba(0,0,0,0.45)' }}
           >
-            <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
-              <span
-                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#3E6FB5] font-bold"
-                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
-              >
-                What We Do
-              </span>
-              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
-            </div>
+            Design &amp; Build Services in the UAE
+          </h1>
+        </div>
+      </section>
 
-            <h1
-              className="section-heading text-4xl md:text-6xl lg:text-[72px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
-              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
-            >
-              Complete Services,<br/>
-              <span
-                className="block text-[#3E6FB5] italic font-medium mt-2"
-                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
-              >
-                One Trusted Partner.
-              </span>
-            </h1>
+      {/* ================= INTRO ================= */}
+      <section className="py-16 md:py-24 px-6">
+        <Reveal>
+          <p className="max-w-3xl mx-auto text-center text-lg md:text-xl text-[#64748B] font-light leading-relaxed">
+            From the first drawing to the final handover, Jood Building Contracting brings your
+            project to life through one seamless process — combining planning, engineering and
+            construction so that every villa, building and warehouse is built on trust,
+            expertise and attention to detail.
+          </p>
+        </Reveal>
+      </section>
 
-            <p
-              className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-10 max-w-xl text-center"
-              style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
-            >
-              From design and renovation to maintenance — Jood Building Contracting handles every detail of your project with precision and care.
-            </p>
-
-            <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => setShowContact(true)} className="bg-[#3E6FB5] text-white hover:bg-white hover:text-[#0B2D5B] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
-                <span>Get a Free Quote</span>
-              </button>
-              <button
-                onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border border-white/40 text-white hover:border-[#3E6FB5] hover:bg-[#3E6FB5] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
-              >
-                <span>View Packages</span>
-              </button>
-            </div>
+      {/* ================= DESIGN & CONSTRUCTION ================= */}
+      <section className="pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto px-5 md:px-8">
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] mb-14">Design &amp; Construction</h2>
+          <div className="grid md:grid-cols-3">
+            {pillars.map((p, i) => (
+              <Reveal key={p.title} delay={i * 120}>
+                <div className={`h-full px-0 md:px-8 py-8 md:py-0 ${i > 0 ? 'border-t md:border-t-0 md:border-l border-[#CBD5E1]' : ''} ${i === 0 ? 'md:pl-0' : ''}`}>
+                  <div className="text-[#3E6FB5] mb-7">{p.icon}</div>
+                  <h3 className="font-serif text-xl md:text-2xl font-normal text-[#0B2D5B] leading-snug mb-5">{p.title}</h3>
+                  <p className="text-sm text-[#64748B] leading-relaxed">{p.desc}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ================= MARQUEE ================= */}
-      <Marquee
-        dark={false}
-        items={[
-          { text: "Interior Design" },
-          { text: "Renovation" },
-          { text: "Fit-Outs" },
-          { text: "Carpentry" },
-          { text: "Landscaping" },
-          { text: "Maintenance" },
-        ]}
-      />
-
-      {/* ================= SERVICES ================= */}
-      <SectionFlip id="services-list">
-        <section className="py-20 md:py-28 bg-[#F8FAFC] relative overflow-hidden">
-          <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
-          <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-            <SectionHeading
-              kicker="What We Do"
-              title="Our Services"
-              subtitle="From concept to completion, we handle every detail of your project with precision and care."
-            />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-              {services.map((service, index) => (
-                <Reveal key={service.title} delay={(index % 3) * 120}>
-                  <ServiceCard service={service} onRequest={() => setShowContact(true)} />
-                </Reveal>
-              ))}
-            </div>
+      {/* ================= SHOWCASE ================= */}
+      <section className="pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] leading-tight">
+            Showcasing Our Work:<br />Behind Every Build
+          </h2>
+          <div>
+            <div className="text-[#64748B] mb-2">Follow our work</div>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#0B2D5B] hover:text-[#3E6FB5] transition-colors">
+              <Icon name="instagram" size={18} /> Instagram
+            </a>
           </div>
-        </section>
-      </SectionFlip>
-
-      {/* ================= PROCESS ================= */}
-      <SectionFlip>
-        <section className="py-20 md:py-28 bg-[#E2E8F0] relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[24rem] h-[24rem] rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
-
-          <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-            <SectionHeading
-              kicker="How We Work"
-              title="A Simple, Proven Process"
-              subtitle="Four clear steps from first hello to flawless handover."
-            />
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {processSteps.map((item, i) => (
-                <Reveal key={item.step} delay={i * 120}>
-                  <TiltCard className="group relative h-full rounded-2xl bg-white p-7 border border-[#E2E8F0] hover:border-[#3E6FB5] transition-all duration-300 card-lift shadow-sm">
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-white shadow-md group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                        <Icon name={item.icon} size={22} strokeWidth={2.2} />
-                      </div>
-                      <span className="text-3xl font-serif font-bold text-[#3E6FB5]/40 group-hover:text-[#3E6FB5] transition-colors duration-300">
-                        {item.step}
-                      </span>
-                    </div>
-                    <div className="text-lg font-semibold text-[#0B2D5B] mb-2">{item.title}</div>
-                    <div className="text-sm text-[#64748B] font-normal leading-relaxed">{item.desc}</div>
-                    <div className="mt-5 h-1 w-8 bg-[#3E6FB5] rounded-full transition-all duration-500 group-hover:w-full" />
-                  </TiltCard>
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal className="mt-14">
-              <div className="rounded-3xl bg-white border border-[#E2E8F0] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-                <div>
-                  <div className="text-xl md:text-2xl font-serif font-medium text-[#0B2D5B]">Not sure where to start?</div>
-                  <p className="text-[#64748B] font-normal mt-1">Talk to a principal architect and get a tailored recommendation within 24 hours.</p>
-                </div>
-                <div className="flex items-center gap-5 shrink-0">
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-[#3E6FB5]">
-                      <Counter end={280} suffix="+" />
-                    </div>
-                    <div className="text-[10px] uppercase tracking-widest text-[#0B2D5B]/60 font-semibold">Projects Done</div>
-                  </div>
-                  <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-7 py-3.5 shadow-md">
-                    <span>Book Consultation</span>
-                  </button>
-                </div>
+        </div>
+        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 [scrollbar-width:thin]" style={{ paddingLeft: 'max(1.25rem, calc((100vw - 80rem) / 2 + 2rem))', paddingRight: '1.25rem', scrollPaddingLeft: 'max(1.25rem, calc((100vw - 80rem) / 2 + 2rem))' }}>
+          {showcase.map((s) => (
+            <Link
+              key={s.title}
+              to="/portfolio"
+              className="group relative shrink-0 snap-start w-[70vw] sm:w-[300px] h-[420px] overflow-hidden bg-[#F1F5F9]"
+            >
+              <img src={s.image} alt={s.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="text-[10px] tracking-[0.3em] uppercase text-white/75 mb-1">{s.tag}</div>
+                <div className="font-serif text-xl text-white font-light">{s.title}</div>
               </div>
-            </Reveal>
-          </div>
-        </section>
-      </SectionFlip>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-      {/* ================= PACKAGES ================= */}
-      <SectionFlip id="packages">
-        <section className="py-20 md:py-28 bg-[#F8FAFC]">
-          <div className="max-w-7xl mx-auto px-5 md:px-6">
-            <SectionHeading
-              kicker="Pricing"
-              title="Service Packages"
-              subtitle="Transparent packages built around your budget and vision."
-            />
+      {/* ================= JOURNEY ================= */}
+      <section className="pb-20 md:pb-28">
+        <div className="max-w-4xl mx-auto px-6 text-center mb-10">
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] mb-4">Our Design &amp; Build Journey</h2>
+          <p className="text-sm text-[#64748B] leading-relaxed">
+            From the first drawing to the final handover, we bring your project to life through a seamless
+            process that combines planning, precision and quality construction.
+          </p>
+        </div>
+        <JourneySlider />
+      </section>
 
-            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
-              {servicePackages.map((pkg, index) => (
-                <Reveal key={pkg.name} delay={index * 120} className="h-full">
-                  <PackageCard pkg={pkg} onBook={() => setShowContact(true)} />
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal className="mt-14">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-                {whyChooseUs.map((item, i) => (
-                  <div key={item.title} className="flex items-start gap-3 p-5 rounded-2xl bg-white border border-[#E2E8F0] hover:border-[#3E6FB5] transition-all duration-300 shadow-sm group">
-                    <span className="w-10 h-10 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
-                      <Icon name={item.icon} size={18} strokeWidth={2.2} />
-                    </span>
-                    <div>
-                      <div className="font-semibold text-[#0B2D5B] text-sm">{item.title}</div>
-                      <div className="text-xs text-[#64748B] font-normal">{item.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      </SectionFlip>
-
-      {/* ================= CTA ================= */}
-      <SectionFlip>
-        <CTA
-          image={heroImages[0]}
-          kicker="Get Started Today"
-          title="Ready to Start Your Project?"
-          subtitle="Book your free consultation today and let our experts bring your vision to life."
-          primaryLabel="Book Now — It’s Free"
-          onPrimary={() => setShowContact(true)}
-          secondaryLabel="View Our Work"
-          onSecondary={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-        />
-      </SectionFlip>
+      {/* ================= PROJECT CTA ================= */}
+      <section className="pb-24 md:pb-32 px-6">
+        <div className="max-w-7xl mx-auto border-t border-[#CBD5E1] pt-16 md:pt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B]">Have a project in mind?</h2>
+          <button
+            type="button"
+            onClick={() => setShowContact(true)}
+            className="self-start md:self-auto border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white transition-colors text-xs uppercase tracking-[0.25em] px-10 py-4"
+          >
+            Contact
+          </button>
+        </div>
+      </section>
 
       {/* ================= FOOTER ================= */}
       <Footer onContactClick={() => setShowContact(true)} />

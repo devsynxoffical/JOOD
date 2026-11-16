@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from './Logo';
 
 const LANGUAGES = [
   { code: 'en', label: 'English' },
@@ -85,7 +86,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
     // Scrolled or mobile menu open: light background, dark text
     headerBgClass = 'bg-white/95 backdrop-blur-xl border-b border-[#3E6FB5]/30 shadow-[0_10px_30px_rgba(0,0,0,0.05)] py-3.5';
     navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
-    whatsappBtnClass = 'border-2 border-[#3E6FB5] text-[#0B2D5B] bg-white/80 hover:bg-[#3E6FB5] hover:text-white';
+    whatsappBtnClass = 'border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white';
     hamburgerLineClass = 'bg-[#0B2D5B]';
   } else {
     // Top of page (not scrolled)
@@ -93,13 +94,13 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
       // Over a dark hero background: transparent background, white/gold text
       headerBgClass = 'bg-gradient-to-b from-black/60 to-transparent py-5';
       navLinkClass = 'text-white/90 hover:text-[#A9C1E3]';
-      whatsappBtnClass = 'border-2 border-[#3E6FB5] text-white bg-white/10 backdrop-blur-sm hover:bg-[#3E6FB5] hover:text-white';
+      whatsappBtnClass = 'border border-white text-white hover:bg-white hover:text-[#0B2D5B]';
       hamburgerLineClass = 'bg-white';
     } else {
       // Over a light hero background: translucent white background, dark text
       headerBgClass = 'bg-gradient-to-b from-white/90 via-white/40 to-transparent py-5';
       navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
-      whatsappBtnClass = 'border-2 border-[#3E6FB5] text-[#0B2D5B] bg-white/80 hover:bg-[#3E6FB5] hover:text-white';
+      whatsappBtnClass = 'border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white';
       hamburgerLineClass = 'bg-[#0B2D5B]';
     }
   }
@@ -110,15 +111,10 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex justify-between items-center">
           {/* Logo */}
           <div className="flex-1">
-            <Link to="/" className="group inline-flex items-center">
-              <div className="relative flex-shrink-0">
-                <img
-                  src="/images/jood-logo.webp"
-                  alt="Jood Building Contracting Logo"
-                  className="w-14 h-14 md:w-[72px] md:h-[72px] object-contain transition-all duration-500 group-hover:scale-105"
-                />
-                <span className="absolute -inset-1 rounded-full bg-[#3E6FB5]/20 blur-lg transition-all duration-500 group-hover:bg-[#3E6FB5]/40" />
-              </div>
+            <Link to="/" className="group inline-flex items-center" aria-label="Jood Building Contracting — Home">
+              <Logo
+                className={`h-10 md:h-12 w-auto transition-colors duration-500 ${!solid && isDarkHero ? 'text-white' : 'text-[#0B2D5B]'}`}
+              />
             </Link>
           </div>
 
@@ -129,7 +125,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                 key={link.label}
                 to={link.to}
                 className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${isActive(link.to)
-                  ? `${!solid && isDarkHero ? 'text-[#A9C1E3]' : 'text-[#3E6FB5]'} font-semibold`
+                  ? `${!solid && isDarkHero ? 'text-white border-b border-white' : 'text-[#0B2D5B] border-b border-[#0B2D5B]'} pb-1 font-semibold`
                   : navLinkClass
                   }`}
               >
@@ -145,13 +141,13 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
               href="https://wa.me/971558344467"
               target="_blank"
               rel="noreferrer"
-              className={`hidden sm:inline-flex items-center gap-2 font-sans text-xs font-semibold tracking-[0.2em] uppercase px-5 py-2.5 rounded-full transition-all shadow-sm ${whatsappBtnClass}`}
+              className={`hidden sm:inline-flex items-center gap-2 font-sans text-[11px] font-semibold tracking-[0.2em] uppercase px-6 py-3 transition-all ${whatsappBtnClass}`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.057 23.882a.5.5 0 0 0 .614.614l6.035-1.467A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.5-5.243-1.376l-.375-.217-3.882.944.965-3.795-.232-.391A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
               </svg>
-              +971 55 834 4467
+              Contact Us
             </a>
 
             {/* Mobile hamburger */}

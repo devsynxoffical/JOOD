@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Preloader({ onDone }) {
   const [progress, setProgress] = useState(0);
@@ -32,8 +33,8 @@ export default function Preloader({ onDone }) {
 
   return (
     <div className={`preloader bg-[#F8FAFC] text-[#0B2D5B] ${done ? 'done' : ''}`}>
-      <div className="loader-mark !bg-white shadow-[0_10px_40px_rgba(62, 111, 181,0.3)] border border-[#3E6FB5]/30 !rounded-2xl overflow-hidden p-2">
-        <img src="/images/jood-logo.webp" alt="Jood Building Contracting Logo" className="w-16 h-16 object-contain scale-110" />
+      <div className="loader-mark !w-auto !h-auto !bg-none !bg-transparent px-2">
+        <Logo className="h-14 w-auto text-[#0B2D5B]" />
       </div>
       <div className="loader-bar !bg-[#0B2D5B]/10 mt-8">
         <span style={{ width: `${progress}%` }} className="!bg-gradient-to-r !from-[#CBD5E1] !to-[#3E6FB5]" />
