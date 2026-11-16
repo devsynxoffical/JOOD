@@ -18,7 +18,6 @@ import SectionFlip from '../components/SectionFlip';
 
 import {
   navLinks,
-  heroImages,
   aboutHighlights,
   whyChooseUs,
   stats,
@@ -36,7 +35,7 @@ export default function AboutPage() {
       <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/about-hero.webp"
+          src="/images/about-hero-construction.webp"
           alt="About Jood Building Contracting Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -47,7 +46,7 @@ export default function AboutPage() {
           <div
             className="w-full max-w-3xl flex flex-col items-center"
             style={{
-              background: 'radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
+              background: 'radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 80%)',
               padding: '3rem 2rem',
               borderRadius: '100px',
             }}
@@ -55,7 +54,7 @@ export default function AboutPage() {
             <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
               <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
               <span
-                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#3E6FB5] font-bold"
+                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#A9C1E3] font-bold"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
               >
                 Who We Are
@@ -67,12 +66,12 @@ export default function AboutPage() {
               className="section-heading text-4xl md:text-6xl lg:text-[72px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
-              Built on Craftsmanship,<br/>
+              Building Trust,<br/>
               <span
-                className="block text-[#3E6FB5] italic font-medium mt-2"
+                className="block text-[#A9C1E3] italic font-medium mt-2"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
-                Driven by Trust.
+                Delivering Excellence.
               </span>
             </h1>
 
@@ -84,12 +83,12 @@ export default function AboutPage() {
             </p>
 
             <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-              {["Certified", "Insured", "On-Time", "UAE-Wide"].map((f) => (
+              {["Villas", "Buildings", "Warehouses", "UAE-Wide"].map((f) => (
                 <span
                   key={f}
                   className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/50 bg-black/40 backdrop-blur-md shadow-md"
                 >
-                  <Icon name="check" size={13} strokeWidth={3} className="text-[#3E6FB5]" />
+                  <Icon name="check" size={13} strokeWidth={3} className="text-[#A9C1E3]" />
                   {f}
                 </span>
               ))}
@@ -116,9 +115,10 @@ export default function AboutPage() {
         items={[
           { text: "15+ Years" },
           { text: "280+ Projects" },
-          { text: "Certified Team" },
-          { text: "Quality Guaranteed" },
-          { text: "Customer First" },
+          { text: "Villas" },
+          { text: "Buildings" },
+          { text: "Warehouses" },
+          { text: "Quality you trust. Results you see" },
         ]}
       />
 
@@ -134,8 +134,8 @@ export default function AboutPage() {
                   <div className="absolute -bottom-8 -right-6 w-52 h-52 rounded-2xl border-2 border-[#3E6FB5]/40 -z-10" />
                   <div className="img-zoom rounded-3xl shadow-xl overflow-hidden border border-[#3E6FB5]/30">
                     <SmartImage
-                      src="/images/about-story.webp"
-                      alt="Jood Building Contracting team"
+                      src="/images/about-story-site.webp"
+                      alt="Jood Building Contracting engineers on site"
                       className="w-full h-[420px] md:h-[520px] object-cover"
                     />
                   </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                       <Counter end={15} suffix="+" />
                     </div>
                     <div className="text-xs leading-tight tracking-wide font-medium uppercase text-[#64748B]">
-                      Years of<br />Craftsmanship
+                      Years of<br />Building Experience
                     </div>
                   </div>
                 </div>
@@ -155,16 +155,16 @@ export default function AboutPage() {
                   Our Story
                 </span>
                 <h2 className="font-serif text-3xl md:text-5xl text-[#0B2D5B] leading-tight mb-6 font-light">
-                  Trusted Experts in<br />Property Transformation
+                  Trusted Builders of<br />Villas, Buildings &amp; Warehouses
                 </h2>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-6">
-                  What began as a small team of passionate craftsmen has grown into one of Dubai's most
-                  trusted renovation and interior fit-out companies. From luxury villas to compact city
-                  apartments, we bring the same level of precision, honesty, and pride to every project.
+                  Jood Building Contracting delivers high-quality villas, buildings, and warehouses across
+                  the UAE, built on trust, expertise, and attention to detail. From the first drawing to
+                  the final handover, our engineers and site teams manage every stage of construction.
                 </p>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-8">
-                  Our mission is simple: deliver beautiful, functional spaces — on time, on budget, and
-                  with craftsmanship you can see and feel.
+                  Our mission is simple: build strong, lasting structures — on time, on budget, and to a
+                  standard our clients can trust. Quality you trust. Results you see.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4 mb-9">
@@ -208,8 +208,8 @@ export default function AboutPage() {
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               kicker="Why Choose Us"
-              title="Craftsmanship You Can Trust"
-              subtitle="At Jood Building Contracting, our principal architects deliver precision-engineered results with top-quality materials and zero compromises."
+              title="Building Trust. Delivering Excellence"
+              subtitle="At Jood Building Contracting, our engineers and site teams deliver well-built villas, buildings and warehouses with quality materials and careful attention to detail."
             />
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
@@ -245,10 +245,10 @@ export default function AboutPage() {
       {/* ================= CTA ================= */}
       <SectionFlip>
         <CTA
-          image={heroImages[0]}
+          image="/hero-villa.webp"
           kicker="Join Our Clients"
-          title="Let's Build Something Great Together"
-          subtitle="From first sketch to final handover — experience the Jood Building Contracting difference."
+          title="Let's Build Your Next Project Together"
+          subtitle="From design to construction and handover — experience the Jood Building Contracting difference."
           primaryLabel="Book a Free Consultation"
           onPrimary={() => setShowContact(true)}
         />

@@ -14,11 +14,11 @@ export const services = [
 ];
 
 export const whyChooseUs = [
-  { icon: "users", title: "Experienced Team", desc: "Skilled professionals with years of industry expertise" },
-  { icon: "zap", title: "Timely Execution", desc: "Fast turnaround with high-quality work" },
-  { icon: "tag", title: "Affordable Packages", desc: "Flexible options for every budget" },
-  { icon: "headset", title: "24/7 Support", desc: "Emergency services available anytime" },
-  { icon: "shield-check", title: "Certified & Insured", desc: "Reliable, safe, and fully insured" },
+  { icon: "users", title: "Experienced Team", desc: "Engineers, supervisors and skilled trades with years of UAE construction experience" },
+  { icon: "clock", title: "On-Schedule Delivery", desc: "Clear programmes and milestones from groundwork to handover" },
+  { icon: "award", title: "Quality Materials", desc: "Approved materials and strict quality control at every stage" },
+  { icon: "shield", title: "Safety First", desc: "Safe, organised sites that follow UAE regulations" },
+  { icon: "shield-check", title: "Licensed & Insured", desc: "A fully licensed building contractor you can rely on" },
 ];
 
 export const servicePackages = [
@@ -123,16 +123,16 @@ export const teamMembers = [
 ];
 
 export const aboutHighlights = [
-  { icon: "award", title: "Quality Guaranteed", desc: "Premium materials, strict QC" },
-  { icon: "clock", title: "On-Time Delivery", desc: "Deadlines we always meet" },
-  { icon: "shield-check", title: "Licensed & Insured", desc: "Fully certified professionals" },
-  { icon: "globe", title: "UAE-Wide Service", desc: "Residential & commercial" },
+  { icon: "hammer", title: "Villas", desc: "Private and luxury villas, built to last" },
+  { icon: "award", title: "Buildings", desc: "Residential & commercial buildings" },
+  { icon: "wrench", title: "Warehouses", desc: "Industrial & storage facilities" },
+  { icon: "globe", title: "UAE-Wide", desc: "Projects across the Emirates" },
 ];
 
 export const stats = [
   { end: 280, suffix: "+", label: "Satisfied Customers" },
   { end: 350, suffix: "+", label: "Expert In-House Team" },
-  { end: 90, suffix: "+", label: "Quality Services" },
+  { end: 90, suffix: "+", label: "Projects Delivered" },
   { end: 100, suffix: "%", label: "Satisfaction Rate" },
 ];
 
