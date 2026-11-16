@@ -70,8 +70,8 @@ const features = [
 ];
 
 const heroImages = [
-  "/images/wpc decking/pic1.webp",
-  "/images/wpc decking/pic3.avif",
+  "/images/jood/wpc-pool-deck.webp",
+  "/images/jood/wpc-rooftop-deck.webp",
 ];
 
 export default function WPCOutdoorDecking() {

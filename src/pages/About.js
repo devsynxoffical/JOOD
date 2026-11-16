@@ -11,7 +11,6 @@ import Counter from '../components/Counter';
 import SectionHeading from '../components/SectionHeading';
 import Marquee from '../components/Marquee';
 import Stats from '../components/Stats';
-import Partnerships from '../components/Partnerships';
 import SmartImage from '../components/SmartImage';
 import CTA from '../components/CTA';
 import SectionFlip from '../components/SectionFlip';
@@ -21,7 +20,6 @@ import {
   aboutHighlights,
   whyChooseUs,
   stats,
-  partnershipImages,
 } from '../data/content';
 
 export default function AboutPage() {
@@ -238,9 +236,6 @@ export default function AboutPage() {
           </div>
         </section>
       </SectionFlip>
-
-      {/* ================= PARTNERSHIPS ================= */}
-      <Partnerships images={partnershipImages} />
 
       {/* ================= CTA ================= */}
       <SectionFlip>

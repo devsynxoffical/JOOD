@@ -4,33 +4,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 const galleryItems = [
   {
     id: 1,
-    title: 'Palm Jumeirah Signature Villa',
-    category: 'Residential',
-    image: '/images/IMG-20250805-WA0103.webp',
+    title: 'Modern Villa with Pool',
+    category: 'Villas',
+    image: '/images/jood/villa-dusk.webp',
     location: 'Palm Jumeirah, Dubai',
     span: 'tall',
   },
   {
     id: 2,
-    title: 'Downtown Dubai Luxury Penthouse',
-    category: 'Residential',
-    image: '/images/IMG-20250805-WA0108.webp',
+    title: 'Gated Villa Community',
+    category: 'Villas',
+    image: '/images/jood/villa-community.webp',
     location: 'Downtown Dubai',
     span: 'normal',
   },
   {
     id: 3,
-    title: 'Executive Corporate Fit-Out',
-    category: 'Commercial',
-    image: '/images/IMG-20250805-WA0115.webp',
+    title: 'Commercial Office Building',
+    category: 'Buildings',
+    image: '/images/jood/commercial-building.webp',
     location: 'Business Bay, Dubai',
     span: 'wide',
   },
   {
     id: 4,
-    title: 'Bespoke Joinery & Marble Suite',
-    category: 'Custom Fit-out',
-    image: '/images/IMG-20250805-WA0121.webp',
+    title: 'Logistics Warehouse',
+    category: 'Warehouses',
+    image: '/images/jood/warehouse-exterior.webp',
     location: 'DIFC, Dubai',
     span: 'normal',
   },
@@ -38,21 +38,21 @@ const galleryItems = [
     id: 5,
     title: 'WPC Outdoor Decking & Lounge',
     category: 'Outdoor Decking',
-    image: '/images/IMG-20250805-WA0126.webp',
+    image: '/images/jood/villa-terrace-deck.webp',
     location: 'Emirates Hills, Dubai',
     span: 'normal',
   },
   {
     id: 6,
-    title: 'Modern Modular Kitchen & Dining',
-    category: 'Residential',
-    image: '/images/IMG-20250805-WA0129.webp',
+    title: 'Villa Interior Finishing',
+    category: 'Villas',
+    image: '/images/jood/villa-interior.webp',
     location: 'Dubai Marina',
     span: 'normal',
   },
 ];
 
-const categories = ['All', 'Residential', 'Commercial', 'Custom Fit-out', 'Outdoor Decking'];
+const categories = ['All', 'Villas', 'Buildings', 'Warehouses', 'Outdoor Decking'];
 
 function ProjectCard({ item, onClick, delay = 0 }) {
   return (
@@ -72,7 +72,7 @@ function ProjectCard({ item, onClick, delay = 0 }) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           onError={(e) => {
             // Fallback to a known-good image if this one fails to load
-            e.target.src = '/images/IMG-20250805-WA0140.webp';
+            e.target.src = '/images/jood/villa-dusk.webp';
           }}
         />
 

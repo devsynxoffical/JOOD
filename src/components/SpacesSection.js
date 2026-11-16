@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 
 const spaceSlides = [
   {
-    image: '/images/spacesec1.webp',
-    tag: 'Bespoke Balconies & Decks',
-    title: 'Luxury Balcony Fit-Outs & Scenic Lounges',
+    image: '/images/jood/villa-entrance.webp',
+    tag: 'Villas',
+    title: 'Modern Villas Built with Care',
   },
   {
-    image: '/images/spacesec2.webp',
-    tag: 'Luxury Residential',
-    title: 'Penthouse Living & Architectural Lounges',
+    image: '/images/jood/residential-tower.webp',
+    tag: 'Buildings',
+    title: 'Residential & Commercial Buildings',
   },
   {
-    image: '/images/spacesec3.webp',
-    tag: 'Custom Fit-Out',
-    title: 'Bespoke Carpentry & Marble Finishes',
+    image: '/images/jood/warehouse-interior.webp',
+    tag: 'Warehouses',
+    title: 'Steel-Structure Warehouses',
   },
 ];
 
