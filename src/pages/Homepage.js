@@ -36,8 +36,6 @@ export default function HomePage() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
-        {/* Navy brand overlay */}
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#071F40]/50 via-[#0B2D5B]/25 to-[#071F40]/55" />
 
         {/* Left Edge Social — Instagram only */}
         <div className="hidden xl:flex flex-col items-center gap-6 absolute left-8 top-1/2 -translate-y-1/2 z-20">
@@ -50,7 +48,6 @@ export default function HomePage() {
 
         {/* Centered Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-[900px]" style={{
-          background: 'radial-gradient(circle, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 75%)',
           padding: '3rem 2rem',
           borderRadius: '100px',
         }}>
