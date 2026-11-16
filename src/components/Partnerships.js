@@ -18,11 +18,11 @@ export default function Partnerships({ images }) {
   }, [images.length]);
 
   return (
-    <section className="py-20 md:py-24 bg-[#FDF8F2] relative overflow-hidden">
+    <section className="py-20 md:py-24 bg-[#F8FAFC] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 md:px-6">
         <SectionHeading kicker="Our Partnerships" title="Trusted Partners in Excellence" />
         <Reveal direction="zoom">
-          <div className="relative rounded-3xl overflow-hidden shadow-deep bg-[#F1E7D0]">
+          <div className="relative rounded-3xl overflow-hidden shadow-deep bg-[#E2E8F0]">
             <div
               className="flex transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{ transform: `translateX(-${current * 100}%)` }}
@@ -41,14 +41,14 @@ export default function Partnerships({ images }) {
 
             <button
               onClick={() => setCurrent((prev) => (prev - 1 + images.length) % images.length)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#392e23] text-[#FDF8F2] flex items-center justify-center hover:bg-[#D6B168] hover:text-[#392e23] transition-all duration-300 shadow-lg"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#1E293B] text-[#F8FAFC] flex items-center justify-center hover:bg-[#8FB0DD] hover:text-[#1E293B] transition-all duration-300 shadow-lg"
               aria-label="Previous"
             >
               <Icon name="arrow-right" size={20} className="rotate-180" />
             </button>
             <button
               onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#392e23] text-[#FDF8F2] flex items-center justify-center hover:bg-[#D6B168] hover:text-[#392e23] transition-all duration-300 shadow-lg"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#1E293B] text-[#F8FAFC] flex items-center justify-center hover:bg-[#8FB0DD] hover:text-[#1E293B] transition-all duration-300 shadow-lg"
               aria-label="Next"
             >
               <Icon name="arrow-right" size={20} />
@@ -60,7 +60,7 @@ export default function Partnerships({ images }) {
                   key={index}
                   onClick={() => setCurrent(index)}
                   className={`h-1.5 rounded-full transition-all duration-500 ${
-                    index === current ? 'w-8 bg-[#D6B168]' : 'w-3 bg-[#392e23]/25 hover:bg-[#392e23]/50'
+                    index === current ? 'w-8 bg-[#8FB0DD]' : 'w-3 bg-[#1E293B]/25 hover:bg-[#1E293B]/50'
                   }`}
                   aria-label={`Slide ${index + 1}`}
                 />

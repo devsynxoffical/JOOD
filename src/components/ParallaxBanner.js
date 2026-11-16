@@ -46,7 +46,7 @@ export default function ParallaxBanner({
 
       {/* ── Subtle dark overlay ── */}
       <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1C120E]/60 via-transparent to-[#1C120E]/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B2D5B]/60 via-transparent to-[#0B2D5B]/70" />
 
       {/* ── Content ── */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-10 text-center">
@@ -54,11 +54,11 @@ export default function ParallaxBanner({
         {/* Kicker */}
         {kicker && (
           <div className="flex items-center justify-center gap-5 mb-12">
-            <span className="flex-1 max-w-[80px] h-px bg-[#C9A15D]/60" />
-            <span className="text-[10px] uppercase tracking-[0.55em] text-[#C9A15D]/90 font-light">
+            <span className="flex-1 max-w-[80px] h-px bg-[#3E6FB5]/60" />
+            <span className="text-[10px] uppercase tracking-[0.55em] text-[#3E6FB5]/90 font-light">
               {kicker}
             </span>
-            <span className="flex-1 max-w-[80px] h-px bg-[#C9A15D]/60" />
+            <span className="flex-1 max-w-[80px] h-px bg-[#3E6FB5]/60" />
           </div>
         )}
 
@@ -71,7 +71,7 @@ export default function ParallaxBanner({
                   j < arr.length - 1 ? (
                     <span key={j}>
                       {part}
-                      <em className="not-italic font-light text-[#C9A15D]">
+                      <em className="not-italic font-light text-[#3E6FB5]">
                         {accent}
                       </em>
                     </span>
@@ -87,7 +87,7 @@ export default function ParallaxBanner({
         </h2>
 
         {/* Hairline divider */}
-        <div className="mx-auto w-16 h-px bg-[#C9A15D]/50 mb-8" />
+        <div className="mx-auto w-16 h-px bg-[#3E6FB5]/50 mb-8" />
 
         {/* Subtitle */}
         {subtitle && (
@@ -100,7 +100,7 @@ export default function ParallaxBanner({
         {cta && (
           <button
             onClick={onCta}
-            className="inline-flex items-center gap-4 border border-[#C9A15D]/60 text-[#C9A15D] text-[10px] uppercase tracking-[0.45em] px-10 py-4 hover:bg-[#C9A15D] hover:text-[#1C120E] transition-all duration-500 font-light"
+            className="inline-flex items-center gap-4 border border-[#3E6FB5]/60 text-[#3E6FB5] text-[10px] uppercase tracking-[0.45em] px-10 py-4 hover:bg-[#3E6FB5] hover:text-[#0B2D5B] transition-all duration-500 font-light"
           >
             {cta}
             <span className="w-6 h-px bg-current" />
@@ -115,7 +115,7 @@ export default function ParallaxBanner({
                 <div className="font-serif text-3xl md:text-4xl font-extralight text-white tracking-tight">
                   {s.value}
                 </div>
-                <div className="text-[9px] uppercase tracking-[0.4em] text-[#C9A15D]/70 mt-2 font-light">
+                <div className="text-[9px] uppercase tracking-[0.4em] text-[#3E6FB5]/70 mt-2 font-light">
                   {s.label}
                 </div>
               </div>
@@ -125,9 +125,9 @@ export default function ParallaxBanner({
       </div>
 
       {/* Bottom fade edge */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1C120E] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0B2D5B] to-transparent pointer-events-none" />
       {/* Top fade edge */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#1C120E] to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#0B2D5B] to-transparent pointer-events-none" />
     </section>
   );
 }

@@ -11,17 +11,17 @@ export default function SectionHeading({ kicker, title, subtitle, align = 'cente
       {kicker && (
         <h2
           className={`font-serif text-4xl md:text-6xl font-light leading-[1.08] tracking-tight mb-4 ${
-            light ? 'text-[#1C120E]' : 'text-white'
+            light ? 'text-[#0B2D5B]' : 'text-white'
           }`}
         >
           {kicker}
         </h2>
       )}
-      <h3 className="text-lg md:text-xl text-[#C9A15D] font-medium tracking-wide mb-6">
+      <h3 className="text-lg md:text-xl text-[#3E6FB5] font-medium tracking-wide mb-6">
         {title}
       </h3>
       {subtitle && (
-        <p className="mt-4 max-w-2xl text-sm md:text-base font-normal leading-relaxed tracking-wide text-[#5E524A]">
+        <p className="mt-4 max-w-2xl text-sm md:text-base font-normal leading-relaxed tracking-wide text-[#64748B]">
           {subtitle}
         </p>
       )}

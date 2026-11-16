@@ -28,11 +28,11 @@ export default function ServicesPage() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#FAFAFA] text-[#1C120E]">
+    <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
       {/* ================= CUSTOM SERVICES HERO ================= */}
-      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#0C0A08]">
+      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
           src="/service-hero.webp"
@@ -52,14 +52,14 @@ export default function ServicesPage() {
             }}
           >
             <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
               <span
-                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-bold"
+                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#3E6FB5] font-bold"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
               >
                 What We Do
               </span>
-              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
             </div>
 
             <h1
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             >
               Complete Services,<br/>
               <span
-                className="block text-[#C9A15D] italic font-medium mt-2"
+                className="block text-[#3E6FB5] italic font-medium mt-2"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
                 One Trusted Partner.
@@ -79,16 +79,16 @@ export default function ServicesPage() {
               className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-10 max-w-xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              From design and renovation to maintenance — BKD Contracting handles every detail of your project with precision and care.
+              From design and renovation to maintenance — Jood Building Contracting handles every detail of your project with precision and care.
             </p>
 
             <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => setShowContact(true)} className="bg-[#C9A15D] text-white hover:bg-white hover:text-[#1C120E] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
+              <button onClick={() => setShowContact(true)} className="bg-[#3E6FB5] text-white hover:bg-white hover:text-[#0B2D5B] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
                 <span>Get a Free Quote</span>
               </button>
               <button
                 onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border border-white/40 text-white hover:border-[#C9A15D] hover:bg-[#C9A15D] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
+                className="border border-white/40 text-white hover:border-[#3E6FB5] hover:bg-[#3E6FB5] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
               >
                 <span>View Packages</span>
               </button>
@@ -112,8 +112,8 @@ export default function ServicesPage() {
 
       {/* ================= SERVICES ================= */}
       <SectionFlip id="services-list">
-        <section className="py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
-          <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
+        <section className="py-20 md:py-28 bg-[#F8FAFC] relative overflow-hidden">
+          <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               kicker="What We Do"
@@ -134,8 +134,8 @@ export default function ServicesPage() {
 
       {/* ================= PROCESS ================= */}
       <SectionFlip>
-        <section className="py-20 md:py-28 bg-[#E5DCC9] relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[24rem] h-[24rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
+        <section className="py-20 md:py-28 bg-[#E2E8F0] relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[24rem] h-[24rem] rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
@@ -147,35 +147,35 @@ export default function ServicesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((item, i) => (
                 <Reveal key={item.step} delay={i * 120}>
-                  <TiltCard className="group relative h-full rounded-2xl bg-white p-7 border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 card-lift shadow-sm">
+                  <TiltCard className="group relative h-full rounded-2xl bg-white p-7 border border-[#E2E8F0] hover:border-[#3E6FB5] transition-all duration-300 card-lift shadow-sm">
                     <div className="flex items-center justify-between mb-5">
                       <div className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-white shadow-md group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
                         <Icon name={item.icon} size={22} strokeWidth={2.2} />
                       </div>
-                      <span className="text-3xl font-serif font-bold text-[#C9A15D]/40 group-hover:text-[#C9A15D] transition-colors duration-300">
+                      <span className="text-3xl font-serif font-bold text-[#3E6FB5]/40 group-hover:text-[#3E6FB5] transition-colors duration-300">
                         {item.step}
                       </span>
                     </div>
-                    <div className="text-lg font-semibold text-[#1C120E] mb-2">{item.title}</div>
-                    <div className="text-sm text-[#5E524A] font-normal leading-relaxed">{item.desc}</div>
-                    <div className="mt-5 h-1 w-8 bg-[#C9A15D] rounded-full transition-all duration-500 group-hover:w-full" />
+                    <div className="text-lg font-semibold text-[#0B2D5B] mb-2">{item.title}</div>
+                    <div className="text-sm text-[#64748B] font-normal leading-relaxed">{item.desc}</div>
+                    <div className="mt-5 h-1 w-8 bg-[#3E6FB5] rounded-full transition-all duration-500 group-hover:w-full" />
                   </TiltCard>
                 </Reveal>
               ))}
             </div>
 
             <Reveal className="mt-14">
-              <div className="rounded-3xl bg-white border border-[#E8E2D8] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+              <div className="rounded-3xl bg-white border border-[#E2E8F0] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
-                  <div className="text-xl md:text-2xl font-serif font-medium text-[#1C120E]">Not sure where to start?</div>
-                  <p className="text-[#5E524A] font-normal mt-1">Talk to a principal architect and get a tailored recommendation within 24 hours.</p>
+                  <div className="text-xl md:text-2xl font-serif font-medium text-[#0B2D5B]">Not sure where to start?</div>
+                  <p className="text-[#64748B] font-normal mt-1">Talk to a principal architect and get a tailored recommendation within 24 hours.</p>
                 </div>
                 <div className="flex items-center gap-5 shrink-0">
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-[#C9A15D]">
+                    <div className="text-3xl font-bold text-[#3E6FB5]">
                       <Counter end={280} suffix="+" />
                     </div>
-                    <div className="text-[10px] uppercase tracking-widest text-[#1C120E]/60 font-semibold">Projects Done</div>
+                    <div className="text-[10px] uppercase tracking-widest text-[#0B2D5B]/60 font-semibold">Projects Done</div>
                   </div>
                   <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-7 py-3.5 shadow-md">
                     <span>Book Consultation</span>
@@ -189,7 +189,7 @@ export default function ServicesPage() {
 
       {/* ================= PACKAGES ================= */}
       <SectionFlip id="packages">
-        <section className="py-20 md:py-28 bg-[#FAFAFA]">
+        <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               kicker="Pricing"
@@ -208,13 +208,13 @@ export default function ServicesPage() {
             <Reveal className="mt-14">
               <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
                 {whyChooseUs.map((item, i) => (
-                  <div key={item.title} className="flex items-start gap-3 p-5 rounded-2xl bg-white border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 shadow-sm group">
+                  <div key={item.title} className="flex items-start gap-3 p-5 rounded-2xl bg-white border border-[#E2E8F0] hover:border-[#3E6FB5] transition-all duration-300 shadow-sm group">
                     <span className="w-10 h-10 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
                       <Icon name={item.icon} size={18} strokeWidth={2.2} />
                     </span>
                     <div>
-                      <div className="font-semibold text-[#1C120E] text-sm">{item.title}</div>
-                      <div className="text-xs text-[#5E524A] font-normal">{item.desc}</div>
+                      <div className="font-semibold text-[#0B2D5B] text-sm">{item.title}</div>
+                      <div className="text-xs text-[#64748B] font-normal">{item.desc}</div>
                     </div>
                   </div>
                 ))}

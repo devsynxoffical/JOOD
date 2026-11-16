@@ -24,12 +24,12 @@ export default function BeforeAfterSlider({ project }) {
   };
 
   return (
-    <div className="glass-dark rounded-3xl p-6 md:p-8 border border-white/10 shadow-2xl text-[#D9C7B1]">
+    <div className="glass-dark rounded-3xl p-6 md:p-8 border border-white/10 shadow-2xl text-[#CBD5E1]">
 
 
       <div
         ref={containerRef}
-        className="relative h-[320px] md:h-[440px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-[#C9A15D]/20"
+        className="relative h-[320px] md:h-[440px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-[#3E6FB5]/20"
         onMouseDown={() => setIsDragging(true)}
         onMouseUp={() => setIsDragging(false)}
         onMouseLeave={() => setIsDragging(false)}
@@ -44,7 +44,7 @@ export default function BeforeAfterSlider({ project }) {
           alt="After Transformation"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#1C120E]/80 backdrop-blur-md text-[#C9A15D] text-[10px] font-light uppercase tracking-widest border border-[#C9A15D]/40 z-10">
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#0B2D5B]/80 backdrop-blur-md text-[#3E6FB5] text-[10px] font-light uppercase tracking-widest border border-[#3E6FB5]/40 z-10">
           AFTER
         </div>
 
@@ -66,10 +66,10 @@ export default function BeforeAfterSlider({ project }) {
 
         {/* Divider Handle */}
         <div
-          className="absolute inset-y-0 z-20 w-0.5 bg-[#C9A15D] cursor-ew-resize"
+          className="absolute inset-y-0 z-20 w-0.5 bg-[#3E6FB5] cursor-ew-resize"
           style={{ left: `${sliderPos}%` }}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#C9A15D] text-[#1C120E] flex items-center justify-center font-bold shadow-xl text-xs">
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#3E6FB5] text-[#0B2D5B] flex items-center justify-center font-bold shadow-xl text-xs">
             ↔
           </div>
         </div>

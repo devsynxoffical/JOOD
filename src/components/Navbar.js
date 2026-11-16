@@ -1,6 +1,54 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+const LANGUAGES = [
+  { code: 'en', label: 'English' },
+  { code: 'ar', label: 'العربية', soon: true },
+];
+
+function LanguageMenu({ className = '', mobile = false, onSelect }) {
+  const [open, setOpen] = useState(false);
+  const [lang, setLang] = useState('en');
+
+  return (
+    <div className={`relative ${mobile ? 'w-full' : ''}`} onMouseLeave={() => !mobile && setOpen(false)}>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className={`inline-flex items-center gap-1.5 ${className}`}
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+        <span>Language</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+      </button>
+      {open && (
+        <div className={`${mobile ? 'mt-2' : 'absolute right-0 top-full pt-3'} min-w-[160px] z-[95]`}>
+          <ul role="listbox" className="bg-white rounded-xl border border-[#3E6FB5]/20 shadow-xl overflow-hidden">
+            {LANGUAGES.map((l) => (
+              <li key={l.code}>
+                <button
+                  type="button"
+                  disabled={l.soon}
+                  onClick={() => { setLang(l.code); setOpen(false); onSelect && onSelect(l.code); }}
+                  className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-xs tracking-wider normal-case text-left transition-colors ${lang === l.code ? 'text-[#0B2D5B] font-semibold bg-[#F1F5F9]' : 'text-[#0B2D5B]/80 hover:bg-[#F1F5F9]'} ${l.soon ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  <span>{l.label}</span>
+                  {l.soon && <span className="text-[9px] uppercase tracking-widest text-[#64748B]">Soon</span>}
+                  {lang === l.code && !l.soon && <span className="text-[#3E6FB5]">✓</span>}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /**
  * Sticky navbar with blur-on-scroll and mobile drawer.
  * props:
@@ -35,24 +83,24 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
 
   if (solid) {
     // Scrolled or mobile menu open: light background, dark text
-    headerBgClass = 'bg-white/95 backdrop-blur-xl border-b border-[#C9A15D]/30 shadow-[0_10px_30px_rgba(0,0,0,0.05)] py-3.5';
-    navLinkClass = 'text-[#1C120E]/80 hover:text-[#C9A15D]';
-    whatsappBtnClass = 'border-2 border-[#C9A15D] text-[#1C120E] bg-white/80 hover:bg-[#C9A15D] hover:text-white';
-    hamburgerLineClass = 'bg-[#1C120E]';
+    headerBgClass = 'bg-white/95 backdrop-blur-xl border-b border-[#3E6FB5]/30 shadow-[0_10px_30px_rgba(0,0,0,0.05)] py-3.5';
+    navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
+    whatsappBtnClass = 'border-2 border-[#3E6FB5] text-[#0B2D5B] bg-white/80 hover:bg-[#3E6FB5] hover:text-white';
+    hamburgerLineClass = 'bg-[#0B2D5B]';
   } else {
     // Top of page (not scrolled)
     if (isDarkHero) {
       // Over a dark hero background: transparent background, white/gold text
       headerBgClass = 'bg-gradient-to-b from-black/60 to-transparent py-5';
-      navLinkClass = 'text-white/90 hover:text-[#C9A15D]';
-      whatsappBtnClass = 'border-2 border-[#C9A15D] text-white bg-white/10 backdrop-blur-sm hover:bg-[#C9A15D] hover:text-white';
+      navLinkClass = 'text-white/90 hover:text-[#A9C1E3]';
+      whatsappBtnClass = 'border-2 border-[#3E6FB5] text-white bg-white/10 backdrop-blur-sm hover:bg-[#3E6FB5] hover:text-white';
       hamburgerLineClass = 'bg-white';
     } else {
       // Over a light hero background: translucent white background, dark text
       headerBgClass = 'bg-gradient-to-b from-white/90 via-white/40 to-transparent py-5';
-      navLinkClass = 'text-[#1C120E]/80 hover:text-[#C9A15D]';
-      whatsappBtnClass = 'border-2 border-[#C9A15D] text-[#1C120E] bg-white/80 hover:bg-[#C9A15D] hover:text-white';
-      hamburgerLineClass = 'bg-[#1C120E]';
+      navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
+      whatsappBtnClass = 'border-2 border-[#3E6FB5] text-[#0B2D5B] bg-white/80 hover:bg-[#3E6FB5] hover:text-white';
+      hamburgerLineClass = 'bg-[#0B2D5B]';
     }
   }
 
@@ -65,29 +113,30 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             <Link to="/" className="group inline-flex items-center">
               <div className="relative flex-shrink-0">
                 <img
-                  src="/images/bkd-logo.webp"
-                  alt="BKD Contracting Logo"
-                  className="w-14 h-14 md:w-18 md:h-18object-contain transition-all duration-500 group-hover:scale-105"
+                  src="/images/jood-logo.webp"
+                  alt="Jood Building Contracting Logo"
+                  className="w-14 h-14 md:w-[72px] md:h-[72px] object-contain transition-all duration-500 group-hover:scale-105"
                 />
-                <span className="absolute -inset-1 rounded-full bg-[#C9A15D]/20 blur-lg transition-all duration-500 group-hover:bg-[#C9A15D]/40" />
+                <span className="absolute -inset-1 rounded-full bg-[#3E6FB5]/20 blur-lg transition-all duration-500 group-hover:bg-[#3E6FB5]/40" />
               </div>
             </Link>
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center justify-center space-x-8 font-medium flex-1">
+          <nav className="hidden lg:flex items-center justify-center space-x-7 font-medium flex-[2]">
             {links.map((link) => (
               <Link
                 key={link.label}
                 to={link.to}
-                className={`nav-link text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${isActive(link.to)
-                  ? 'text-[#C9A15D] font-semibold'
+                className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${isActive(link.to)
+                  ? `${!solid && isDarkHero ? 'text-[#A9C1E3]' : 'text-[#3E6FB5]'} font-semibold`
                   : navLinkClass
                   }`}
               >
                 {link.label}
               </Link>
             ))}
+            <LanguageMenu className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${navLinkClass}`} />
           </nav>
 
           <div className="flex-1 flex items-center justify-end gap-4 lg:gap-6">
@@ -108,11 +157,11 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-full border border-[#C9A15D]/40 shadow-sm transition-all ${solid ? 'bg-white/90' : 'bg-black/20 backdrop-blur-sm'}`}
+              className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-full border border-[#3E6FB5]/40 shadow-sm transition-all ${solid ? 'bg-white/90' : 'bg-black/20 backdrop-blur-sm'}`}
               aria-label="Toggle menu"
             >
               <span className={`block w-5 h-[1.5px] transition-all duration-300 ${hamburgerLineClass} ${mobileMenuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
-              <span className={`block w-5 h-[1.5px] bg-[#C9A15D] transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-[1.5px] bg-[#3E6FB5] transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
               <span className={`block w-5 h-[1.5px] transition-all duration-300 ${hamburgerLineClass} ${mobileMenuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
             </button>
           </div>
@@ -124,14 +173,14 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
         className={`fixed inset-0 z-[85] lg:hidden transition-all duration-500 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
       >
-        <div className="absolute inset-0 bg-[#1C120E]/40 backdrop-blur-md" onClick={() => setMobileMenuOpen(false)} />
+        <div className="absolute inset-0 bg-[#0B2D5B]/40 backdrop-blur-md" onClick={() => setMobileMenuOpen(false)} />
         <div
-          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white border-l border-[#C9A15D]/20 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white border-l border-[#3E6FB5]/20 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
           <div className="p-8 pt-24 flex flex-col h-full">
-            <div className="text-[#C9A15D] text-xs tracking-[0.4em] uppercase font-semibold mb-8 flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-[#C9A15D]" />
+            <div className="text-[#3E6FB5] text-xs tracking-[0.4em] uppercase font-semibold mb-8 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-[#3E6FB5]" />
               Navigation
             </div>
             <nav className="flex flex-col space-y-1">
@@ -140,18 +189,21 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                   key={link.label}
                   to={link.to}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between py-4 border-b border-[#C9A15D]/10 transition-all duration-300 text-base uppercase tracking-widest font-medium ${isActive(link.to)
-                    ? 'text-[#C9A15D] pl-2 font-semibold'
-                    : 'text-[#1C120E]/80 hover:text-[#C9A15D] hover:pl-2'
+                  className={`flex items-center justify-between py-4 border-b border-[#3E6FB5]/10 transition-all duration-300 text-base uppercase tracking-widest font-medium ${isActive(link.to)
+                    ? 'text-[#3E6FB5] pl-2 font-semibold'
+                    : 'text-[#0B2D5B]/80 hover:text-[#3E6FB5] hover:pl-2'
                     }`}
                   style={{ transitionDelay: `${i * 50}ms` }}
                 >
                   <span>{link.label}</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#C9A15D]">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#3E6FB5]">
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>
                 </Link>
               ))}
+              <div className="py-4 border-b border-[#3E6FB5]/10">
+                <LanguageMenu mobile className="text-base uppercase tracking-widest font-medium text-[#0B2D5B]/80 hover:text-[#3E6FB5]" />
+              </div>
             </nav>
           </div>
         </div>

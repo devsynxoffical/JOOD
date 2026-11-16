@@ -17,14 +17,14 @@ export default function SmartImage({ src, alt = '', fallback, className = '', ..
     if (fallback) return fallback;
     return (
       <div
-        className={`w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-[#2E1F1A] to-[#1C120E] ${className}`}
+        className={`w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-[#12396E] to-[#0B2D5B] ${className}`}
         role="img"
         aria-label={alt}
       >
-        <span className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-[#1C120E] font-serif font-bold text-lg">
-          BKD
+        <span className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-[#0B2D5B] font-serif font-bold text-lg">
+          JOOD
         </span>
-        <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A15D]/80">{alt || 'BKD Contracting'}</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-[#3E6FB5]/80">{alt || 'Jood Building Contracting'}</span>
       </div>
     );
   }

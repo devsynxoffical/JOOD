@@ -77,9 +77,9 @@ function ProjectCard({ item, onClick, delay = 0 }) {
         />
 
         {/* Hover arrow */}
-        <div className="absolute top-4 right-4 w-8 h-8 bg-[#C9A15D] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-4 right-4 w-8 h-8 bg-[#3E6FB5] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M2 10L10 2M10 2H4M10 2V8" stroke="#1C120E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 10L10 2M10 2H4M10 2V8" stroke="#0B2D5B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
       </div>
@@ -96,11 +96,11 @@ export default function MasterySection({ onContactClick }) {
     : galleryItems.filter((i) => i.category === selectedCat);
 
   return (
-    <section className="py-24 md:py-32 bg-[#FAFAFA] text-[#1C120E] relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#F8FAFC] text-[#0B2D5B] relative overflow-hidden">
       {/* Subtle background texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
         style={{
-          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,161,93,0.3) 60px, rgba(201,161,93,0.3) 61px)`,
+          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(62, 111, 181,0.3) 60px, rgba(62, 111, 181,0.3) 61px)`,
         }}
       />
 
@@ -109,15 +109,15 @@ export default function MasterySection({ onContactClick }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-8 h-px bg-[#C9A15D]/50" />
-            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#C9A15D] font-bold">Portfolio Showcase</span>
-            <span className="w-8 h-px bg-[#C9A15D]/50" />
+            <span className="w-8 h-px bg-[#3E6FB5]/50" />
+            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#3E6FB5] font-bold">Portfolio Showcase</span>
+            <span className="w-8 h-px bg-[#3E6FB5]/50" />
           </div>
-          <h2 className="font-serif text-4xl md:text-6xl text-[#1C120E] leading-[1.08] font-light tracking-tight mb-4">
+          <h2 className="font-serif text-4xl md:text-6xl text-[#0B2D5B] leading-[1.08] font-light tracking-tight mb-4">
             The Mediums <br />
-            <span className="font-light italic text-[#C9A15D]">Our Mastery</span>
+            <span className="font-light italic text-[#3E6FB5]">Our Mastery</span>
           </h2>
-          <p className="text-sm md:text-base text-[#5E524A] font-normal max-w-xl mx-auto tracking-wide leading-relaxed">
+          <p className="text-sm md:text-base text-[#64748B] font-normal max-w-xl mx-auto tracking-wide leading-relaxed">
             Explore our curated portfolio of bespoke interior transformations, structural fit-outs, and architectural outdoor spaces across Dubai.
           </p>
         </div>
@@ -132,8 +132,8 @@ export default function MasterySection({ onContactClick }) {
                 onClick={() => setSelectedCat(cat)}
                 className={`px-5 py-2 text-[10px] font-semibold uppercase tracking-[0.25em] transition-all duration-300 rounded-full border ${
                   isActive
-                    ? 'bg-[#C9A15D] text-white border-[#C9A15D] shadow-sm'
-                    : 'bg-white text-[#1C120E]/70 border-[#1C120E]/20 hover:border-[#C9A15D] hover:text-[#1C120E]'
+                    ? 'bg-[#3E6FB5] text-white border-[#3E6FB5] shadow-sm'
+                    : 'bg-white text-[#0B2D5B]/70 border-[#0B2D5B]/20 hover:border-[#3E6FB5] hover:text-[#0B2D5B]'
                 }`}
               >
                 {cat}
@@ -179,12 +179,12 @@ export default function MasterySection({ onContactClick }) {
           onClick={() => setActiveItem(null)}
         >
           <div
-            className="relative bg-[#1C120E] text-[#D9C7B1] max-w-3xl w-full overflow-hidden border border-[#C9A15D]/25 shadow-2xl"
+            className="relative bg-[#0B2D5B] text-[#CBD5E1] max-w-3xl w-full overflow-hidden border border-[#3E6FB5]/25 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 bg-[#C9A15D] text-[#1C120E] flex items-center justify-center hover:bg-white transition-colors text-sm font-bold"
+              className="absolute top-4 right-4 z-10 w-8 h-8 bg-[#3E6FB5] text-[#0B2D5B] flex items-center justify-center hover:bg-white transition-colors text-sm font-bold"
             >
               ✕
             </button>
@@ -197,7 +197,7 @@ export default function MasterySection({ onContactClick }) {
             </div>
             <div className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#C9A15D] font-medium">
+                <span className="text-[10px] uppercase tracking-widest text-[#3E6FB5] font-medium">
                   {activeItem.category} · {activeItem.location}
                 </span>
                 <h3 className="font-serif text-2xl text-white font-light mt-1 tracking-tight">

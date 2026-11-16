@@ -6,44 +6,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1C120E', // Espresso Brown
-        secondary: '#C9A15D', // Brushed Gold
-        accent: '#D9C7B1', // Sand Beige
-        background: '#1C120E',
-        dark: '#1C120E',
+        primary: '#0B2D5B', // Espresso Brown
+        secondary: '#3E6FB5', // Brushed Gold
+        accent: '#CBD5E1', // Sand Beige
+        background: '#0B2D5B',
+        dark: '#0B2D5B',
         espresso: {
-          DEFAULT: '#1C120E',
-          dark: '#140C09',
-          medium: '#2E1F1A',
-          light: '#3E2B25',
-          card: '#2E1F1A',
+          DEFAULT: '#0B2D5B',
+          dark: '#071F40',
+          medium: '#12396E',
+          light: '#1A4580',
+          card: '#12396E',
         },
         cocoa: {
-          DEFAULT: '#2E1F1A',
-          dark: '#1C120E',
-          light: '#3D2A23',
+          DEFAULT: '#12396E',
+          dark: '#0B2D5B',
+          light: '#1A4580',
         },
         taupe: {
-          DEFAULT: '#8B6E58',
-          light: '#A4866E',
-          dark: '#6E5441',
+          DEFAULT: '#64748B',
+          light: '#8392A8',
+          dark: '#475569',
         },
         bronze: {
-          DEFAULT: '#B38A58',
-          light: '#CA9F6A',
-          dark: '#926C3B',
+          DEFAULT: '#2F5E9E',
+          light: '#6B93CC',
+          dark: '#1E4C8C',
         },
         gold: {
-          DEFAULT: '#C9A15D',
-          light: '#E2C384',
-          bright: '#F0D495',
-          dark: '#B38A58',
-          muted: '#8B6E58',
+          DEFAULT: '#3E6FB5',
+          light: '#A9C1E3',
+          bright: '#CBD5E1',
+          dark: '#2F5E9E',
+          muted: '#64748B',
         },
         sand: {
-          DEFAULT: '#D9C7B1',
-          light: '#EFE5D8',
-          dark: '#BFAF99',
+          DEFAULT: '#CBD5E1',
+          light: '#F1F5F9',
+          dark: '#94A3B8',
         },
         charcoal: {
           DEFAULT: '#2A2A2A',
@@ -51,35 +51,35 @@ module.exports = {
           light: '#3A3A3A',
         },
         forest: {
-          DEFAULT: '#1C120E',
-          dark: '#140C09',
-          medium: '#2E1F1A',
-          light: '#3E2B25',
-          card: '#2E1F1A',
+          DEFAULT: '#0B2D5B',
+          dark: '#071F40',
+          medium: '#12396E',
+          light: '#1A4580',
+          card: '#12396E',
         },
         cream: {
-          DEFAULT: '#D9C7B1',
-          light: '#EFE5D8',
-          medium: '#C9B79E',
-          dark: '#A9977E',
+          DEFAULT: '#CBD5E1',
+          light: '#F1F5F9',
+          medium: '#B6C2D2',
+          dark: '#94A3B8',
         },
       },
       fontFamily: {
-        sans: ['"Montserrat"', '"Inter"', 'system-ui', 'sans-serif'],
-        display: ['"Cormorant Garamond"', 'serif'],
-        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Open Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Montserrat"', 'sans-serif'],
+        serif: ['"Montserrat"', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 20px 60px -15px rgba(28, 18, 14, 0.12)',
-        gold: '0 10px 40px -10px rgba(201, 161, 93, 0.4)',
-        deep: '0 30px 80px -20px rgba(20, 12, 9, 0.6)',
+        soft: '0 20px 60px -15px rgba(11, 45, 91, 0.12)',
+        gold: '0 10px 40px -10px rgba(62, 111, 181, 0.4)',
+        deep: '0 30px 80px -20px rgba(7, 31, 64, 0.6)',
         card: '0 12px 32px rgba(0, 0, 0, 0.25)',
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #E2C384 0%, #C9A15D 50%, #B38A58 100%)',
-        'forest-gradient': 'linear-gradient(180deg, #1C120E 0%, #140C09 100%)',
-        'espresso-gradient': 'linear-gradient(180deg, #2E1F1A 0%, #1C120E 100%)',
-        'cream-gradient': 'linear-gradient(180deg, #EFE5D8 0%, #D9C7B1 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #A9C1E3 0%, #3E6FB5 50%, #2F5E9E 100%)',
+        'forest-gradient': 'linear-gradient(180deg, #0B2D5B 0%, #071F40 100%)',
+        'espresso-gradient': 'linear-gradient(180deg, #12396E 0%, #0B2D5B 100%)',
+        'cream-gradient': 'linear-gradient(180deg, #F1F5F9 0%, #CBD5E1 100%)',
       },
       keyframes: {
         'spin-slow': {

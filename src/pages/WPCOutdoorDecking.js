@@ -98,11 +98,11 @@ export default function WPCOutdoorDecking() {
   };
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#FAFAFA] text-[#1C120E]">
+    <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} />
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen h-auto py-32 md:py-40 relative overflow-hidden bg-[#F4F0EA] flex flex-col justify-center">
+      <section className="min-h-screen h-auto py-32 md:py-40 relative overflow-hidden bg-[#F1F5F9] flex flex-col justify-center">
         {heroImages.map((img, i) => (
           <div key={img} className={`hero-img-layer ${i === currentImage ? 'active' : ''}`}>
             <SmartImage src={img} alt="WPC Outdoor Decking" className="absolute inset-0 w-full h-full object-cover animate-kenburns" />
@@ -113,26 +113,26 @@ export default function WPCOutdoorDecking() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 w-full">
           <div className="text-center">
-            <div className="ornament entrance-fade-up d-1 text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-bold mb-6 justify-center">
+            <div className="ornament entrance-fade-up d-1 text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#3E6FB5] font-bold mb-6 justify-center">
               Premium Outdoor Living
             </div>
 
-            <h1 className="section-heading text-4xl md:text-6xl lg:text-7xl text-[#1C120E] leading-[1.08] mb-7 font-light">
+            <h1 className="section-heading text-4xl md:text-6xl lg:text-7xl text-[#0B2D5B] leading-[1.08] mb-7 font-light">
               <AnimatedWords text="Transform Your" delayBase={0.15} />
-              <span className="block text-[#C9A15D] font-serif font-light mt-2">
+              <span className="block text-[#3E6FB5] font-serif font-light mt-2">
                 <AnimatedWords text="Outdoor Space" delayBase={0.55} />
               </span>
             </h1>
 
-            <p className="entrance-fade-up d-6 text-base md:text-xl text-[#5E524A] font-normal leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="entrance-fade-up d-6 text-base md:text-xl text-[#64748B] font-normal leading-relaxed mb-8 max-w-3xl mx-auto">
               Premium WPC Decking Solutions — weather-resistant, low-maintenance, and stunning wood-like
               appearance. Perfect for patios, terraces, and outdoor living areas.
             </p>
 
             <div className="entrance-fade-up d-7 flex flex-wrap justify-center gap-3 mb-10">
               {["No Maintenance", "Fade Resistant", "Eco-Friendly", "10 Year Warranty"].map((f) => (
-                <span key={f} className="bg-white/90 shadow-sm rounded-full px-5 py-2.5 text-xs md:text-sm text-[#1C120E] tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#C9A15D]/40">
-                  <Icon name="check" size={13} strokeWidth={3} className="text-[#C9A15D]" />
+                <span key={f} className="bg-white/90 shadow-sm rounded-full px-5 py-2.5 text-xs md:text-sm text-[#0B2D5B] tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/40">
+                  <Icon name="check" size={13} strokeWidth={3} className="text-[#3E6FB5]" />
                   {f}
                 </span>
               ))}
@@ -155,7 +155,7 @@ export default function WPCOutdoorDecking() {
               key={index}
               onClick={() => setCurrentImage(index)}
               className={`h-1.5 rounded-full transition-all duration-500 ${
-                index === currentImage ? 'w-10 bg-[#C9A15D] shadow-md' : 'w-4 bg-black/30 hover:bg-black/60'
+                index === currentImage ? 'w-10 bg-[#3E6FB5] shadow-md' : 'w-4 bg-black/30 hover:bg-black/60'
               }`}
             />
           ))}
@@ -163,7 +163,7 @@ export default function WPCOutdoorDecking() {
 
         <button
           onClick={() => document.getElementById('intro')?.scrollIntoView({ behavior: 'smooth' })}
-          className="absolute bottom-6 right-6 md:right-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-[#1C120E] hover:bg-[#C9A15D] hover:text-white transition-all duration-300 animate-bounce border border-[#C9A15D]/40"
+          className="absolute bottom-6 right-6 md:right-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-[#0B2D5B] hover:bg-[#3E6FB5] hover:text-white transition-all duration-300 animate-bounce border border-[#3E6FB5]/40"
           aria-label="Scroll down"
         >
           <Icon name="chevron-down" size={20} />
@@ -184,24 +184,24 @@ export default function WPCOutdoorDecking() {
 
       {/* ================= INTRODUCTION ================= */}
       <SectionFlip id="intro">
-        <section className="py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
-          <div className="absolute -bottom-40 -right-40 w-[30rem] h-[30rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
+        <section className="py-20 md:py-28 bg-[#F8FAFC] relative overflow-hidden">
+          <div className="absolute -bottom-40 -right-40 w-[30rem] h-[30rem] rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-4xl mx-auto px-5 md:px-6 text-center">
             <SectionHeading
               light={false}
               kicker="Why WPC Decking"
               title="Premium WPC Decking Solutions"
-              subtitle="If you are looking for high–quality WPC decking, then you have come to the right place. Here at BKD Contracting, we pride ourselves on providing our customers with only the best products on the market."
+              subtitle="If you are looking for high–quality WPC decking, then you have come to the right place. Here at Jood Building Contracting, we pride ourselves on providing our customers with only the best products on the market."
             />
             <Reveal delay={150}>
-              <p className="text-base md:text-lg text-[#5E524A] font-normal leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed max-w-3xl mx-auto">
                 Our WPC decking is made from high–quality wood and polymer, and it is designed to last for years.
                 It is also very easy to install and maintain, so you can enjoy your deck for many years to come.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4">
-                <div className="text-2xl md:text-3xl font-bold text-[#1C120E]">
+                <div className="text-2xl md:text-3xl font-bold text-[#0B2D5B]">
                   Call Now:{" "}
-                  <a href="tel:+971558344467" className="text-[#C9A15D] hover:opacity-80 transition-opacity">
+                  <a href="tel:+971558344467" className="text-[#3E6FB5] hover:opacity-80 transition-opacity">
                     +971 55 834 4467
                   </a>
                 </div>
@@ -216,7 +216,7 @@ export default function WPCOutdoorDecking() {
 
       {/* ================= FEATURES ================= */}
       <SectionFlip>
-        <section className="py-20 md:py-28 bg-[#F4F0EA]">
+        <section className="py-20 md:py-28 bg-[#F1F5F9]">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading light={false} kicker="Decking Benefits" title="Why Choose WPC Decking" />
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -232,7 +232,7 @@ export default function WPCOutdoorDecking() {
 
       {/* ================= PRODUCTS ================= */}
       <SectionFlip id="products-section">
-        <section className="py-20 md:py-28 bg-[#FAFAFA]">
+        <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               light={false}
@@ -245,13 +245,13 @@ export default function WPCOutdoorDecking() {
               <div key={categoryIndex} className="mb-20 last:mb-0">
                 <Reveal>
                   <div className="flex items-center gap-4 mb-9">
-                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-white text-[#C9A15D] border border-[#C9A15D]/50 flex items-center justify-center text-lg font-bold shadow-sm">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-white text-[#3E6FB5] border border-[#3E6FB5]/50 flex items-center justify-center text-lg font-bold shadow-sm">
                       {String(categoryIndex + 1).padStart(2, '0')}
                     </div>
-                    <h3 className="text-lg md:text-2xl font-semibold text-[#1C120E] tracking-wide">
+                    <h3 className="text-lg md:text-2xl font-semibold text-[#0B2D5B] tracking-wide">
                       {category.category}
                     </h3>
-                    <div className="hidden md:block flex-1 h-[2px] bg-gradient-to-r from-[#C9A15D] to-transparent" />
+                    <div className="hidden md:block flex-1 h-[2px] bg-gradient-to-r from-[#3E6FB5] to-transparent" />
                   </div>
                 </Reveal>
 

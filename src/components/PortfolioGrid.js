@@ -22,8 +22,8 @@ export default function PortfolioGrid({ images, onOpen }) {
               alt={`Interior Design ${index + 1}`}
               className={`w-full object-cover ${index % 5 === 0 ? 'h-72 md:h-[480px]' : 'h-44 md:h-56'}`}
             />
-            <div className="absolute inset-0 bg-[#392e23]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-              <span className="w-12 h-12 rounded-full bg-[#D6B168] text-[#392e23] flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500">
+            <div className="absolute inset-0 bg-[#1E293B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <span className="w-12 h-12 rounded-full bg-[#8FB0DD] text-[#1E293B] flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500">
                 <Icon name="zoom" size={18} strokeWidth={2.4} />
               </span>
             </div>

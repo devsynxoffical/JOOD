@@ -61,23 +61,23 @@ export default function FourPillarsSection() {
   const activePillar = pillars.find((p) => p.id === activeId) || pillars[0];
 
   return (
-    <section className="py-24 md:py-32 bg-[#E5DCC9] text-[#1C120E] relative overflow-hidden" id="pillars-section">
+    <section className="py-24 md:py-32 bg-[#E2E8F0] text-[#0B2D5B] relative overflow-hidden" id="pillars-section">
 
       {/* Subtle gold ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full bg-[#C9A15D]/15 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full bg-[#3E6FB5]/15 blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-8 h-px bg-[#C9A15D]/60" />
-            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#C9A15D] font-bold">The Foundation</span>
-            <span className="w-8 h-px bg-[#C9A15D]/60" />
+            <span className="w-8 h-px bg-[#3E6FB5]/60" />
+            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#3E6FB5] font-bold">The Foundation</span>
+            <span className="w-8 h-px bg-[#3E6FB5]/60" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1C120E] font-light leading-[1.08] tracking-tight">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#0B2D5B] font-light leading-[1.08] tracking-tight">
             Four Principles.{' '}
-            <em className="not-italic font-normal text-[#C9A15D]">One Exceptional Standard.</em>
+            <em className="not-italic font-normal text-[#3E6FB5]">One Exceptional Standard.</em>
           </h2>
         </div>
 
@@ -91,8 +91,8 @@ export default function FourPillarsSection() {
                 onClick={() => setActiveId(pillar.id)}
                 className={`px-7 py-3 text-[10px] font-semibold uppercase tracking-[0.25em] transition-all duration-300 rounded-full border ${
                   isActive
-                    ? 'border-[#C9A15D] bg-[#C9A15D] text-white shadow-sm'
-                    : 'border-[#1C120E]/20 bg-white/50 text-[#1C120E]/70 hover:border-[#C9A15D] hover:bg-white hover:text-[#1C120E]'
+                    ? 'border-[#3E6FB5] bg-[#3E6FB5] text-white shadow-sm'
+                    : 'border-[#0B2D5B]/20 bg-white/50 text-[#0B2D5B]/70 hover:border-[#3E6FB5] hover:bg-white hover:text-[#0B2D5B]'
                 }`}
               >
                 {pillar.label}
@@ -112,20 +112,20 @@ export default function FourPillarsSection() {
             className="max-w-3xl mx-auto text-center"
           >
             {/* Title */}
-            <h3 className="font-serif text-2xl md:text-3xl text-[#1C120E] font-light mb-3 tracking-tight">
+            <h3 className="font-serif text-2xl md:text-3xl text-[#0B2D5B] font-light mb-3 tracking-tight">
               {activePillar.title}
             </h3>
 
             {/* Subtitle */}
-            <p className="text-[13px] text-[#C9A15D] font-semibold mb-6 tracking-wide italic">
+            <p className="text-[13px] text-[#3E6FB5] font-semibold mb-6 tracking-wide italic">
               {activePillar.subtitle}
             </p>
 
             {/* Divider */}
-            <div className="mx-auto w-12 h-px bg-[#C9A15D]/40 mb-8" />
+            <div className="mx-auto w-12 h-px bg-[#3E6FB5]/40 mb-8" />
 
             {/* Description */}
-            <p className="text-sm md:text-base text-[#5E524A] font-normal leading-[1.9] mb-10 tracking-wide">
+            <p className="text-sm md:text-base text-[#64748B] font-normal leading-[1.9] mb-10 tracking-wide">
               {activePillar.description}
             </p>
 
@@ -133,11 +133,11 @@ export default function FourPillarsSection() {
             <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 mt-8">
               {activePillar.features.map((feat, idx) => (
                 <div key={idx} className="flex items-center gap-x-4">
-                  <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold text-[#C9A15D]">
+                  <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold text-[#3E6FB5]">
                     {feat}
                   </span>
                   {idx < activePillar.features.length - 1 && (
-                    <span className="w-1.5 h-1.5 bg-[#C9A15D]/60 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-[#3E6FB5]/60 rounded-full" />
                   )}
                 </div>
               ))}

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const quoteInputClass =
-  'w-full px-4 py-3 rounded-xl bg-white border border-[#E8E2D8] focus:border-[#C9A15D] focus:ring-2 focus:ring-[#C9A15D]/20 transition-all duration-300 text-[#1C120E] placeholder-[#1C120E]/40 shadow-sm';
+  'w-full px-4 py-3 rounded-xl bg-white border border-[#E2E8F0] focus:border-[#3E6FB5] focus:ring-2 focus:ring-[#3E6FB5]/20 transition-all duration-300 text-[#0B2D5B] placeholder-[#0B2D5B]/40 shadow-sm';
 
 /**
  * Quote request form shared between the ContactModal and the Contact page.
@@ -34,29 +34,29 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
       {isWpc ? (
         <>
           <div>
-            <label className="block text-sm font-semibold text-[#1C120E] mb-2">Name *</label>
+            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Name *</label>
             <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Enter your name" className={quoteInputClass} />
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">E-Mail *</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">E-Mail *</label>
               <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Enter your email" className={quoteInputClass} />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Contact Number *</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Contact Number *</label>
               <input type="tel" name="contactNumber" value={form.contactNumber} onChange={handleChange} required placeholder="+971..." className={quoteInputClass} />
             </div>
           </div>
           <div>
-            <label className="block text-sm font-semibold text-[#1C120E] mb-2">Location *</label>
+            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Location *</label>
             <input type="text" name="location" value={form.location} onChange={handleChange} required placeholder="Enter your location" className={quoteInputClass} />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-[#1C120E] mb-2">Tell Us Your Requirements *</label>
+            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Tell Us Your Requirements *</label>
             <textarea name="requirements" value={form.requirements} onChange={handleChange} rows="4" required placeholder="Tell us about your decking requirements..." className={quoteInputClass} />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-[#1C120E] mb-3">How To Contact You?</label>
+            <label className="block text-sm font-semibold text-[#0B2D5B] mb-3">How To Contact You?</label>
             <div className="flex gap-4">
               {['Email', 'WhatsApp', 'Call'].map((method) => (
                 <label key={method} className="flex items-center gap-2 cursor-pointer group">
@@ -66,9 +66,9 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
                     value={method}
                     checked={form.contactMethod === method}
                     onChange={handleChange}
-                    className="w-4 h-4 accent-[#C9A15D]"
+                    className="w-4 h-4 accent-[#3E6FB5]"
                   />
-                  <span className="text-sm text-[#1C120E]/80 group-hover:text-[#1C120E] transition-colors font-medium">{method}</span>
+                  <span className="text-sm text-[#0B2D5B]/80 group-hover:text-[#0B2D5B] transition-colors font-medium">{method}</span>
                 </label>
               ))}
             </div>
@@ -78,27 +78,27 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
         <>
           <div className="grid md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">First Name *</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">First Name *</label>
               <input type="text" name="firstName" value={form.firstName} onChange={handleChange} required placeholder="Enter your first name" className={quoteInputClass} />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Last Name</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Last Name</label>
               <input type="text" name="lastName" value={form.lastName} onChange={handleChange} placeholder="Enter your last name" className={quoteInputClass} />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Email *</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Email *</label>
               <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Enter your email" className={quoteInputClass} />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Phone Number *</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Phone Number *</label>
               <input type="tel" name="phone" value={form.phone} onChange={handleChange} required placeholder="+971..." className={quoteInputClass} />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Service Required</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Service Required</label>
               <select name="service" value={form.service} onChange={handleChange} className={quoteInputClass}>
                 <option value="">Select a service</option>
                 <option>Interior Design & Renovation</option>
@@ -110,7 +110,7 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-semibold text-[#1C120E] mb-2">Package (Optional)</label>
+              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Package (Optional)</label>
               <select name="package" value={form.package} onChange={handleChange} className={quoteInputClass}>
                 <option value="">Select a package</option>
                 <option>Minimal Package</option>
@@ -121,7 +121,7 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-semibold text-[#1C120E] mb-2">Message</label>
+            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Message</label>
             <textarea name="message" value={form.message} onChange={handleChange} rows="4" placeholder="Tell us about your project requirements..." className={quoteInputClass} />
           </div>
         </>

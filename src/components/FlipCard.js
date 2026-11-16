@@ -26,9 +26,9 @@ export default function FlipCard({
         transition={{ duration: 0.7, ease: [0.34, 1.56, 0.64, 1] }}
       >
         {/* Front Face */}
-        <div className="absolute inset-0 w-full h-full backface-hidden rounded-3xl overflow-hidden glass border border-[#C9A15D]/30 shadow-2xl p-6 flex flex-col justify-between">
+        <div className="absolute inset-0 w-full h-full backface-hidden rounded-3xl overflow-hidden glass border border-[#3E6FB5]/30 shadow-2xl p-6 flex flex-col justify-between">
           {front}
-          <div className="mt-4 flex items-center justify-between text-xs text-[#C9A15D] font-semibold uppercase tracking-widest pt-3 border-t border-[#C9A15D]/20">
+          <div className="mt-4 flex items-center justify-between text-xs text-[#3E6FB5] font-semibold uppercase tracking-widest pt-3 border-t border-[#3E6FB5]/20">
             <span>Hover or Tap to flip</span>
             <span>↺ 3D Flip</span>
           </div>
@@ -36,7 +36,7 @@ export default function FlipCard({
 
         {/* Back Face */}
         <div
-          className="absolute inset-0 w-full h-full backface-hidden rounded-3xl overflow-hidden glass-dark border border-[#C9A15D]/60 shadow-2xl p-6 flex flex-col justify-between rotate-y-180"
+          className="absolute inset-0 w-full h-full backface-hidden rounded-3xl overflow-hidden glass-dark border border-[#3E6FB5]/60 shadow-2xl p-6 flex flex-col justify-between rotate-y-180"
           style={{ transform: 'rotateY(180deg)' }}
         >
           {back}

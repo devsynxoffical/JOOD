@@ -61,9 +61,9 @@ export const servicePackages = [
 ];
 
 export const testimonials = [
-  { name: "Elena Rodriguez", role: "Property Investor", text: "BKD Contracting delivered our luxury renovation on time and within budget. The craftsmanship is exceptional.", initials: "ER" },
-  { name: "Sarah Ahmed", role: "Dubai Marina Resident", text: "BKD Contracting transformed our apartment beyond expectations. The attention to detail and quality of work is outstanding.", initials: "SA" },
-  { name: "Mohammed Al Rashid", role: "Business Owner", text: "Professional team, timely execution, and beautiful results. Highly recommend BKD Contracting for any renovation project.", initials: "MR" },
+  { name: "Elena Rodriguez", role: "Property Investor", text: "Jood Building Contracting delivered our luxury renovation on time and within budget. The craftsmanship is exceptional.", initials: "ER" },
+  { name: "Sarah Ahmed", role: "Dubai Marina Resident", text: "Jood Building Contracting transformed our apartment beyond expectations. The attention to detail and quality of work is outstanding.", initials: "SA" },
+  { name: "Mohammed Al Rashid", role: "Business Owner", text: "Professional team, timely execution, and beautiful results. Highly recommend Jood Building Contracting for any renovation project.", initials: "MR" },
 ];
 
 export const portfolioProjects = [
@@ -138,9 +138,9 @@ export const stats = [
 
 export const navLinks = [
   { label: "Home", to: "/" },
-  { label: "Services", to: "/services" },
-  { label: "Portfolio", to: "/portfolio" },
   { label: "About", to: "/about" },
+  { label: "Design and Build", to: "/services" },
+  { label: "Projects", to: "/portfolio" },
 ];
 
 export const contactInfo = {

@@ -14,5 +14,5 @@ export default function ScrollProgress() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return <div className="scroll-progress" style={{ width: `${width}%`, background: 'linear-gradient(90deg, #C5A059, #E2C47C)', boxShadow: '0 0 10px rgba(197, 160, 89, 0.5)' }} />;
+  return <div className="scroll-progress" style={{ width: `${width}%`, background: 'linear-gradient(90deg, #3E6FB5, #A9C1E3)', boxShadow: '0 0 10px rgba(62, 111, 181, 0.5)' }} />;
 }
