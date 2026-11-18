@@ -43,10 +43,11 @@ export default function PortfolioPage() {
       <section className="min-h-[75vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/images/jood/projects-hero.webp"
+          src="/images/jood/projects-hero-blue.webp"
           alt="Jood Building Contracting Portfolio Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/45" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           
@@ -54,29 +55,28 @@ export default function PortfolioPage() {
           <div
             className="w-full max-w-4xl flex flex-col items-center"
             style={{
-              background: 'radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
               padding: '3.5rem 2rem',
               borderRadius: '100px',
             }}
           >
             <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span className="w-8 h-px bg-[#CBD5E1]" />
               <span
-                className="text-[11px] md:text-xs tracking-[0.45em] uppercase text-[#3E6FB5] font-bold"
+                className="text-[11px] md:text-xs tracking-[0.45em] uppercase text-[#CBD5E1] font-bold"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
               >
                 JOOD BUILDING CONTRACTING • PROJECTS
               </span>
-              <span className="w-8 h-px bg-[#3E6FB5]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span className="w-8 h-px bg-[#CBD5E1]" />
             </div>
 
             <h1
-              className="section-heading text-4xl md:text-6xl lg:text-[76px] text-white leading-[1.08] mb-6 font-serif font-light tracking-tight text-center"
+              className="section-heading text-3xl md:text-4xl lg:text-[40px] xl:text-[46px] lg:whitespace-nowrap text-white leading-[1.15] mb-6 font-serif font-light tracking-tight text-center"
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
-              BUILT TO LAST<br/>
+              BUILT TO LAST{' '}
               <span
-                className="block text-[#3E6FB5] italic font-medium mt-2"
+                className="text-[#A9C1E3] italic font-medium"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
                 RENOVATED TO IMPRESS
@@ -95,9 +95,9 @@ export default function PortfolioPage() {
               {portfolioCategories.map((cat, i) => (
                 <div
                   key={cat.title}
-                  className="p-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 hover:border-[#3E6FB5]/60 transition-all duration-300 shadow-lg"
+                  className="p-5 rounded-2xl bg-[#071F40]/55 backdrop-blur-md border border-white/20 hover:border-white/50 transition-all duration-300 shadow-lg"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#3E6FB5]/20 border border-[#3E6FB5]/40 flex items-center justify-center text-[#3E6FB5] mb-3">
+                  <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/30 flex items-center justify-center text-[#CBD5E1] mb-3">
                     <Icon name={cat.icon} size={18} strokeWidth={2} />
                   </div>
                   <h3 className="font-serif text-lg font-normal text-white mb-2">{cat.title}</h3>
