@@ -110,15 +110,15 @@ export default function MasterySection({ onContactClick }) {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
             <span className="w-8 h-px bg-[#3E6FB5]/50" />
-            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#3E6FB5] font-bold">Portfolio Showcase</span>
+            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#3E6FB5] font-bold">Our Projects</span>
             <span className="w-8 h-px bg-[#3E6FB5]/50" />
           </div>
           <h2 className="font-serif text-4xl md:text-6xl text-[#0B2D5B] leading-[1.08] font-light tracking-tight mb-4">
-            The Mediums <br />
-            <span className="font-light italic text-[#3E6FB5]">Our Mastery</span>
+            What We Build <br />
+            <span className="font-light italic text-[#3E6FB5]">and Renovate</span>
           </h2>
           <p className="text-sm md:text-base text-[#64748B] font-normal max-w-xl mx-auto tracking-wide leading-relaxed">
-            Explore our curated portfolio of bespoke interior transformations, structural fit-outs, and architectural outdoor spaces across Dubai.
+            A selection of new construction and renovation projects — villas, buildings, warehouses and outdoor spaces across the UAE.
           </p>
         </div>
 

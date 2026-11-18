@@ -16,7 +16,7 @@ import { navLinks, heroImages, contactInfo } from '../data/content';
 
 const contactChannels = [
   { icon: 'phone', title: 'Call Us', desc: contactInfo.phone, href: `tel:${contactInfo.phoneRaw}` },
-  { icon: 'whatsapp', title: 'WhatsApp', desc: contactInfo.phone, href: `https://wa.me/${contactInfo.phoneRaw}` },
+  { icon: 'whatsapp', title: 'WhatsApp', desc: contactInfo.phone, href: `https://wa.me/${contactInfo.whatsappRaw}` },
   { icon: 'mail', title: 'Email Us', desc: contactInfo.email, href: `mailto:${contactInfo.email}` },
   { icon: 'globe', title: 'Website', desc: contactInfo.website, href: null },
 ];
@@ -64,7 +64,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="entrance-fade-up d-4 text-sm md:text-lg text-[#64748B] font-normal leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
-              Whether it's a renovation, a fit-out, or a maintenance request — we reply within 24 hours to get you started.
+              Whether it's a new villa, building or warehouse, or the renovation of an existing property — we reply within 24 hours to get you started.
             </p>
 
             <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -134,8 +134,8 @@ export default function ContactPage() {
         items={[
           { text: "We Reply Within 24 Hours" },
           { text: "Free Consultation" },
-          { text: "Call +971 55 834 4467" },
-          { text: "info@bkdcontracting.com" },
+          { text: "Call +971 58 929 9581" },
+          { text: "info@joodbuildingcontracting.ae" },
         ]}
       />
 
@@ -247,7 +247,7 @@ export default function ContactPage() {
           kicker="Prefer to Talk?"
           title="We're One Call Away"
           subtitle="Speak directly with a specialist for a free, no-obligation consultation."
-          primaryLabel="Call +971 55 834 4467"
+          primaryLabel="Call +971 58 929 9581"
           onPrimary={() => {
             window.location.href = `tel:${contactInfo.phoneRaw}`;
           }}

@@ -61,9 +61,10 @@ export const servicePackages = [
 ];
 
 export const testimonials = [
-  { name: "Elena Rodriguez", role: "Property Investor", text: "Jood Building Contracting delivered our luxury renovation on time and within budget. The craftsmanship is exceptional.", initials: "ER" },
-  { name: "Sarah Ahmed", role: "Dubai Marina Resident", text: "Jood Building Contracting transformed our apartment beyond expectations. The attention to detail and quality of work is outstanding.", initials: "SA" },
-  { name: "Mohammed Al Rashid", role: "Business Owner", text: "Professional team, timely execution, and beautiful results. Highly recommend Jood Building Contracting for any renovation project.", initials: "MR" },
+  { name: "Khalid Al Mansoori", role: "Villa Owner, Dubai", text: "Jood built our family villa from the ground up and later renovated our older property. Both jobs were handled with the same care, clear communication and honest pricing.", initials: "KM" },
+  { name: "Sarah Ahmed", role: "Property Investor", text: "We have used Jood for a new residential building and for renovating two existing units. Whether it is new construction or renovation, the team is organised, on schedule and easy to work with.", initials: "SA" },
+  { name: "Mohammed Al Rashid", role: "Business Owner", text: "Our warehouse was built on time and exactly to the approved drawings. The structure, finishing and site safety were all handled professionally from start to handover.", initials: "MR" },
+  { name: "Elena Rodriguez", role: "Homeowner, Abu Dhabi", text: "Jood renovated our villa completely, including a new kitchen, bathrooms, flooring and an extension. The result looks like a new home, and the work was finished when they said it would be.", initials: "ER" },
 ];
 
 export const portfolioProjects = [
@@ -116,7 +117,7 @@ export const aboutHighlights = [
   { icon: "hammer", title: "Villas", desc: "Private and luxury villas, built to last" },
   { icon: "award", title: "Buildings", desc: "Residential & commercial buildings" },
   { icon: "wrench", title: "Warehouses", desc: "Industrial & storage facilities" },
-  { icon: "globe", title: "UAE-Wide", desc: "Projects across the Emirates" },
+  { icon: "paintbrush", title: "Renovation", desc: "Upgrades, extensions & refurbishment" },
 ];
 
 export const stats = [
@@ -134,9 +135,10 @@ export const navLinks = [
 ];
 
 export const contactInfo = {
-  phone: "+971 55 834 4467",
-  phoneRaw: "971558344467",
-  email: "info@bkdcontracting.com",
-  website: "www.bkdcontracting.com",
+  phone: "+971 58 929 9581",
+  phoneRaw: "971589299581",
+  whatsappRaw: "971564455996",
+  email: "info@joodbuildingcontracting.ae",
+  website: "www.joodbuildingcontracting.ae",
   hours: "Mon – Sat · 9am – 5pm",
 };

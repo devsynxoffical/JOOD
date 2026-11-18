@@ -83,26 +83,17 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
   let hamburgerLineClass = '';
 
   if (solid) {
-    // Scrolled or mobile menu open: light background, dark text
-    headerBgClass = 'bg-white/95 backdrop-blur-xl border-b border-[#3E6FB5]/30 shadow-[0_10px_30px_rgba(0,0,0,0.05)] py-3.5';
+    // Scrolled or mobile menu open: navy bar, white logo and text
+    headerBgClass = 'bg-[#0B2D5B]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(7,31,64,0.25)] py-3.5';
+    navLinkClass = 'text-white/85 hover:text-white';
+    whatsappBtnClass = 'border border-white text-white hover:bg-white hover:text-[#0B2D5B]';
+    hamburgerLineClass = 'bg-white';
+  } else {
+    // Top of page: light bar, blue logo and text
+    headerBgClass = 'bg-white/90 backdrop-blur-md py-5';
     navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
     whatsappBtnClass = 'border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white';
     hamburgerLineClass = 'bg-[#0B2D5B]';
-  } else {
-    // Top of page (not scrolled)
-    if (isDarkHero) {
-      // Over a dark hero background: transparent background, white/gold text
-      headerBgClass = 'bg-gradient-to-b from-black/60 to-transparent py-5';
-      navLinkClass = 'text-white/90 hover:text-[#A9C1E3]';
-      whatsappBtnClass = 'border border-white text-white hover:bg-white hover:text-[#0B2D5B]';
-      hamburgerLineClass = 'bg-white';
-    } else {
-      // Over a light hero background: translucent white background, dark text
-      headerBgClass = 'bg-gradient-to-b from-white/90 via-white/40 to-transparent py-5';
-      navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
-      whatsappBtnClass = 'border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white';
-      hamburgerLineClass = 'bg-[#0B2D5B]';
-    }
   }
 
   return (
@@ -113,7 +104,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
           <div className="flex-1">
             <Link to="/" className="group inline-flex items-center" aria-label="Jood Building Contracting — Home">
               <Logo
-                className={`h-10 md:h-12 w-auto transition-colors duration-500 ${!solid && isDarkHero ? 'text-white' : 'text-[#0B2D5B]'}`}
+                className={`h-10 md:h-12 w-auto transition-colors duration-500 ${solid ? 'text-white' : 'text-[#0B2D5B]'}`}
               />
             </Link>
           </div>
@@ -125,7 +116,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                 key={link.label}
                 to={link.to}
                 className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${isActive(link.to)
-                  ? `${!solid && isDarkHero ? 'text-white border-b border-white' : 'text-[#0B2D5B] border-b border-[#0B2D5B]'} pb-1 font-semibold`
+                  ? `${solid ? 'text-white border-b border-white' : 'text-[#0B2D5B] border-b border-[#0B2D5B]'} pb-1 font-semibold`
                   : navLinkClass
                   }`}
               >
@@ -138,7 +129,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
           <div className="flex-1 flex items-center justify-end gap-4 lg:gap-6">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/971558344467"
+              href="https://wa.me/971564455996"
               target="_blank"
               rel="noreferrer"
               className={`hidden sm:inline-flex items-center gap-2 font-sans text-[11px] font-semibold tracking-[0.2em] uppercase px-6 py-3 transition-all ${whatsappBtnClass}`}
@@ -153,11 +144,11 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-full border border-[#3E6FB5]/40 shadow-sm transition-all ${solid ? 'bg-white/90' : 'bg-black/20 backdrop-blur-sm'}`}
+              className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-full border border-[#3E6FB5]/40 shadow-sm transition-all ${solid ? 'bg-white/10' : 'bg-white'}`}
               aria-label="Toggle menu"
             >
               <span className={`block w-5 h-[1.5px] transition-all duration-300 ${hamburgerLineClass} ${mobileMenuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
-              <span className={`block w-5 h-[1.5px] bg-[#3E6FB5] transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-[1.5px] transition-all duration-300 ${hamburgerLineClass} ${mobileMenuOpen ? 'opacity-0' : ''}`} />
               <span className={`block w-5 h-[1.5px] transition-all duration-300 ${hamburgerLineClass} ${mobileMenuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
             </button>
           </div>

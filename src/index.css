@@ -515,3 +515,11 @@ body {
 .duration-900 {
   transition-duration: 900ms;
 }
+
+/* Homepage hero: diagonal blue triangle + image */
+.hero-clip-outer { clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%); }
+.hero-clip-inner { clip-path: polygon(0 20%, 100% 5%, 100% 100%, 0 100%); }
+@media (min-width: 1024px) {
+  .hero-clip-outer { clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%); }
+  .hero-clip-inner { clip-path: polygon(40% 0, 100% 0, 100% 100%, 6% 100%); }
+}

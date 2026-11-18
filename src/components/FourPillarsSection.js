@@ -8,7 +8,7 @@ const pillars = [
     title: 'End-to-End Project Management',
     subtitle: 'Every stage handled with precision, from concept to completion.',
     description:
-      'We manage every stage with care — from design coordination and procurement to installation and final handover — ensuring your project is delivered seamlessly and to an uncompromising standard.',
+      'One team manages your new build or renovation from start to finish — drawings, approvals, procurement, site works and handover — so you always know what is happening and when.',
     features: [
       'End-to-End Project Management',
       'Design Coordination & Procurement',
@@ -19,12 +19,12 @@ const pillars = [
     id: 'quality',
     label: 'Quality Control',
     title: 'Quality Control at Every Stage',
-    subtitle: 'German & Italian engineering standards applied across UAE projects.',
+    subtitle: 'Checked at every stage, on new builds and renovations alike.',
     description:
-      'Our dedicated in-house master carpenters, MEP engineers, and fit-out specialists execute every detail with zero compromises on structural durability and immaculate finishing.',
+      'Our engineers and supervisors inspect the work at each stage — foundations, structure, MEP and finishes — so that new construction and renovation works meet the approved drawings and UAE standards.',
     features: [
       'Quality Control at Every Stage',
-      'In-House Joinery & CNC Precision',
+      'Approved Materials & Suppliers',
       'Rigorous Inspection Protocols',
     ],
   },
@@ -32,9 +32,9 @@ const pillars = [
     id: 'handover',
     label: 'Final Handover',
     title: 'Seamless Final Handover',
-    subtitle: 'Your space, delivered exactly as envisioned — no surprises.',
+    subtitle: 'Your property, delivered as agreed — no surprises.',
     description:
-      'We believe delivery is not just a date — it is a standard. Every handover is conducted with a full walk-through, snag resolution, and comprehensive warranty documentation ensuring peace of mind long after completion.',
+      'Before we hand over a new building or a renovated property, we walk through it with you, resolve every snag and provide the warranty documents, so you have peace of mind long after completion.',
     features: [
       'Seamless Final Handover',
       'Full Walk-Through & Snag Resolution',
@@ -43,15 +43,15 @@ const pillars = [
   },
   {
     id: 'bespoke',
-    label: 'Bespoke Design',
-    title: 'Curated Elegance & Refined Taste',
-    subtitle: 'Where timeless aesthetics meet contemporary Dubai grandeur.',
+    label: 'Design & Build',
+    title: 'Design That Fits How You Live and Work',
+    subtitle: 'Practical, well-planned designs for new and existing properties.',
     description:
-      'We curate sophisticated color harmonies, bespoke textures, and architectural lighting layouts that elevate living environments into works of art — tailored to echo your personal narrative.',
+      'Our designers and engineers plan layouts, structure and finishes around your needs and budget, whether you are starting on an empty plot or reworking an existing villa, building or warehouse.',
     features: [
-      'Tailored Material Palettes & Luxury Stone',
-      'Architectural Lighting & Acoustic Panels',
-      'Bespoke Italian-Inspired Custom Joinery',
+      'Architectural & Structural Design',
+      'Extensions & Layout Changes',
+      'Finishes Selected for UAE Conditions',
     ],
   },
 ];

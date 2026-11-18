@@ -14,13 +14,17 @@ const serviceLinks = [
   { label: 'Villa Construction', to: '/services' },
   { label: 'Building Construction', to: '/services' },
   { label: 'Warehouse Construction', to: '/services' },
+  { label: 'Renovation', to: '/services' },
   { label: 'Design & Build', to: '/services' },
 ];
 
 const socials = [
-  { label: 'WhatsApp', href: 'https://wa.me/971558344467', icon: 'whatsapp' },
-  { label: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
-];
+  { label: 'WhatsApp', href: 'https://wa.me/971564455996', icon: 'whatsapp' },
+  { label: 'Instagram', href: 'https://www.instagram.com/joodcontractinguae', icon: 'instagram' },
+  // Add the profile URLs to show these icons
+  { label: 'TikTok', href: '', icon: 'tiktok' },
+  { label: 'LinkedIn', href: '', icon: 'linkedin' },
+].filter((s) => s.href);
 
 export default function Footer({ onContactClick }) {
   const contactBtnClass =
@@ -35,14 +39,14 @@ export default function Footer({ onContactClick }) {
             <Logo className="h-12 w-auto text-white mb-10" />
             <p className="text-white/60 text-sm mb-2">For project inquiries, please contact us at</p>
             <a
-              href="mailto:info@bkdcontracting.com"
-              className="font-serif text-2xl md:text-4xl font-light text-white hover:text-[#A9C1E3] transition-colors break-all"
+              href="mailto:info@joodbuildingcontracting.ae"
+              className="font-serif text-lg sm:text-2xl md:text-3xl font-light text-white hover:text-[#A9C1E3] transition-colors break-words"
             >
-              info@bkdcontracting.com
+              info@joodbuildingcontracting.ae
             </a>
             <div className="mt-3">
-              <a href="tel:+971558344467" className="text-white/80 hover:text-white text-base tracking-wide">
-                +971 55 834 4467
+              <a href="tel:+971589299581" className="text-white/80 hover:text-white text-base tracking-wide">
+                +971 58 929 9581
               </a>
             </div>
           </div>
@@ -77,8 +81,8 @@ export default function Footer({ onContactClick }) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
           <div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Jood Building Contracting delivers high-quality villas, buildings, and warehouses across the UAE,
-              built on trust, expertise, and attention to detail.
+              New construction and renovation across the UAE — villas, buildings and warehouses,
+              delivered by one accountable team.
             </p>
           </div>
 

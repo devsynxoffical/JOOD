@@ -46,9 +46,9 @@ export default function ContactModal({ open, onClose, variant = 'home' }) {
 
         <div className="mt-8 pt-6 border-t border-[#8FB0DD]/20">
           <div className="grid grid-cols-2 gap-4 text-sm text-[#1E293B]/70">
-            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Phone</span>+971 55 834 4467</p>
-            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Email</span>info@bkdcontracting.com</p>
-            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Website</span>www.bkdcontracting.com</p>
+            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Phone</span>+971 58 929 9581</p>
+            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Email</span>info@joodbuildingcontracting.ae</p>
+            <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Website</span>www.joodbuildingcontracting.ae</p>
             <p><span className="block text-[10px] uppercase tracking-widest text-[#2F5E9E] font-semibold mb-1">Response</span>Within 24 hours</p>
           </div>
         </div>

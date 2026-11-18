@@ -61,12 +61,12 @@ export default function AboutPage() {
             </div>
 
             <h1
-              className="section-heading text-4xl md:text-6xl lg:text-[72px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
+              className="section-heading text-4xl md:text-6xl lg:text-[64px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
               Building Trust,<br/>
               <span
-                className="block text-[#A9C1E3] italic font-medium mt-2"
+                className="block md:whitespace-nowrap text-[#A9C1E3] italic font-medium mt-2"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
                 Delivering Excellence.
@@ -74,14 +74,15 @@ export default function AboutPage() {
             </h1>
 
             <p
-              className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-8 max-w-xl text-center"
+              className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-6 max-w-xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              Jood Building Contracting delivers high-quality villas, buildings, and warehouses across the UAE, built on trust, expertise, and attention to detail.
+              A UAE contractor for new construction and renovation — villas, buildings and warehouses, handled by one accountable team from first drawing to final handover.
             </p>
+            <span className="block w-24 h-[3px] bg-[#3E6FB5] rounded-full mb-10" aria-hidden="true" />
 
             <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-              {["Villas", "Buildings", "Warehouses", "UAE-Wide"].map((f) => (
+              {["Construction", "Renovation", "Design & Build", "UAE-Wide"].map((f) => (
                 <span
                   key={f}
                   className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/50 bg-black/40 backdrop-blur-md shadow-md"
@@ -153,15 +154,15 @@ export default function AboutPage() {
                   Our Story
                 </span>
                 <h2 className="font-serif text-3xl md:text-5xl text-[#0B2D5B] leading-tight mb-6 font-light">
-                  Trusted Builders of<br />Villas, Buildings &amp; Warehouses
+                  Trusted for Construction<br />and Renovation
                 </h2>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-6">
-                  Jood Building Contracting delivers high-quality villas, buildings, and warehouses across
-                  the UAE, built on trust, expertise, and attention to detail. From the first drawing to
-                  the final handover, our engineers and site teams manage every stage of construction.
+                  We are a UAE building contractor working on both sides of the trade: constructing new
+                  villas, buildings and warehouses, and renovating the ones that already exist. From the
+                  first drawing to the final handover, our engineers and site teams manage every stage.
                 </p>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-8">
-                  Our mission is simple: build strong, lasting structures — on time, on budget, and to a
+                  Our mission is simple: build and renovate properties that last — on time, on budget, and to a
                   standard our clients can trust. Quality you trust. Results you see.
                 </p>
 
@@ -207,7 +208,7 @@ export default function AboutPage() {
             <SectionHeading
               kicker="Why Choose Us"
               title="Building Trust. Delivering Excellence"
-              subtitle="At Jood Building Contracting, our engineers and site teams deliver well-built villas, buildings and warehouses with quality materials and careful attention to detail."
+              subtitle="Whether it is a new build or a renovation, our engineers and site teams work with quality materials, clear schedules and careful attention to detail."
             />
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">

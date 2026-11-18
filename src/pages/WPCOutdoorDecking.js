@@ -86,7 +86,7 @@ export default function WPCOutdoorDecking() {
   }, []);
 
   const handleWhatsAppClick = (productName = '') => {
-    const phoneNumber = '971558344467';
+    const phoneNumber = '971564455996';
     const message = productName
       ? `Hello! I'm interested in getting a quote for ${productName}. Could you please provide me with more information?`
       : `Hello! I'm interested in getting a quote for your WPC decking products. Could you please provide me with more information?`;
@@ -201,8 +201,8 @@ export default function WPCOutdoorDecking() {
               <div className="mt-10 flex flex-col items-center gap-4">
                 <div className="text-2xl md:text-3xl font-bold text-[#0B2D5B]">
                   Call Now:{" "}
-                  <a href="tel:+971558344467" className="text-[#3E6FB5] hover:opacity-80 transition-opacity">
-                    +971 55 834 4467
+                  <a href="tel:+971589299581" className="text-[#3E6FB5] hover:opacity-80 transition-opacity">
+                    +971 58 929 9581
                   </a>
                 </div>
                 <button onClick={() => setShowContact(true)} className="btn-gold px-8 py-3.5 text-xs uppercase tracking-widest rounded-full shadow-md">

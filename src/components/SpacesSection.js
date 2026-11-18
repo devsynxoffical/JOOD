@@ -88,15 +88,16 @@ export default function SpacesSection({ onContactClick }) {
 
             {/* Sub-heading */}
             <h3 className="text-lg md:text-xl text-[#3E6FB5] font-medium tracking-wide mb-6">
-              We Build Spaces Worth Living In
+              We Build New and Renew What Exists
             </h3>
 
             {/* Body */}
             <p className="text-sm md:text-[15px] text-[#64748B] font-normal leading-[1.8] mb-8 tracking-wide">
-              Jood Building Contracting designs and builds high-quality villas, buildings, and
-              warehouses across the UAE — built on trust, expertise, and attention to
-              detail. Every material is selected for longevity, every detail crafted
-              for impact.
+              Good building work starts with listening. Whether we are constructing a new
+              villa, building or warehouse, or renovating a property that needs a second
+              life, we plan carefully, use materials that last, and keep you informed at
+              every stage. Our aim is simple: sound structures, clean finishes and a
+              handover you are proud of.
             </p>
 
             {/* Stats row */}
@@ -106,7 +107,7 @@ export default function SpacesSection({ onContactClick }) {
                   100<span className="text-[#3E6FB5]">%</span>
                 </div>
                 <div className="text-[9px] text-[#0B2D5B]/70 uppercase tracking-[0.2em] font-bold">
-                  Turn-key Precision
+                  Client Commitment
                 </div>
               </div>
               <div>
@@ -121,7 +122,7 @@ export default function SpacesSection({ onContactClick }) {
 
             {/* CTA */}
             <a
-              href="https://wa.me/971558344467"
+              href="https://wa.me/971564455996"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-[#0B2D5B] text-white text-[10px] uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-colors duration-300 hover:bg-[#3E6FB5] hover:text-white"

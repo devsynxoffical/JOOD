@@ -14,18 +14,18 @@ import { navLinks, heroImages, portfolioImages, servicePackages } from '../data/
 
 const portfolioCategories = [
   {
-    title: 'Luxury Renovations',
-    desc: 'Complete transformations of spaces, blending contemporary design with timeless charm to create environments that exude sophistication and comfort.',
+    title: 'New Construction',
+    desc: 'Villas, residential and commercial buildings, and warehouses built from the ground up to approved drawings.',
     icon: 'sparkles',
   },
   {
-    title: 'Office Fit-Outs',
-    desc: 'Custom-designed office spaces tailored to enhance productivity and creativity, with ergonomic layouts and high-end finishes that make a lasting impression.',
+    title: 'Renovation',
+    desc: 'Full and partial renovations, extensions and upgrades that give existing properties a new life.',
     icon: 'users',
   },
   {
-    title: 'Commercial Design',
-    desc: 'High-quality interiors for commercial spaces, combining luxury, practicality, and functionality to meet the needs of modern businesses.',
+    title: 'Design & Build',
+    desc: 'One team for design, approvals and construction, so your project runs smoothly from start to handover.',
     icon: 'award',
   },
 ];
@@ -74,12 +74,12 @@ export default function PortfolioPage() {
               className="section-heading text-4xl md:text-6xl lg:text-[76px] text-white leading-[1.08] mb-6 font-serif font-light tracking-tight text-center"
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
-              WHERE ELEGANCE<br/>
+              BUILT TO LAST<br/>
               <span
                 className="block text-[#3E6FB5] italic font-medium mt-2"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
-                MEETS FUNCTIONALITY
+                RENOVATED TO IMPRESS
               </span>
             </h1>
 
@@ -87,7 +87,7 @@ export default function PortfolioPage() {
               className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-10 max-w-2xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              At Jood Building Contracting, we take pride in the work we do. Our portfolio showcases a diverse range of projects, from residential spaces to commercial properties — each reflecting our commitment to quality craftsmanship, innovative design, and functional solutions.
+              Our projects range from new villas, buildings and warehouses to complete renovations of existing properties — each one planned carefully, built properly and handed over on time.
             </p>
 
             {/* 3 Pillars Row */}
@@ -125,11 +125,11 @@ export default function PortfolioPage() {
       <Marquee
         dark={false}
         items={[
-          { text: "Luxury Renovations" },
-          { text: "Office Fit-Outs" },
-          { text: "Commercial Design" },
+          { text: "New Construction" },
+          { text: "Renovation" },
+          { text: "Design & Build" },
           { text: "Turnkey Execution" },
-          { text: "Bespoke Joinery" },
+          { text: "Villas • Buildings • Warehouses" },
         ]}
       />
 
@@ -219,8 +219,8 @@ export default function PortfolioPage() {
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               kicker="Showcase"
-              title="Jood Building Contracting Portfolio Gallery"
-              subtitle="Explore our completed luxury interior transformations across Dubai."
+              title="Project Gallery"
+              subtitle="New construction and renovation projects across the UAE."
             />
             <PortfolioGrid images={portfolioImages} onOpen={setLightbox} />
           </div>
@@ -231,9 +231,9 @@ export default function PortfolioPage() {
       <SectionFlip>
         <CTA
           image={heroImages[0]}
-          kicker="Transforming Spaces • Elevating Lifestyles"
-          title="Ready to Craft Your Signature Space?"
-          subtitle="Crafted for every corner of your home. Call +971 55 834 4467 or email info@bkdcontracting.com today."
+          kicker="Construction • Renovation"
+          title="Ready to Start Your Project?"
+          subtitle="For new builds and renovations, call +971 58 929 9581 or email info@joodbuildingcontracting.ae today."
           primaryLabel="Book a Free Consultation"
           onPrimary={() => setShowContact(true)}
         />

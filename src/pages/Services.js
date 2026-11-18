@@ -54,8 +54,8 @@ const pillars = [
   },
   {
     icon: <CraneIcon />,
-    title: 'Construction, Fit-Out & Turnkey Delivery',
-    desc: 'As a UAE building contractor, we turn approved drawings into finished villas, buildings and warehouses. From foundations and structure to finishing and handover, our site teams work to a clear programme, with quality materials and strict quality control.',
+    title: 'Construction, Renovation & Turnkey Delivery',
+    desc: 'We turn approved drawings into finished villas, buildings and warehouses, and we renovate and extend existing properties. From foundations and structure to finishing and handover, our site teams work to a clear programme with strict quality control.',
   },
 ];
 
@@ -153,46 +153,42 @@ export default function ServicesPage() {
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[92vh] min-h-[560px] overflow-hidden">
+      <section className="relative h-[92vh] min-h-[600px] overflow-hidden bg-[#06172F]">
         <img
-          src={`${J}villa-luxury.webp`}
+          src="/images/jood/design-build-villa-blue.webp"
           alt="Villa built by Jood Building Contracting"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/70 to-transparent" />
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071F40]/55 via-[#0B2D5B]/35 to-[#0B2D5B]/20" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
           <h1
-            className="font-serif text-white text-center font-light leading-[1.05] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-5xl"
-            style={{ textShadow: '0 2px 18px rgba(0,0,0,0.45)' }}
+            className="font-serif text-white font-bold leading-[1.08] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-5xl mb-6"
+            style={{ textShadow: '0 2px 18px rgba(7,31,64,0.55)' }}
           >
             Design &amp; Build Services in the UAE
           </h1>
+          <p
+            className="max-w-3xl text-base md:text-lg text-white/95 leading-relaxed"
+            style={{ textShadow: '0 1px 10px rgba(7,31,64,0.7)' }}
+          >
+            From the first drawing to the final handover, we take your project through one seamless
+            process — planning, engineering, construction and renovation — so every villa, building
+            and warehouse is delivered with care and attention to detail.
+          </p>
         </div>
       </section>
 
-      {/* ================= INTRO ================= */}
-      <section className="py-16 md:py-24 px-6">
-        <Reveal>
-          <p className="max-w-3xl mx-auto text-center text-lg md:text-xl text-[#64748B] font-light leading-relaxed">
-            From the first drawing to the final handover, Jood Building Contracting brings your
-            project to life through one seamless process — combining planning, engineering and
-            construction so that every villa, building and warehouse is built on trust,
-            expertise and attention to detail.
-          </p>
-        </Reveal>
-      </section>
-
       {/* ================= DESIGN & CONSTRUCTION ================= */}
-      <section className="pb-20 md:pb-28">
+      <section className="pt-10 md:pt-14 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] mb-14">Design &amp; Construction</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#0B2D5B] text-center mb-12">Design &amp; Construction</h2>
           <div className="grid md:grid-cols-3">
             {pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 120}>
                 <div className={`h-full px-0 md:px-8 py-8 md:py-0 ${i > 0 ? 'border-t md:border-t-0 md:border-l border-[#CBD5E1]' : ''} ${i === 0 ? 'md:pl-0' : ''}`}>
                   <div className="text-[#3E6FB5] mb-7">{p.icon}</div>
-                  <h3 className="font-serif text-xl md:text-2xl font-normal text-[#0B2D5B] leading-snug mb-5">{p.title}</h3>
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-[#0B2D5B] leading-snug mb-5">{p.title}</h3>
                   <p className="text-sm text-[#64748B] leading-relaxed">{p.desc}</p>
                 </div>
               </Reveal>
@@ -209,7 +205,7 @@ export default function ServicesPage() {
           </h2>
           <div>
             <div className="text-[#64748B] mb-2">Follow our work</div>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#0B2D5B] hover:text-[#3E6FB5] transition-colors">
+            <a href="https://www.instagram.com/joodcontractinguae" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#0B2D5B] hover:text-[#3E6FB5] transition-colors">
               <Icon name="instagram" size={18} /> Instagram
             </a>
           </div>

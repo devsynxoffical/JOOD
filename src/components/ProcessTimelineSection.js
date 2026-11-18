@@ -4,20 +4,20 @@ const steps = [
   {
     num: '1',
     phase: 'Phase I',
-    title: 'Vision & Concept Design',
-    desc: 'Translating your aspirations into bespoke 3D space layouts, luxury moodboards, and material specifications.',
+    title: 'Survey, Design & Approvals',
+    desc: 'We study your plot or existing property, prepare the drawings and costing, and secure the approvals needed for new construction or renovation.',
   },
   {
     num: '2',
     phase: 'Phase II',
-    title: 'Technical Fit-Out & Execution',
-    desc: 'Precision MEP engineering, custom joinery production in our UAE factory, and flawless structural execution.',
+    title: 'Construction & Renovation Works',
+    desc: 'Our site teams carry out the structure, MEP and finishing for new builds, and the demolition, repair and upgrade works for renovations, to a clear schedule.',
   },
   {
     num: '3',
     phase: 'Phase III',
-    title: 'Master Handover & Delivery',
-    desc: 'White-glove deep cleaning, detailed snagging inspection, key handover, and ongoing aftercare support.',
+    title: 'Inspection & Handover',
+    desc: 'Every project ends with a full inspection, snagging, final cleaning and handover, followed by after-care support.',
   },
 ];
 
@@ -29,14 +29,14 @@ export default function ProcessTimelineSection({ onContactClick }) {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#3E6FB5] font-bold mb-4 flex items-center justify-center gap-3">
             <span className="w-6 h-px bg-[#3E6FB5]/80" />
-            <span>Turn-Key Methodology</span>
+            <span>How We Work</span>
             <span className="w-6 h-px bg-[#3E6FB5]/80" />
           </div>
           <h2 className="font-serif text-4xl md:text-6xl text-[#0B2D5B] font-light leading-[1.08] tracking-tight">
             Spaces That Speak <span className="italic font-medium text-[#3E6FB5]">Volumes</span>
           </h2>
           <p className="text-sm md:text-base text-[#64748B] font-normal mt-3 tracking-wide">
-            Our structured 3-stage execution model ensures zero delays and flawless luxury standards.
+            One clear three-stage process for both new construction and renovation projects.
           </p>
         </div>
 
