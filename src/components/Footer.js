@@ -21,10 +21,10 @@ const serviceLinks = [
 const socials = [
   { label: 'WhatsApp', href: 'https://wa.me/971564455996', icon: 'whatsapp' },
   { label: 'Instagram', href: 'https://www.instagram.com/joodcontractinguae', icon: 'instagram' },
-  // Add the profile URLs to show these icons
-  { label: 'TikTok', href: '', icon: 'tiktok' },
-  { label: 'LinkedIn', href: '', icon: 'linkedin' },
-].filter((s) => s.href);
+  // TODO: replace these two with Jood's own profile URLs when provided
+  { label: 'TikTok', href: 'https://www.tiktok.com/', icon: 'tiktok' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
+];
 
 export default function Footer({ onContactClick }) {
   const contactBtnClass =
