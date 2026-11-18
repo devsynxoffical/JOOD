@@ -19,7 +19,7 @@ export default function PortfolioGrid({ images, onOpen }) {
           >
             <SmartImage
               src={image}
-              alt={`Interior Design ${index + 1}`}
+              alt={`Project ${index + 1}`}
               className={`w-full object-cover ${index % 5 === 0 ? 'h-72 md:h-[480px]' : 'h-44 md:h-56'}`}
             />
             <div className="absolute inset-0 bg-[#1E293B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">

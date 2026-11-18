@@ -20,7 +20,7 @@ import {
 
 export default function HomePage() {
   const [showContact, setShowContact] = useState(false);
-  const [activePackage, setActivePackage] = useState('Luxury');
+  const [activePackage, setActivePackage] = useState('Premium');
 
   return (
     <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">

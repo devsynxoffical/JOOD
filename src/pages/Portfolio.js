@@ -33,7 +33,7 @@ const portfolioCategories = [
 export default function PortfolioPage() {
   const [showContact, setShowContact] = useState(false);
   const [lightbox, setLightbox] = useState(null);
-  const [activePackage, setActivePackage] = useState('Luxury');
+  const [activePackage, setActivePackage] = useState('Premium');
 
   return (
     <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
@@ -138,9 +138,9 @@ export default function PortfolioPage() {
         <section className="py-20 md:py-28 bg-[#E2E8F0] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              kicker="Design Standards"
-              title="Renovation Styles & Packages"
-              subtitle="Crafted for Every Corner of Your Home — tailored for budget homes, Airbnb properties, and luxury penthouses."
+              kicker="Our Packages"
+              title="Construction & Renovation Packages"
+              subtitle="Four levels of specification for new builds and renovations, from practical to fully bespoke."
             />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -37,6 +37,21 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------- Arabic (RTL) ---------- */
+html[lang='ar'] body,
+html[lang='ar'] .font-sans,
+html[lang='ar'] .font-serif,
+html[lang='ar'] .font-display,
+html[lang='ar'] h1, html[lang='ar'] h2, html[lang='ar'] h3, html[lang='ar'] h4,
+html[lang='ar'] p, html[lang='ar'] a, html[lang='ar'] span, html[lang='ar'] div,
+html[lang='ar'] button, html[lang='ar'] input, html[lang='ar'] textarea, html[lang='ar'] select, html[lang='ar'] label, html[lang='ar'] li {
+  font-family: 'Cairo', 'Tajawal', system-ui, sans-serif !important;
+}
+/* letter-spacing breaks joined Arabic letters */
+html[lang='ar'] * { letter-spacing: 0 !important; font-style: normal !important; }
+html[lang='ar'] nav a > svg { transform: scaleX(-1); }
+html[lang='ar'] .font-mono { font-family: 'Cairo', sans-serif !important; }
+
 ::selection {
   background: var(--secondary);
   color: #FFFFFF;

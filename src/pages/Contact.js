@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <Icon name="phone" size={14} />
               </a>
               <a
-                href={`https://wa.me/${contactInfo.phoneRaw}?text=Hello!%20I%27m%20interested%20in%20your%20services.`}
+                href={`https://wa.me/${contactInfo.whatsappRaw}?text=Hello!%20I%27m%20interested%20in%20your%20services.`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-outline-gold px-8 py-4 text-xs uppercase tracking-[0.2em] bg-white rounded-full"
@@ -178,7 +178,7 @@ export default function ContactPage() {
                     <div className="relative">
                       <div className="text-[10px] uppercase tracking-[0.25em] text-[#3E6FB5] font-bold mb-2">Working Hours</div>
                       <div className="text-xl font-bold mb-1 text-[#0B2D5B]">{contactInfo.hours}</div>
-                      <div className="text-sm text-[#64748B] font-normal">Emergency maintenance available 24/7.</div>
+                      <div className="text-sm text-[#64748B] font-normal">We reply to every enquiry within 24 hours.</div>
                       <a href={`tel:${contactInfo.phoneRaw}`} className="mt-5 inline-flex items-center gap-2 text-[#3E6FB5] hover:text-[#0B2D5B] transition-colors text-sm font-bold">
                         <Icon name="phone" size={15} />
                         {contactInfo.phone}

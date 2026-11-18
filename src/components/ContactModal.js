@@ -7,7 +7,7 @@ export default function ContactModal({ open, onClose, variant = 'home' }) {
   const isWpc = variant === 'wpc';
 
   const handleSuccess = () => {
-    alert('Thank you for your inquiry! Our team will contact you within 24 hours.');
+    alert(document.documentElement.lang === 'ar' ? 'شكراً لتواصلكم معنا! سيتصل بكم فريقنا خلال 24 ساعة.' : 'Thank you for your inquiry! Our team will contact you within 24 hours.');
     onClose();
   };
 
@@ -38,7 +38,7 @@ export default function ContactModal({ open, onClose, variant = 'home' }) {
           <p className="text-[#1E293B]/60 mt-3 font-light text-sm">
             {isWpc
               ? 'Share your decking requirements and we’ll get back to you shortly.'
-              : 'Tell us what you need — design, renovation, or maintenance. We reply within 24 hours.'}
+              : 'Tell us what you need — new construction, renovation, or design and build. We reply within 24 hours.'}
           </p>
         </div>
 

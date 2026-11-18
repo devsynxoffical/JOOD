@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
+import { getLanguage, setLanguage } from '../i18n';
 
 const LANGUAGES = [
   { code: 'en', label: 'English' },
-  { code: 'ar', label: 'العربية', soon: true },
+  { code: 'ar', label: 'العربية' },
 ];
 
 function LanguageMenu({ className = '', mobile = false, onSelect }) {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(getLanguage);
 
   return (
     <div className={`relative ${mobile ? 'w-full' : ''}`} onMouseLeave={() => !mobile && setOpen(false)}>
@@ -34,7 +35,7 @@ function LanguageMenu({ className = '', mobile = false, onSelect }) {
                 <button
                   type="button"
                   disabled={l.soon}
-                  onClick={() => { setLang(l.code); setOpen(false); onSelect && onSelect(l.code); }}
+                  onClick={() => { setLang(l.code); setOpen(false); setLanguage(l.code); onSelect && onSelect(l.code); }}
                   className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-xs tracking-wider normal-case text-left transition-colors ${lang === l.code ? 'text-[#0B2D5B] font-semibold bg-[#F1F5F9]' : 'text-[#0B2D5B]/80 hover:bg-[#F1F5F9]'} ${l.soon ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <span>{l.label}</span>
@@ -110,7 +111,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center justify-center space-x-7 font-medium flex-[2]">
+          <nav className="hidden lg:flex items-center justify-center gap-7 font-medium flex-[2]">
             {links.map((link) => (
               <Link
                 key={link.label}

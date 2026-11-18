@@ -8,6 +8,8 @@ export default function Logo({ className = '', showTagline = true, title = 'Jood
       viewBox="0 0 218 64"
       className={className}
       fill="currentColor"
+      direction="ltr"
+      style={{ direction: 'ltr', unicodeBidi: 'isolate' }}
       role="img"
       aria-label={title}
     >

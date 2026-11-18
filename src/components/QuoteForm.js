@@ -101,22 +101,22 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
               <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Service Required</label>
               <select name="service" value={form.service} onChange={handleChange} className={quoteInputClass}>
                 <option value="">Select a service</option>
-                <option>Interior Design & Renovation</option>
-                <option>Fit-Outs & Carpentry</option>
-                <option>Air Conditioning & Electrical</option>
-                <option>Landscaping & Outdoor</option>
-                <option>Painting & Flooring</option>
-                <option>Maintenance Services</option>
+                <option>Villa Construction</option>
+                <option>Building Construction</option>
+                <option>Warehouse Construction</option>
+                <option>Renovation</option>
+                <option>Design & Build</option>
+                <option>WPC Outdoor Decking</option>
               </select>
             </div>
             <div>
               <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Package (Optional)</label>
               <select name="package" value={form.package} onChange={handleChange} className={quoteInputClass}>
                 <option value="">Select a package</option>
-                <option>Minimal Package</option>
-                <option>Modern Package</option>
-                <option>Luxury Package</option>
-                <option>Signature Bespoke Package</option>
+                <option>Essential Package</option>
+                <option>Standard Package</option>
+                <option>Premium Package</option>
+                <option>Signature Package</option>
               </select>
             </div>
           </div>
