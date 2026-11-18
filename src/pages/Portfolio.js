@@ -140,7 +140,7 @@ export default function PortfolioPage() {
             <SectionHeading
               kicker="Our Packages"
               title="Construction & Renovation Packages"
-              subtitle="Four levels of specification for new builds and renovations, from practical to fully bespoke."
+              subtitle="Every package is available for both new construction and renovation — choose the level of specification that fits your project."
             />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

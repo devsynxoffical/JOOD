@@ -130,7 +130,7 @@ export default function HomePage() {
                 Construction &amp; Renovation <span className="font-light italic text-[#3E6FB5]">Packages</span>
               </h2>
               <p className="text-sm md:text-base text-[#64748B] font-normal mt-3 tracking-wide">
-                Indicative price brackets for new builds and renovations, from standard to fully bespoke finishes.
+                Every package covers both new construction and renovation — choose the level of specification that fits your project.
               </p>
             </div>
 
