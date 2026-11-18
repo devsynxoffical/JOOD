@@ -5,7 +5,6 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import WPCOutdoorDecking from './pages/WPCOutdoorDecking';
 
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
@@ -52,7 +51,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/wpc-outdoor-decking" element={<WPCOutdoorDecking />} />
+          <Route path="*" element={<Homepage />} />
         </Routes>
       </div>
     </Router>

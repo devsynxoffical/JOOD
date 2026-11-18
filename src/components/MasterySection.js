@@ -36,23 +36,23 @@ const galleryItems = [
   },
   {
     id: 5,
-    title: 'WPC Outdoor Decking & Lounge',
-    category: 'Outdoor Decking',
-    image: '/images/jood/villa-terrace-deck.webp',
+    title: 'Villa Renovation & Facade Upgrade',
+    category: 'Renovation',
+    image: '/images/jood/villa-entrance.webp',
     location: 'Emirates Hills, Dubai',
     span: 'normal',
   },
   {
     id: 6,
-    title: 'Villa Interior Finishing',
-    category: 'Villas',
-    image: '/images/jood/villa-interior.webp',
+    title: 'Villa Extension Under Construction',
+    category: 'Renovation',
+    image: '/images/jood/design-build-hero.webp',
     location: 'Dubai Marina',
     span: 'normal',
   },
 ];
 
-const categories = ['All', 'Villas', 'Buildings', 'Warehouses', 'Outdoor Decking'];
+const categories = ['All', 'Villas', 'Buildings', 'Warehouses', 'Renovation'];
 
 function ProjectCard({ item, onClick, delay = 0 }) {
   return (

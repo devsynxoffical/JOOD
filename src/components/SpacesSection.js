@@ -12,7 +12,7 @@ const spaceSlides = [
     title: 'Residential & Commercial Buildings',
   },
   {
-    image: '/images/jood/warehouse-interior.webp',
+    image: '/images/jood/warehouse-hall.webp',
     tag: 'Warehouses',
     title: 'Steel-Structure Warehouses',
   },

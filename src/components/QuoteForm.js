@@ -6,16 +6,11 @@ export const quoteInputClass =
 /**
  * Quote request form shared between the ContactModal and the Contact page.
  * props:
- *  - variant: 'home' | 'wpc'
  *  - onSuccess: called after a valid submit (e.g. close modal / show thanks)
  *  - onCancel: optional — renders a Cancel button next to Submit
  */
-export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
-  const [form, setForm] = useState(
-    variant === 'wpc'
-      ? { name: '', email: '', contactNumber: '', location: '', requirements: '', contactMethod: 'Email' }
-      : { firstName: '', lastName: '', email: '', phone: '', service: '', package: '', message: '' }
-  );
+export default function QuoteForm({ onSuccess, onCancel }) {
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', service: '', package: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,55 +22,8 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
     if (onSuccess) onSuccess();
   };
 
-  const isWpc = variant === 'wpc';
-
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {isWpc ? (
-        <>
-          <div>
-            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Name *</label>
-            <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Enter your name" className={quoteInputClass} />
-          </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">E-Mail *</label>
-              <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Enter your email" className={quoteInputClass} />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Contact Number *</label>
-              <input type="tel" name="contactNumber" value={form.contactNumber} onChange={handleChange} required placeholder="+971..." className={quoteInputClass} />
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Location *</label>
-            <input type="text" name="location" value={form.location} onChange={handleChange} required placeholder="Enter your location" className={quoteInputClass} />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Tell Us Your Requirements *</label>
-            <textarea name="requirements" value={form.requirements} onChange={handleChange} rows="4" required placeholder="Tell us about your decking requirements..." className={quoteInputClass} />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0B2D5B] mb-3">How To Contact You?</label>
-            <div className="flex gap-4">
-              {['Email', 'WhatsApp', 'Call'].map((method) => (
-                <label key={method} className="flex items-center gap-2 cursor-pointer group">
-                  <input
-                    type="radio"
-                    name="contactMethod"
-                    value={method}
-                    checked={form.contactMethod === method}
-                    onChange={handleChange}
-                    className="w-4 h-4 accent-[#3E6FB5]"
-                  />
-                  <span className="text-sm text-[#0B2D5B]/80 group-hover:text-[#0B2D5B] transition-colors font-medium">{method}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
           <div className="grid md:grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">First Name *</label>
@@ -106,7 +54,6 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
                 <option>Warehouse Construction</option>
                 <option>Renovation</option>
                 <option>Design & Build</option>
-                <option>WPC Outdoor Decking</option>
               </select>
             </div>
             <div>
@@ -124,8 +71,6 @@ export default function QuoteForm({ variant = 'home', onSuccess, onCancel }) {
             <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Message</label>
             <textarea name="message" value={form.message} onChange={handleChange} rows="4" placeholder="Tell us about your project requirements..." className={quoteInputClass} />
           </div>
-        </>
-      )}
 
       <div className="flex gap-4 pt-2">
         <button type="submit" className="btn-gold flex-1 py-4 text-xs font-semibold uppercase tracking-[0.15em] shadow-md">

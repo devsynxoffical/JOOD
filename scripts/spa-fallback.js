@@ -13,7 +13,6 @@ const routes = [
   'portfolio',
   'about',
   'contact',
-  'wpc-outdoor-decking',
 ];
 
 if (!fs.existsSync(indexHtml)) {

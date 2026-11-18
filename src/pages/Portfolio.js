@@ -243,7 +243,7 @@ export default function PortfolioPage() {
       <Footer onContactClick={() => setShowContact(true)} />
 
       {/* ================= CONTACT MODAL ================= */}
-      <ContactModal open={showContact} onClose={() => setShowContact(false)} variant="home" />
+      <ContactModal open={showContact} onClose={() => setShowContact(false)} />
 
       {/* ================= LIGHTBOX ================= */}
       {lightbox && (

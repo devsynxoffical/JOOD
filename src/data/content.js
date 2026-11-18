@@ -8,9 +8,9 @@ export const services = [
   { icon: "hammer", title: "Villa Construction", desc: "Private and luxury villas built from foundation to handover.", image: "/images/jood/design-build-hero.webp" },
   { icon: "award", title: "Building Construction", desc: "Residential and commercial buildings delivered to the highest standards.", image: "/images/jood/residential-tower.webp" },
   { icon: "wrench", title: "Warehouse Construction", desc: "Steel-structure warehouses and industrial facilities built to last.", image: "/images/jood/warehouse-steel-frame.webp" },
+  { icon: "paintbrush", title: "Renovation", desc: "Full and partial renovations, extensions and upgrades for existing properties.", image: "/images/jood/villa-entrance.webp" },
   { icon: "palette", title: "Design & Build", desc: "One team from concept and approvals through to construction.", image: "/images/jood/design-planning.webp" },
   { icon: "shield-check", title: "Structural & Civil Works", desc: "Foundations, concrete frames and civil works with strict quality control.", image: "/images/jood/concrete-pour.webp" },
-  { icon: "sun", title: "WPC Outdoor Decking", desc: "Durable, eco-friendly WPC decking solutions engineered for Dubai's climate.", image: "/images/jood/villa-terrace-deck.webp", link: "/wpc-outdoor-decking" },
 ];
 
 export const whyChooseUs = [
@@ -36,7 +36,7 @@ export const servicePackages = [
     price: "Quote on request",
     style: "Modern | Functional | Balanced",
     perfectFor: "Family villas, small buildings, full home renovations",
-    features: ["New build: design, approvals & concrete structure", "Renovation: full interior refresh & layout changes", "Kitchen & bathroom renovation", "Porcelain flooring & aluminium windows", "Complete electrical, plumbing & AC works", "Waterproofing & exterior repainting"],
+    features: ["New build: design, approvals & concrete structure", "Renovation: full refurbishment & layout changes", "Kitchen & bathroom renovation", "Porcelain flooring & aluminium windows", "Complete electrical, plumbing & AC works", "Waterproofing & exterior repainting"],
     image: "/images/jood/villa-modern.webp",
     featured: true,
   },
@@ -67,12 +67,6 @@ export const testimonials = [
   { name: "Elena Rodriguez", role: "Homeowner, Abu Dhabi", text: "Jood renovated our villa completely, including a new kitchen, bathrooms, flooring and an extension. The result looks like a new home, and the work was finished when they said it would be.", initials: "ER" },
 ];
 
-export const portfolioProjects = [
-  { title: "Luxury Villa – Palm Jumeirah", before: "/images/Before & After/Palm Jumeirah-Before.webp", after: "/images/Before & After/Palm Jumeirah-After.avif" },
-  { title: "Downtown Dubai Apartment", before: "/images/Before & After/Modern Apartment – Downtown Dubai-BEFORE.webp", after: "/images/Before & After/Modern Apartment – Downtown Dubai-AFTER.webp" },
-  { title: "Office Space – Business Bay", before: "/images/Before & After/Office Space – Business Bay-before.webp", after: "/images/Before & After/Office Space – Business Bay-After.webp" },
-];
-
 export const portfolioImages = [
   "/hero-villa.webp",
   "/images/jood/villa-dusk.webp",
@@ -82,35 +76,17 @@ export const portfolioImages = [
   "/images/jood/residential-tower.webp",
   "/images/jood/commercial-building.webp",
   "/images/jood/villa-community.webp",
-  "/images/jood/warehouse-interior.webp",
+  "/images/jood/warehouse-hall.webp",
   "/images/jood/villa-entrance.webp",
   "/images/jood/design-build-hero.webp",
   "/images/jood/villa-modern.webp",
   "/images/jood/concrete-pour.webp",
   "/images/jood/villa-signature.webp",
   "/images/jood/warehouse-steel-frame.webp",
-  "/images/jood/villa-interior.webp",
-  "/images/jood/villa-terrace-deck.webp",
   "/images/jood/villa-townhouse.webp",
   "/images/jood/design-planning.webp",
-  "/images/jood/wpc-pool-deck.webp",
-  "/images/jood/wpc-rooftop-deck.webp",
   "/images/about-hero-construction.webp",
   "/images/about-story-site.webp",
-];
-
-export const partnershipImages = [
-  "/images/partnership/WhatsApp Image 2025-08-06 at 17.15.05_9157f94d.webp",
-  "/images/partnership/WhatsApp Image 2025-08-06 at 17.14.31_b3e2078f.webp",
-  "/images/partnership/WhatsApp Image 2025-08-06 at 17.13.46_af198770.webp",
-  "/images/partnership/WhatsApp Image 2025-08-06 at 17.13.05_dd15b325.webp",
-];
-
-export const teamMembers = [
-  { name: "Ahmed Bilal", role: "Founder & CEO", image: "/images/IMG-20250805-WA0120.webp" },
-  { name: "Sarah Johnson", role: "Lead Interior Designer", image: "/images/IMG-20250805-WA0111.webp" },
-  { name: "Mohammed Ali", role: "Senior Project Manager", image: "/images/IMG-20250805-WA0110.webp" },
-  { name: "Elena Rodriguez", role: "Architectural Consultant", image: "/images/IMG-20250805-WA0150.webp" },
 ];
 
 export const aboutHighlights = [

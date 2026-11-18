@@ -230,7 +230,7 @@ export default function ContactPage() {
                           Request a Free Quote
                         </h3>
                       </div>
-                      <QuoteForm variant="home" onSuccess={handleSuccess} />
+                      <QuoteForm onSuccess={handleSuccess} />
                     </>
                   )}
                 </div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
       <Footer onContactClick={() => setShowContact(true)} />
 
       {/* ================= CONTACT MODAL ================= */}
-      <ContactModal open={showContact} onClose={() => setShowContact(false)} variant="home" />
+      <ContactModal open={showContact} onClose={() => setShowContact(false)} />
     </div>
   );
 }

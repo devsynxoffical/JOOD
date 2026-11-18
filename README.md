@@ -1,72 +1,34 @@
-# 🛠️ FIXITBILAL – Premium Interior Design & Maintenance Services in Dubai
+# Jood Building Contracting
 
-### 🔗 Live Website
-Check out the live site here: [fixitbilal.com](https://fixitbilal.com)
+Website for Jood Building Contracting, a UAE contractor for new construction and renovation of villas, buildings and warehouses.
 
-FIXITBILAL is a Dubai-based service provider specializing in interior design, property renovation, and general maintenance solutions for both residential and commercial spaces. Our mission is to deliver high-quality, tailored, and cost-effective services to clients across the UAE.
+## Pages
 
-## 🔧 Services Offered
-- **Interior Design & Fit-Outs**
-- **Villa & Apartment Renovation**
-- **Kitchen & Bathroom Remodeling**
-- **Wardrobe & Carpentry Works**
-- **Painting & Flooring**
-- **Plumbing, HVAC & Electrical Services**
-- **Swimming Pool Installation**
-- **Landscaping & Outdoor Solutions**
-- **Same-Day Emergency Repairs**
+- Home
+- About
+- Design and Build
+- Projects
+- Contact
 
-## 🌟 Project Overview
-The website [fixitbilal.com](https://fixitbilal.com) was built to showcase FIXITBILAL's services, highlight its past projects, and make it easier for customers to request quotes and schedule appointments.
+The site is available in English and Arabic (right-to-left).
 
-## 🖥️ Tech Stack
-- **Frontend**: React.js (with Cursor)
-- **Styling**: Tailwind CSS (customized with brand color #392e23)
-- **Hosting**: Vercel / Netlify (or your provider)
-- **Forms**: Contact & Quote Request Forms with email integration
+## Development
 
-## 📦 Features
-- Fully responsive design
-- Services showcase with icons and visuals
-- Project gallery with image slider
-- About us section and contact details
-- "Get a Quote" call-to-action
-- Same-day appointment form
-- SEO-optimized metadata and structure
-- WPC Outdoor Decking products page
+```bash
+npm install
+npm start
+```
 
-## 🚀 Goals
-- Provide a smooth and modern user experience
-- Generate more leads through online channels
-- Build trust and brand visibility in Dubai's interior services market
+## Production build
 
-## 🏃‍♂️ Getting Started
+```bash
+npm run build
+```
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+The output is written to the `build` folder.
 
-### Installation
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Contact
 
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Build for production:
-   ```bash
-   npm run build
-   ```
-
-## 📱 Contact
-- **Phone**: +971 55 834 4467
-- **Email**: info@fixitbilal.com
-- **Website**: www.fixitbilal.com
-
-## 📄 License
-This project is proprietary to FIXITBILAL. All rights reserved.
+- Phone: +971 58 929 9581
+- WhatsApp: +971 56 445 5996
+- Email: info@joodbuildingcontracting.ae

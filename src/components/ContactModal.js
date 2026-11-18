@@ -1,10 +1,8 @@
 import Icon from './Icon';
 import QuoteForm from './QuoteForm';
 
-export default function ContactModal({ open, onClose, variant = 'home' }) {
+export default function ContactModal({ open, onClose }) {
   if (!open) return null;
-
-  const isWpc = variant === 'wpc';
 
   const handleSuccess = () => {
     alert(document.documentElement.lang === 'ar' ? 'شكراً لتواصلكم معنا! سيتصل بكم فريقنا خلال 24 ساعة.' : 'Thank you for your inquiry! Our team will contact you within 24 hours.');
@@ -30,19 +28,17 @@ export default function ContactModal({ open, onClose, variant = 'home' }) {
 
         <div className="mb-8 pr-12">
           <div className="ornament text-[11px] tracking-[0.3em] uppercase text-[#2F5E9E] font-semibold mb-3">
-            {isWpc ? 'Decking Specialist' : 'Free Consultation'}
+            Free Consultation
           </div>
           <h2 className="section-heading text-3xl md:text-4xl text-[#1E293B]">
-            {isWpc ? 'Connect With Our Specialist' : 'Let’s Talk About Your Project'}
+            Let’s Talk About Your Project
           </h2>
           <p className="text-[#1E293B]/60 mt-3 font-light text-sm">
-            {isWpc
-              ? 'Share your decking requirements and we’ll get back to you shortly.'
-              : 'Tell us what you need — new construction, renovation, or design and build. We reply within 24 hours.'}
+            Tell us what you need — new construction, renovation, or design and build. We reply within 24 hours.
           </p>
         </div>
 
-        <QuoteForm variant={variant} onSuccess={handleSuccess} onCancel={onClose} />
+        <QuoteForm onSuccess={handleSuccess} onCancel={onClose} />
 
         <div className="mt-8 pt-6 border-t border-[#8FB0DD]/20">
           <div className="grid grid-cols-2 gap-4 text-sm text-[#1E293B]/70">
