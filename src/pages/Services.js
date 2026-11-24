@@ -155,11 +155,11 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[88vh] min-h-[600px] overflow-hidden bg-[#06172F]">
         <img
-          src="/images/projects/villa-saif/01.webp"
-          alt="Villa built by Jood Building Contracting"
+          src="/images/jood/hero-design-build.webp"
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#071F40]/65" />
+        <div className="absolute inset-0 bg-[#071F40]/50" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pt-20 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-[#CBD5E1]" />

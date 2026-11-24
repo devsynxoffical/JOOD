@@ -25,11 +25,11 @@ export default function PortfolioPage() {
       <section className="min-h-[75vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/images/projects/villa-complex/01.webp"
+          src="/images/jood/hero-projects.webp"
           alt="Jood Building Contracting Portfolio Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/65" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/55" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           

@@ -33,11 +33,11 @@ export default function AboutPage() {
       <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/images/projects/shed-shady/01.webp"
+          src="/images/jood/hero-about.webp"
           alt="About Jood Building Contracting Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/70" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/45" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           
