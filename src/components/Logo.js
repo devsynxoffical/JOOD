@@ -37,8 +37,9 @@ export default function Logo({ className = '', showTagline = false, title = 'Joo
           textAnchor="middle"
           fontFamily="'Montserrat', sans-serif"
           fontWeight="600"
-          fontSize="13.5"
-          letterSpacing="2.6"
+          fontSize="12"
+          textLength="190"
+          lengthAdjust="spacingAndGlyphs"
         >
           BUILDING CONTRACTING
         </text>
