@@ -85,13 +85,13 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
 
   if (solid) {
     // Scrolled or mobile menu open: navy bar, white logo and text
-    headerBgClass = 'bg-[#0B2D5B]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(7,31,64,0.25)] py-3.5';
+    headerBgClass = 'bg-[#0B2D5B]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(7,31,64,0.25)] py-2.5';
     navLinkClass = 'text-white/85 hover:text-white';
     whatsappBtnClass = 'border border-white text-white hover:bg-white hover:text-[#0B2D5B]';
     hamburgerLineClass = 'bg-white';
   } else {
     // Top of page: light bar, blue logo and text
-    headerBgClass = 'bg-white/90 backdrop-blur-md py-5';
+    headerBgClass = 'bg-white/90 backdrop-blur-md py-3.5';
     navLinkClass = 'text-[#0B2D5B]/80 hover:text-[#3E6FB5]';
     whatsappBtnClass = 'border border-[#0B2D5B] text-[#0B2D5B] hover:bg-[#0B2D5B] hover:text-white';
     hamburgerLineClass = 'bg-[#0B2D5B]';
@@ -105,7 +105,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
           <div className="flex-1">
             <Link to="/" className="group inline-flex items-center" aria-label="Jood Building Contracting — Home">
               <Logo
-                className={`h-10 md:h-12 w-auto transition-colors duration-500 ${solid ? 'text-white' : 'text-[#0B2D5B]'}`}
+                className={`h-12 md:h-14 w-auto transition-colors duration-500 ${solid ? 'text-white' : 'text-[#0B2D5B]'}`}
               />
             </Link>
           </div>
@@ -127,19 +127,30 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             <LanguageMenu className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${navLinkClass}`} />
           </nav>
 
-          <div className="flex-1 flex items-center justify-end gap-4 lg:gap-6">
-            {/* WhatsApp Button */}
+          <div className="flex-1 flex items-center justify-end gap-2 md:gap-3">
+            {/* WhatsApp + Call icon buttons */}
             <a
-              href="https://wa.me/971564455996"
+              href="https://wa.me/971566664982"
               target="_blank"
               rel="noreferrer"
-              className={`hidden sm:inline-flex items-center gap-2 font-sans text-[11px] font-semibold tracking-[0.2em] uppercase px-6 py-3 transition-all ${whatsappBtnClass}`}
+              aria-label="WhatsApp Abdullah Hasan"
+              title="WhatsApp — Abdullah Hasan: +971 56 666 4982"
+              className={`inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full transition-all ${whatsappBtnClass}`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.057 23.882a.5.5 0 0 0 .614.614l6.035-1.467A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.5-5.243-1.376l-.375-.217-3.882.944.965-3.795-.232-.391A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
               </svg>
-              Contact Us
+            </a>
+            <a
+              href="tel:+971564455996"
+              aria-label="Call Muhammad Hasan"
+              title="Call — Muhammad Hasan: +971 56 445 5996"
+              className={`inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full transition-all ${whatsappBtnClass}`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
             </a>
 
             {/* Mobile hamburger */}

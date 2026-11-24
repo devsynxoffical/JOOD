@@ -5,13 +5,13 @@ const steps = [
     num: '1',
     phase: 'Phase I',
     title: 'Survey, Design & Approvals',
-    desc: 'We study your plot or existing property, prepare the drawings and costing, and secure the approvals needed for new construction or renovation.',
+    desc: 'We study your plot, prepare the drawings and costing, and secure the authority approvals needed before construction starts.',
   },
   {
     num: '2',
     phase: 'Phase II',
-    title: 'Construction & Renovation Works',
-    desc: 'Our site teams carry out the structure, MEP and finishing for new builds, and the demolition, repair and upgrade works for renovations, to a clear schedule.',
+    title: 'Construction Works',
+    desc: 'Our site teams carry out the foundations, structure, MEP and finishing works to a clear schedule, with quality checks at every stage.',
   },
   {
     num: '3',
@@ -36,7 +36,7 @@ export default function ProcessTimelineSection({ onContactClick }) {
             Spaces That Speak <span className="italic font-medium text-[#3E6FB5]">Volumes</span>
           </h2>
           <p className="text-sm md:text-base text-[#64748B] font-normal mt-3 tracking-wide">
-            One clear three-stage process for both new construction and renovation projects.
+            One clear three-stage process for every residential and commercial project.
           </p>
         </div>
 

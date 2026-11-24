@@ -45,7 +45,7 @@ const pillars = [
   {
     icon: <PlanIcon />,
     title: 'Planning Tailored to Your Project',
-    desc: 'Every project begins with a clear brief. We sit with you to understand your goals, budget, plot and timeline — whether it is a private villa, a residential or commercial building, or a warehouse — and turn them into a practical plan that is ready to build.',
+    desc: 'Every project begins with a clear brief. We sit with you to understand your goals, budget, plot and timeline — whether it is a private villa, an industrial shed, a labour camp or another commercial building — and turn them into a practical plan that is ready to build.',
   },
   {
     icon: <BlueprintIcon />,
@@ -54,28 +54,28 @@ const pillars = [
   },
   {
     icon: <CraneIcon />,
-    title: 'Construction, Renovation & Turnkey Delivery',
-    desc: 'We turn approved drawings into finished villas, buildings and warehouses, and we renovate and extend existing properties. From foundations and structure to finishing and handover, our site teams work to a clear programme with strict quality control.',
+    title: 'Construction & Turnkey Delivery',
+    desc: 'We turn approved drawings into finished residential and commercial buildings. From foundations and structure to finishing and handover, our site teams work to a clear programme with strict quality control.',
   },
 ];
 
 /* ---------- Showcase ---------- */
 const showcase = [
-  { image: `${J}villa-luxury.webp`, title: 'Luxury Villa', tag: 'Villas' },
-  { image: `${J}residential-tower.webp`, title: 'Residential Tower', tag: 'Buildings' },
-  { image: `${J}warehouse-exterior.webp`, title: 'Logistics Warehouse', tag: 'Warehouses' },
-  { image: `${J}villa-signature.webp`, title: 'Signature Mansion', tag: 'Villas' },
-  { image: `${J}commercial-building.webp`, title: 'Commercial Building', tag: 'Buildings' },
-  { image: `${J}villa-community.webp`, title: 'Villa Community', tag: 'Villas' },
-  { image: `${J}warehouse-steel-frame.webp`, title: 'Steel-Frame Warehouse', tag: 'Warehouses' },
+  { image: '/images/projects/villa-saif/01.webp', title: 'Villa Saif', tag: 'Residential' },
+  { image: '/images/projects/shed-shady/01.webp', title: 'Shed Shady', tag: 'Commercial' },
+  { image: `${J}labour-camp.webp`, title: 'Labour Camp', tag: 'Commercial' },
+  { image: '/images/projects/villa-harmodi/01.webp', title: 'Villa Harmodi', tag: 'Residential' },
+  { image: `${J}labour-camp-courtyard.webp`, title: 'Labour Accommodation', tag: 'Commercial' },
+  { image: '/images/projects/villa-complex/01.webp', title: 'Villa Complex', tag: 'Residential' },
+  { image: '/images/projects/shed-ideal/01.webp', title: 'Shed Ideal', tag: 'Commercial' },
 ];
 
 /* ---------- Journey ---------- */
 const journey = [
   { title: 'Concept & Planning', image: `${J}design-planning.webp`, desc: 'Brief, site study, budget and programme agreed with you.' },
-  { title: 'Design & Approvals', image: '/images/about-story-site.webp', desc: 'Architectural, structural and MEP drawings, plus authority approvals.' },
-  { title: 'Construction', image: `${J}design-build-hero.webp`, desc: 'Foundations, structure and MEP, built to a clear schedule.' },
-  { title: 'Finishing & Handover', image: `${J}villa-dusk.webp`, desc: 'Finishes, testing, snagging and a smooth handover of your keys.' },
+  { title: 'Design & Approvals', image: '/images/projects/shed-shady/06.webp', desc: 'Architectural, structural and MEP drawings, plus authority approvals.' },
+  { title: 'Construction', image: '/images/projects/shed-shady/05.webp', desc: 'Foundations, structure and MEP, built to a clear schedule.' },
+  { title: 'Finishing & Handover', image: '/images/projects/sham-07-amal-ghareeb/01.webp', desc: 'Finishes, testing, snagging and a smooth handover of your keys.' },
 ];
 
 function JourneySlider() {
@@ -153,28 +153,26 @@ export default function ServicesPage() {
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[92vh] min-h-[600px] overflow-hidden bg-[#06172F]">
+      <section className="relative h-[88vh] min-h-[600px] overflow-hidden bg-[#06172F]">
         <img
-          src="/images/jood/design-build-villa-blue.webp"
+          src="/images/projects/villa-saif/01.webp"
           alt="Villa built by Jood Building Contracting"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#071F40]/55 via-[#0B2D5B]/35 to-[#0B2D5B]/20" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-          <h1
-            className="font-serif text-white font-bold leading-[1.08] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-5xl mb-6"
-            style={{ textShadow: '0 2px 18px rgba(7,31,64,0.55)' }}
-          >
-            Design &amp; Build Services in the UAE
+        <div className="absolute inset-0 bg-[#071F40]/65" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pt-20 text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-8 h-px bg-[#CBD5E1]" />
+            <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#CBD5E1] font-bold">Ajman &amp; Umm Al Quwain</span>
+            <span className="w-8 h-px bg-[#CBD5E1]" />
+          </div>
+          <h1 className="font-serif text-white font-bold leading-[1.1] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-4xl mb-6">
+            Design &amp; Build Services
           </h1>
-          <p
-            className="max-w-3xl text-base md:text-lg text-white/95 leading-relaxed"
-            style={{ textShadow: '0 1px 10px rgba(7,31,64,0.7)' }}
-          >
+          <p className="max-w-2xl text-base md:text-lg text-white/90 leading-relaxed">
             From the first drawing to the final handover, we take your project through one seamless
-            process — planning, engineering, construction and renovation — so every villa, building
-            and warehouse is delivered with care and attention to detail.
+            process — planning, engineering and construction — so every residential and commercial
+            project is delivered with care and attention to detail.
           </p>
         </div>
       </section>

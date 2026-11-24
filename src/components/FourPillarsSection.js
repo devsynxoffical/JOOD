@@ -8,7 +8,7 @@ const pillars = [
     title: 'End-to-End Project Management',
     subtitle: 'Every stage handled with precision, from concept to completion.',
     description:
-      'One team manages your new build or renovation from start to finish — drawings, approvals, procurement, site works and handover — so you always know what is happening and when.',
+      'One team manages your project from start to finish — drawings, approvals, procurement, site works and handover — so you always know what is happening and when.',
     features: [
       'End-to-End Project Management',
       'Design Coordination & Procurement',
@@ -19,13 +19,26 @@ const pillars = [
     id: 'quality',
     label: 'Quality Control',
     title: 'Quality Control at Every Stage',
-    subtitle: 'Checked at every stage, on new builds and renovations alike.',
+    subtitle: 'Checked at every stage, on every residential and commercial project.',
     description:
-      'Our engineers and supervisors inspect the work at each stage — foundations, structure, MEP and finishes — so that new construction and renovation works meet the approved drawings and UAE standards.',
+      'Our engineers and supervisors inspect the work at each stage — foundations, structure, MEP and finishes — so that every project meets the approved drawings and UAE standards.',
     features: [
       'Quality Control at Every Stage',
       'Approved Materials & Suppliers',
       'Rigorous Inspection Protocols',
+    ],
+  },
+  {
+    id: 'bespoke',
+    label: 'Design & Build',
+    title: 'Design That Fits How You Live and Work',
+    subtitle: 'Practical, well-planned designs for residential and commercial projects.',
+    description:
+      'Our designers and engineers plan layouts, structure and finishes around your needs and budget, whether you are building a family villa, an industrial shed or a labour camp.',
+    features: [
+      'Architectural & Structural Design',
+      'Authority Approvals & NOCs',
+      'Finishes Selected for UAE Conditions',
     ],
   },
   {
@@ -34,24 +47,11 @@ const pillars = [
     title: 'Seamless Final Handover',
     subtitle: 'Your property, delivered as agreed — no surprises.',
     description:
-      'Before we hand over a new building or a renovated property, we walk through it with you, resolve every snag and provide the warranty documents, so you have peace of mind long after completion.',
+      'Before we hand over your building, we walk through it with you, resolve every snag and provide the warranty documents, so you have peace of mind long after completion.',
     features: [
       'Seamless Final Handover',
       'Full Walk-Through & Snag Resolution',
       'Comprehensive Post-Handover Warranty',
-    ],
-  },
-  {
-    id: 'bespoke',
-    label: 'Design & Build',
-    title: 'Design That Fits How You Live and Work',
-    subtitle: 'Practical, well-planned designs for new and existing properties.',
-    description:
-      'Our designers and engineers plan layouts, structure and finishes around your needs and budget, whether you are starting on an empty plot or reworking an existing villa, building or warehouse.',
-    features: [
-      'Architectural & Structural Design',
-      'Extensions & Layout Changes',
-      'Finishes Selected for UAE Conditions',
     ],
   },
 ];
@@ -76,8 +76,8 @@ export default function FourPillarsSection() {
             <span className="w-8 h-px bg-[#3E6FB5]/60" />
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#0B2D5B] font-light leading-[1.08] tracking-tight">
-            Four Principles.{' '}
-            <em className="not-italic font-normal text-[#3E6FB5]">One Exceptional Standard.</em>
+            Four Core Services.{' '}
+            <em className="not-italic font-normal text-[#3E6FB5] block">One Complete Building Solution.</em>
           </h2>
         </div>
 

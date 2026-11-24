@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 
 const spaceSlides = [
   {
-    image: '/images/jood/villa-entrance.webp',
-    tag: 'Villas',
-    title: 'Modern Villas Built with Care',
+    image: '/images/projects/villa-harmodi/01.webp',
+    tag: 'Residential',
+    title: 'Villas Built with Care',
   },
   {
-    image: '/images/jood/residential-tower.webp',
-    tag: 'Buildings',
-    title: 'Residential & Commercial Buildings',
+    image: '/images/jood/labour-camp.webp',
+    tag: 'Commercial',
+    title: 'Labour Camps & Accommodation',
   },
   {
-    image: '/images/jood/warehouse-hall.webp',
-    tag: 'Warehouses',
-    title: 'Steel-Structure Warehouses',
+    image: '/images/projects/shed-ideal/01.webp',
+    tag: 'Commercial',
+    title: 'Industrial Sheds',
   },
 ];
 
@@ -88,16 +88,15 @@ export default function SpacesSection({ onContactClick }) {
 
             {/* Sub-heading */}
             <h3 className="text-lg md:text-xl text-[#3E6FB5] font-medium tracking-wide mb-6">
-              We Build New and Renew What Exists
+              Built Properly. Delivered on Time.
             </h3>
 
             {/* Body */}
             <p className="text-sm md:text-[15px] text-[#64748B] font-normal leading-[1.8] mb-8 tracking-wide">
-              Good building work starts with listening. Whether we are constructing a new
-              villa, building or warehouse, or renovating a property that needs a second
-              life, we plan carefully, use materials that last, and keep you informed at
-              every stage. Our aim is simple: sound structures, clean finishes and a
-              handover you are proud of.
+              Good building work starts with listening. Whether your project is residential or
+              commercial — a family villa, an industrial shed or a labour camp — we plan
+              carefully, use materials that last, and keep you informed at every stage. Our
+              aim is simple: sound structures, clean finishes and a handover you are proud of.
             </p>
 
             {/* Stats row */}

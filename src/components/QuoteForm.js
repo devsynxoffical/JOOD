@@ -10,7 +10,7 @@ export const quoteInputClass =
  *  - onCancel: optional — renders a Cancel button next to Submit
  */
 export default function QuoteForm({ onSuccess, onCancel }) {
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', service: '', package: '', message: '' });
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', service: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,26 +44,16 @@ export default function QuoteForm({ onSuccess, onCancel }) {
               <input type="tel" name="phone" value={form.phone} onChange={handleChange} required placeholder="+971..." className={quoteInputClass} />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div>
             <div>
               <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Service Required</label>
               <select name="service" value={form.service} onChange={handleChange} className={quoteInputClass}>
                 <option value="">Select a service</option>
-                <option>Villa Construction</option>
-                <option>Building Construction</option>
-                <option>Warehouse Construction</option>
-                <option>Renovation</option>
+                <option>Residential Construction</option>
+                <option>Commercial Construction</option>
+                <option>Industrial Shed</option>
+                <option>Labour Camp</option>
                 <option>Design & Build</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-[#0B2D5B] mb-2">Package (Optional)</label>
-              <select name="package" value={form.package} onChange={handleChange} className={quoteInputClass}>
-                <option value="">Select a package</option>
-                <option>Essential Package</option>
-                <option>Standard Package</option>
-                <option>Premium Package</option>
-                <option>Signature Package</option>
               </select>
             </div>
           </div>

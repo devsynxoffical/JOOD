@@ -1,58 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { projects } from '../data/projects';
 
-const galleryItems = [
-  {
-    id: 1,
-    title: 'Modern Villa with Pool',
-    category: 'Villas',
-    image: '/images/jood/villa-dusk.webp',
-    location: 'Palm Jumeirah, Dubai',
-    span: 'tall',
-  },
-  {
-    id: 2,
-    title: 'Gated Villa Community',
-    category: 'Villas',
-    image: '/images/jood/villa-community.webp',
-    location: 'Downtown Dubai',
-    span: 'normal',
-  },
-  {
-    id: 3,
-    title: 'Commercial Office Building',
-    category: 'Buildings',
-    image: '/images/jood/commercial-building.webp',
-    location: 'Business Bay, Dubai',
-    span: 'wide',
-  },
-  {
-    id: 4,
-    title: 'Logistics Warehouse',
-    category: 'Warehouses',
-    image: '/images/jood/warehouse-exterior.webp',
-    location: 'DIFC, Dubai',
-    span: 'normal',
-  },
-  {
-    id: 5,
-    title: 'Villa Renovation & Facade Upgrade',
-    category: 'Renovation',
-    image: '/images/jood/villa-entrance.webp',
-    location: 'Emirates Hills, Dubai',
-    span: 'normal',
-  },
-  {
-    id: 6,
-    title: 'Villa Extension Under Construction',
-    category: 'Renovation',
-    image: '/images/jood/design-build-hero.webp',
-    location: 'Dubai Marina',
-    span: 'normal',
-  },
-];
+const galleryItems = projects.map((p, i) => ({
+  id: i + 1,
+  title: p.title,
+  category: p.category,
+  image: p.images[0],
+}));
 
-const categories = ['All', 'Villas', 'Buildings', 'Warehouses', 'Renovation'];
+const categories = ['All', 'Commercial', 'Residential'];
 
 function ProjectCard({ item, onClick, delay = 0 }) {
   return (
@@ -72,7 +29,7 @@ function ProjectCard({ item, onClick, delay = 0 }) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           onError={(e) => {
             // Fallback to a known-good image if this one fails to load
-            e.target.src = '/images/jood/villa-dusk.webp';
+            e.target.src = '/images/projects/villa-saif/01.webp';
           }}
         />
 
@@ -115,10 +72,10 @@ export default function MasterySection({ onContactClick }) {
           </div>
           <h2 className="font-serif text-4xl md:text-6xl text-[#0B2D5B] leading-[1.08] font-light tracking-tight mb-4">
             What We Build <br />
-            <span className="font-light italic text-[#3E6FB5]">and Renovate</span>
+            <span className="font-light italic text-[#3E6FB5]">Residential &amp; Commercial</span>
           </h2>
           <p className="text-sm md:text-base text-[#64748B] font-normal max-w-xl mx-auto tracking-wide leading-relaxed">
-            A selection of new construction and renovation projects — villas, buildings, warehouses and outdoor spaces across the UAE.
+            A selection of our completed residential and commercial projects — villas, industrial sheds and labour camps in Ajman and Umm Al Quwain.
           </p>
         </div>
 
@@ -198,7 +155,7 @@ export default function MasterySection({ onContactClick }) {
             <div className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
                 <span className="text-[10px] uppercase tracking-widest text-[#3E6FB5] font-medium">
-                  {activeItem.category} · {activeItem.location}
+                  {activeItem.category}
                 </span>
                 <h3 className="font-serif text-2xl text-white font-light mt-1 tracking-tight">
                   {activeItem.title}

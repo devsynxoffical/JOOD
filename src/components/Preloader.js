@@ -34,7 +34,7 @@ export default function Preloader({ onDone }) {
   return (
     <div className={`preloader bg-[#F8FAFC] text-[#0B2D5B] ${done ? 'done' : ''}`}>
       <div className="loader-mark !w-auto !h-auto !bg-none !bg-transparent px-2">
-        <Logo className="h-14 w-auto text-[#0B2D5B]" />
+        <Logo className="h-20 w-auto text-[#0B2D5B]" />
       </div>
       <div className="loader-bar !bg-[#0B2D5B]/10 mt-8">
         <span style={{ width: `${progress}%` }} className="!bg-gradient-to-r !from-[#CBD5E1] !to-[#3E6FB5]" />

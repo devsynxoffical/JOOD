@@ -1,18 +1,3 @@
-export const heroImages = [
-  "/hero-villa.webp",
-  "/images/jood/projects-hero.webp",
-  "/images/jood/villa-community.webp",
-];
-
-export const services = [
-  { icon: "hammer", title: "Villa Construction", desc: "Private and luxury villas built from foundation to handover.", image: "/images/jood/design-build-hero.webp" },
-  { icon: "award", title: "Building Construction", desc: "Residential and commercial buildings delivered to the highest standards.", image: "/images/jood/residential-tower.webp" },
-  { icon: "wrench", title: "Warehouse Construction", desc: "Steel-structure warehouses and industrial facilities built to last.", image: "/images/jood/warehouse-steel-frame.webp" },
-  { icon: "paintbrush", title: "Renovation", desc: "Full and partial renovations, extensions and upgrades for existing properties.", image: "/images/jood/villa-entrance.webp" },
-  { icon: "palette", title: "Design & Build", desc: "One team from concept and approvals through to construction.", image: "/images/jood/design-planning.webp" },
-  { icon: "shield-check", title: "Structural & Civil Works", desc: "Foundations, concrete frames and civil works with strict quality control.", image: "/images/jood/concrete-pour.webp" },
-];
-
 export const whyChooseUs = [
   { icon: "users", title: "Experienced Team", desc: "Engineers, supervisors and skilled trades with years of UAE construction experience" },
   { icon: "clock", title: "On-Schedule Delivery", desc: "Clear programmes and milestones from groundwork to handover" },
@@ -21,79 +6,18 @@ export const whyChooseUs = [
   { icon: "shield-check", title: "Licensed & Insured", desc: "A fully licensed building contractor you can rely on" },
 ];
 
-export const servicePackages = [
-  {
-    name: "Essential",
-    price: "Quote on request",
-    style: "Practical | Durable | Cost-Efficient",
-    perfectFor: "Starter homes, rental units, single-room and partial renovations",
-    features: ["New build: standard structure, blockwork & plaster", "Renovation: repairs, repainting & minor upgrades", "Ceramic flooring & standard doors and windows", "Basic electrical & plumbing works", "Neutral paint finishes", "Site clean-up & handover"],
-    image: "/images/jood/villa-townhouse.webp",
-    featured: false,
-  },
-  {
-    name: "Standard",
-    price: "Quote on request",
-    style: "Modern | Functional | Balanced",
-    perfectFor: "Family villas, small buildings, full home renovations",
-    features: ["New build: design, approvals & concrete structure", "Renovation: full refurbishment & layout changes", "Kitchen & bathroom renovation", "Porcelain flooring & aluminium windows", "Complete electrical, plumbing & AC works", "Waterproofing & exterior repainting"],
-    image: "/images/jood/villa-modern.webp",
-    featured: true,
-  },
-  {
-    name: "Premium",
-    price: "Quote on request",
-    style: "Refined | Custom | High-End Finishes",
-    perfectFor: "Luxury villas, commercial buildings, major renovations & extensions",
-    features: ["New build: custom architectural design", "Renovation: structural changes & extensions", "Stone & cladding facades, new or refaced", "Marble flooring & premium sanitary fittings", "Landscaping & pool construction or upgrade", "Smart-home ready wiring"],
-    image: "/images/jood/villa-luxury.webp",
-    featured: false,
-  },
-  {
-    name: "Signature",
-    price: "Quote on request",
-    style: "Bespoke | Turnkey | Fully Managed",
-    perfectFor: "Signature villas, large buildings, warehouses & complete rebuilds",
-    features: ["New build: full design & build, turnkey", "Renovation: complete strip-out & rebuild", "Dedicated project manager & site team", "Bespoke finishes, inside and out", "Authority approvals & NOCs handled for you", "Extended warranty & after-care support"],
-    image: "/images/jood/villa-signature.webp",
-    featured: false,
-  },
-];
-
 export const testimonials = [
-  { name: "Khalid Al Mansoori", role: "Villa Owner, Dubai", text: "Jood built our family villa from the ground up and later renovated our older property. Both jobs were handled with the same care, clear communication and honest pricing.", initials: "KM" },
-  { name: "Sarah Ahmed", role: "Property Investor", text: "We have used Jood for a new residential building and for renovating two existing units. Whether it is new construction or renovation, the team is organised, on schedule and easy to work with.", initials: "SA" },
-  { name: "Mohammed Al Rashid", role: "Business Owner", text: "Our warehouse was built on time and exactly to the approved drawings. The structure, finishing and site safety were all handled professionally from start to handover.", initials: "MR" },
-  { name: "Elena Rodriguez", role: "Homeowner, Abu Dhabi", text: "Jood renovated our villa completely, including a new kitchen, bathrooms, flooring and an extension. The result looks like a new home, and the work was finished when they said it would be.", initials: "ER" },
-];
-
-export const portfolioImages = [
-  "/hero-villa.webp",
-  "/images/jood/villa-dusk.webp",
-  "/images/jood/projects-hero.webp",
-  "/images/jood/warehouse-exterior.webp",
-  "/images/jood/villa-luxury.webp",
-  "/images/jood/residential-tower.webp",
-  "/images/jood/commercial-building.webp",
-  "/images/jood/villa-community.webp",
-  "/images/jood/warehouse-hall.webp",
-  "/images/jood/villa-entrance.webp",
-  "/images/jood/design-build-hero.webp",
-  "/images/jood/villa-modern.webp",
-  "/images/jood/concrete-pour.webp",
-  "/images/jood/villa-signature.webp",
-  "/images/jood/warehouse-steel-frame.webp",
-  "/images/jood/villa-townhouse.webp",
-  "/images/jood/design-planning.webp",
-  "/images/about-hero-construction.webp",
-  "/images/about-story-site.webp",
+  { name: "Khalid Al Mansoori", role: "Villa Owner, Ajman", text: "Jood built our family villa from the ground up. The work was handled with care, clear communication and honest pricing, and we moved in on the date they promised.", initials: "KM" },
+  { name: "Sarah Ahmed", role: "Property Investor, Umm Al Quwain", text: "We have built two residential villas with Jood. The team is organised, on schedule and easy to work with, and the finishing quality is excellent.", initials: "SA" },
+  { name: "Mohammed Al Rashid", role: "Factory Owner, Umm Al Quwain", text: "Our industrial shed was built on time and exactly to the approved drawings. The structure, finishing and site safety were all handled professionally from start to handover.", initials: "MR" },
+  { name: "Faisal Al Nuaimi", role: "Business Owner, Ajman", text: "Jood delivered our labour camp accommodation on programme and within budget. Their engineers kept us informed at every stage and the handover was smooth.", initials: "FN" },
 ];
 
 export const aboutHighlights = [
-  { icon: "hammer", title: "Villas", desc: "Private and luxury villas, built to last" },
-  { icon: "award", title: "Buildings", desc: "Residential & commercial buildings" },
-  { icon: "wrench", title: "Warehouses", desc: "Industrial & storage facilities" },
-  { icon: "paintbrush", title: "Renovation", desc: "Upgrades, extensions & refurbishment" },
+  { icon: "hammer", title: "Residential", desc: "Private villas, built to last" },
+  { icon: "award", title: "Commercial", desc: "Commercial buildings delivered on programme" },
+  { icon: "wrench", title: "Industrial Sheds", desc: "Steel-structure sheds & facilities" },
+  { icon: "users", title: "Labour Camps", desc: "Staff & labour accommodation" },
 ];
 
 export const stats = [

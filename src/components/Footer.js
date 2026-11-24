@@ -11,10 +11,10 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { label: 'Villa Construction', to: '/services' },
-  { label: 'Building Construction', to: '/services' },
-  { label: 'Warehouse Construction', to: '/services' },
-  { label: 'Renovation', to: '/services' },
+  { label: 'Residential Construction', to: '/services' },
+  { label: 'Commercial Construction', to: '/services' },
+  { label: 'Industrial Sheds', to: '/services' },
+  { label: 'Labour Camps', to: '/services' },
   { label: 'Design & Build', to: '/services' },
 ];
 
@@ -36,7 +36,7 @@ export default function Footer({ onContactClick }) {
         {/* Top: inquiry + contact */}
         <div className="grid lg:grid-cols-2 gap-10 pb-14 border-b border-white/15">
           <div>
-            <Logo className="h-12 w-auto text-white mb-10" />
+            <Logo showTagline className="h-24 w-auto text-white mb-10" />
             <p className="text-white/60 text-sm mb-2">For project inquiries, please contact us at</p>
             <a
               href="mailto:info@joodbuildingcontracting.ae"
@@ -81,7 +81,7 @@ export default function Footer({ onContactClick }) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
           <div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              New construction and renovation across the UAE — villas, buildings and warehouses,
+              Residential and commercial construction in Ajman and Umm Al Quwain,
               delivered by one accountable team.
             </p>
           </div>
@@ -114,8 +114,8 @@ export default function Footer({ onContactClick }) {
 
           <div>
             <h4 className="text-xs tracking-[0.3em] uppercase text-white/50 font-semibold mb-6">Location</h4>
-            <p className="text-white/85 text-sm leading-relaxed">Dubai, United Arab Emirates</p>
-            <p className="text-white/60 text-sm mt-4">Projects across the UAE</p>
+            <p className="text-white/85 text-sm leading-relaxed">Ajman &amp; Umm Al Quwain, UAE</p>
+            <p className="text-white/60 text-sm mt-4">Serving Ajman and Umm Al Quwain</p>
           </div>
         </div>
 

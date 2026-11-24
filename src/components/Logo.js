@@ -1,11 +1,12 @@
 /**
- * JOOD Building Contracting wordmark: building-bars mark + "JOOD" + "BUILDING CONTRACTING".
- * Uses currentColor so it can be white over dark heroes and navy on light backgrounds.
+ * JOOD logo: building mark stacked above the "JOOD" wordmark, drawn as shapes so it
+ * looks the same everywhere. Uses currentColor (navy on light, white on dark).
+ * showTagline adds "BUILDING CONTRACTING" underneath.
  */
-export default function Logo({ className = '', showTagline = true, title = 'Jood Building Contracting' }) {
+export default function Logo({ className = '', showTagline = false, title = 'Jood Building Contracting' }) {
   return (
     <svg
-      viewBox="0 0 218 64"
+      viewBox={showTagline ? '0 0 200 172' : '0 0 200 146'}
       className={className}
       fill="currentColor"
       direction="ltr"
@@ -16,31 +17,28 @@ export default function Logo({ className = '', showTagline = true, title = 'Jood
       <title>{title}</title>
       {/* Building mark */}
       <g>
-        <path d="M2 50 L2 30 L9 26 L9 50 Z" opacity="0.55" />
-        <path d="M12 50 L12 20 L19 14 L19 50 Z" opacity="0.75" />
-        <path d="M22 50 L22 8 L30 2 L30 50 Z" />
-        <path d="M33 50 L33 16 L40 21 L40 50 Z" opacity="0.75" />
-        <rect x="0" y="52" width="42" height="2.4" />
+        <polygon points="56,82 56,52 73,44 73,82" />
+        <polygon points="76,82 76,30 93,19 93,82" />
+        <polygon points="96,82 96,13 113,0 113,82" />
+        <polygon points="116,82 116,10 131,21 131,82" opacity="0.82" />
+        <polygon points="134,82 134,42 147,49 147,82" />
       </g>
-      {/* Wordmark */}
-      <text
-        x="52"
-        y="38"
-        fontFamily="'Montserrat', sans-serif"
-        fontWeight="700"
-        fontSize="34"
-        letterSpacing="1.5"
-      >
-        JOOD
-      </text>
+      {/* JOOD wordmark */}
+      <g fill="none" stroke="currentColor" strokeWidth="9" strokeLinejoin="round">
+        <path d="M34 98.5 V124 Q34 137.5 21 137.5 H15 Q4.5 137.5 4.5 126" strokeLinecap="butt" />
+        <rect x="49.5" y="103" width="40" height="34.5" rx="12" />
+        <rect x="103.5" y="103" width="40" height="34.5" rx="12" />
+        <path d="M157.5 103 H180 Q195.5 103 195.5 120.25 Q195.5 137.5 180 137.5 H157.5 Z" />
+      </g>
       {showTagline && (
         <text
-          x="53"
-          y="54"
+          x="100"
+          y="165"
+          textAnchor="middle"
           fontFamily="'Montserrat', sans-serif"
           fontWeight="600"
-          fontSize="8.6"
-          letterSpacing="2.4"
+          fontSize="13.5"
+          letterSpacing="2.6"
         >
           BUILDING CONTRACTING
         </text>

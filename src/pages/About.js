@@ -33,10 +33,11 @@ export default function AboutPage() {
       <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/images/about-hero-construction.webp"
+          src="/images/projects/shed-shady/01.webp"
           alt="About Jood Building Contracting Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/70" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           
@@ -44,7 +45,6 @@ export default function AboutPage() {
           <div
             className="w-full max-w-3xl flex flex-col items-center"
             style={{
-              background: 'radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 80%)',
               padding: '3rem 2rem',
               borderRadius: '100px',
             }}
@@ -77,12 +77,12 @@ export default function AboutPage() {
               className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-6 max-w-xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              A UAE contractor for new construction and renovation — villas, buildings and warehouses, handled by one accountable team from first drawing to final handover.
+              A building contractor for residential and commercial projects in Ajman and Umm Al Quwain, with one accountable team from first drawing to final handover.
             </p>
             <span className="block w-24 h-[3px] bg-[#3E6FB5] rounded-full mb-10" aria-hidden="true" />
 
             <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-              {["Construction", "Renovation", "Design & Build", "UAE-Wide"].map((f) => (
+              {["Residential", "Commercial", "Design & Build", "Ajman & UAQ"].map((f) => (
                 <span
                   key={f}
                   className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/50 bg-black/40 backdrop-blur-md shadow-md"
@@ -114,9 +114,9 @@ export default function AboutPage() {
         items={[
           { text: "15+ Years" },
           { text: "280+ Projects" },
-          { text: "Villas" },
-          { text: "Buildings" },
-          { text: "Warehouses" },
+          { text: "Residential" },
+          { text: "Commercial" },
+          { text: "Ajman • Umm Al Quwain" },
           { text: "Quality you trust. Results you see" },
         ]}
       />
@@ -133,7 +133,7 @@ export default function AboutPage() {
                   <div className="absolute -bottom-8 -right-6 w-52 h-52 rounded-2xl border-2 border-[#3E6FB5]/40 -z-10" />
                   <div className="img-zoom rounded-3xl shadow-xl overflow-hidden border border-[#3E6FB5]/30">
                     <SmartImage
-                      src="/images/about-story-site.webp"
+                      src="/images/projects/villa-complex/02.webp"
                       alt="Jood Building Contracting engineers on site"
                       className="w-full h-[420px] md:h-[520px] object-cover"
                     />
@@ -154,15 +154,15 @@ export default function AboutPage() {
                   Our Story
                 </span>
                 <h2 className="font-serif text-3xl md:text-5xl text-[#0B2D5B] leading-tight mb-6 font-light">
-                  Trusted for Construction<br />and Renovation
+                  Trusted for Residential<br />and Commercial Construction
                 </h2>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-6">
-                  We are a UAE building contractor working on both sides of the trade: constructing new
-                  villas, buildings and warehouses, and renovating the ones that already exist. From the
+                  We are a building contractor serving Ajman and Umm Al Quwain. We build residential
+                  villas and commercial projects such as industrial sheds and labour camps. From the
                   first drawing to the final handover, our engineers and site teams manage every stage.
                 </p>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-8">
-                  Our mission is simple: build and renovate properties that last — on time, on budget, and to a
+                  Our mission is simple: build properties that last — on time, on budget, and to a
                   standard our clients can trust. Quality you trust. Results you see.
                 </p>
 
@@ -208,7 +208,7 @@ export default function AboutPage() {
             <SectionHeading
               kicker="Why Choose Us"
               title="Building Trust. Delivering Excellence"
-              subtitle="Whether it is a new build or a renovation, our engineers and site teams work with quality materials, clear schedules and careful attention to detail."
+              subtitle="On every residential and commercial project, our engineers and site teams work with quality materials, clear schedules and careful attention to detail. Quality, punctuality and honesty."
             />
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
@@ -241,7 +241,7 @@ export default function AboutPage() {
       {/* ================= CTA ================= */}
       <SectionFlip>
         <CTA
-          image="/hero-villa.webp"
+          image="/images/projects/villa-harmodi/01.webp"
           kicker="Join Our Clients"
           title="Let's Build Your Next Project Together"
           subtitle="From design to construction and handover — experience the Jood Building Contracting difference."

@@ -6,34 +6,16 @@ import ContactModal from '../components/ContactModal';
 import Icon from '../components/Icon';
 import SectionHeading from '../components/SectionHeading';
 import Marquee from '../components/Marquee';
-import PortfolioGrid from '../components/PortfolioGrid';
 import CTA from '../components/CTA';
 import SectionFlip from '../components/SectionFlip';
 
-import { navLinks, heroImages, portfolioImages, servicePackages } from '../data/content';
-
-const portfolioCategories = [
-  {
-    title: 'New Construction',
-    desc: 'Villas, residential and commercial buildings, and warehouses built from the ground up to approved drawings.',
-    icon: 'sparkles',
-  },
-  {
-    title: 'Renovation',
-    desc: 'Full and partial renovations, extensions and upgrades that give existing properties a new life.',
-    icon: 'users',
-  },
-  {
-    title: 'Design & Build',
-    desc: 'One team for design, approvals and construction, so your project runs smoothly from start to handover.',
-    icon: 'award',
-  },
-];
+import { navLinks } from '../data/content';
+import { projects, projectCategories } from '../data/projects';
 
 export default function PortfolioPage() {
   const [showContact, setShowContact] = useState(false);
   const [lightbox, setLightbox] = useState(null);
-  const [activePackage, setActivePackage] = useState('Premium');
+  const [category, setCategory] = useState('All');
 
   return (
     <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
@@ -43,11 +25,11 @@ export default function PortfolioPage() {
       <section className="min-h-[75vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#06172F]">
         {/* Background Image */}
         <img
-          src="/images/jood/projects-hero-blue.webp"
+          src="/images/projects/villa-complex/01.webp"
           alt="Jood Building Contracting Portfolio Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/45" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[#071F40]/65" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           
@@ -74,12 +56,12 @@ export default function PortfolioPage() {
               className="section-heading text-3xl md:text-4xl lg:text-[40px] xl:text-[46px] lg:whitespace-nowrap text-white leading-[1.15] mb-6 font-serif font-light tracking-tight text-center"
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
-              BUILT TO LAST{' '}
+              OUR WORK{' '}
               <span
                 className="text-[#A9C1E3] italic font-medium"
                 style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
               >
-                RENOVATED TO IMPRESS
+                SPEAKS FOR ITSELF
               </span>
             </h1>
 
@@ -87,34 +69,15 @@ export default function PortfolioPage() {
               className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-10 max-w-2xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              Our projects range from new villas, buildings and warehouses to complete renovations of existing properties — each one planned carefully, built properly and handed over on time.
+              Behind every project is a team that cares about the details, from the first foundation to the final finish. See the results for yourself.
             </p>
 
-            {/* 3 Pillars Row */}
-            <div className="grid md:grid-cols-3 gap-5 text-left mb-10 w-full">
-              {portfolioCategories.map((cat, i) => (
-                <div
-                  key={cat.title}
-                  className="p-5 rounded-2xl bg-[#071F40]/55 backdrop-blur-md border border-white/20 hover:border-white/50 transition-all duration-300 shadow-lg"
-                >
-                  <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/30 flex items-center justify-center text-[#CBD5E1] mb-3">
-                    <Icon name={cat.icon} size={18} strokeWidth={2} />
-                  </div>
-                  <h3 className="font-serif text-lg font-normal text-white mb-2">{cat.title}</h3>
-                  <p className="text-xs text-white/80 font-normal leading-relaxed">{cat.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="entrance-fade-up d-6 flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => setShowContact(true)} className="bg-[#3E6FB5] text-white hover:bg-white hover:text-[#0B2D5B] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
-                <span>Start Your Project</span>
-              </button>
+            <div className="entrance-fade-up d-6 flex justify-center">
               <button
                 onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border border-white/40 text-white hover:border-[#3E6FB5] hover:bg-[#3E6FB5] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
+                className="bg-[#3E6FB5] text-white hover:bg-white hover:text-[#0B2D5B] transition-colors text-xs uppercase tracking-[0.2em] px-10 py-4 font-bold shadow-md rounded-full border border-transparent"
               >
-                <span>Explore Gallery</span>
+                <span>Visit Our Projects</span>
               </button>
             </div>
           </div>
@@ -125,92 +88,13 @@ export default function PortfolioPage() {
       <Marquee
         dark={false}
         items={[
-          { text: "New Construction" },
-          { text: "Renovation" },
+          { text: "Residential" },
+          { text: "Commercial" },
           { text: "Design & Build" },
           { text: "Turnkey Execution" },
-          { text: "Villas • Buildings • Warehouses" },
+          { text: "Ajman • Umm Al Quwain" },
         ]}
       />
-
-      {/* ================= RENOVATION PACKAGES SHOWCASE ================= */}
-      <SectionFlip id="renovation-styles">
-        <section className="py-20 md:py-28 bg-[#E2E8F0] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 md:px-6">
-            <SectionHeading
-              kicker="Our Packages"
-              title="Construction & Renovation Packages"
-              subtitle="Every package is available for both new construction and renovation — choose the level of specification that fits your project."
-            />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {servicePackages.map((pkg) => {
-                const isSelected = activePackage === pkg.name;
-                return (
-                  <div
-                    key={pkg.name}
-                    onClick={() => setActivePackage(pkg.name)}
-                    className={`rounded-3xl p-7 transition-all duration-300 cursor-pointer flex flex-col justify-between border ${
-                      isSelected
-                        ? 'bg-white text-[#0B2D5B] border-[#3E6FB5] shadow-xl'
-                        : 'bg-white/80 text-[#0B2D5B] border-[#E2E8F0] hover:border-[#3E6FB5]/40 shadow-sm'
-                    }`}
-                  >
-                    <div>
-                      {pkg.featured && (
-                        <span className="inline-block px-3 py-1 rounded-full bg-[#3E6FB5] text-white text-[9px] uppercase font-semibold tracking-widest mb-4 shadow-sm">
-                          Most Popular
-                        </span>
-                      )}
-                      <h3 className="font-serif text-2xl font-normal mb-1 text-[#0B2D5B] tracking-tight">
-                        {pkg.name}
-                      </h3>
-                      <div className="text-xs text-[#3E6FB5] font-semibold tracking-wide mb-2">
-                        Price Range: {pkg.price}
-                      </div>
-                      <div className="text-[11px] text-[#0B2D5B]/70 font-medium mb-4 italic">
-                        Design Style: {pkg.style}
-                      </div>
-                      <div className="text-xs font-semibold text-[#0B2D5B] mb-2 uppercase tracking-wider">
-                        Perfect For:
-                      </div>
-                      <p className="text-xs mb-6 font-normal text-[#64748B] leading-relaxed">
-                        {pkg.perfectFor}
-                      </p>
-
-                      <div className="text-xs font-semibold text-[#0B2D5B] mb-3 uppercase tracking-wider">
-                        Features Included:
-                      </div>
-                      <div className="space-y-2.5 mb-8">
-                        {pkg.features.map((feat, i) => (
-                          <div key={i} className="flex items-start gap-2.5 text-xs font-normal text-[#0B2D5B]/85">
-                            <span className="text-[#3E6FB5] font-bold">✓</span>
-                            <span>{feat}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setShowContact(true);
-                      }}
-                      className={`w-full py-3 rounded-full text-[10px] uppercase tracking-[0.25em] font-semibold transition-all ${
-                        isSelected
-                          ? 'btn-gold shadow-md'
-                          : 'bg-white text-[#0B2D5B] border border-[#3E6FB5]/40 hover:bg-[#3E6FB5] hover:text-white'
-                      }`}
-                    >
-                      Inquire {pkg.name}
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      </SectionFlip>
 
       {/* ================= GALLERY ================= */}
       <SectionFlip id="gallery">
@@ -218,11 +102,62 @@ export default function PortfolioPage() {
           <div className="absolute -top-40 -left-40 w-[30rem] h-[30rem] rounded-full bg-[#3E6FB5]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              kicker="Showcase"
+              kicker="Our Projects"
               title="Project Gallery"
-              subtitle="New construction and renovation projects across the UAE."
+              subtitle="Completed residential and commercial projects in Ajman and Umm Al Quwain."
             />
-            <PortfolioGrid images={portfolioImages} onOpen={setLightbox} />
+
+            <div className="flex flex-wrap justify-center gap-3 mb-14">
+              {projectCategories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategory(cat)}
+                  className={`px-7 py-3 text-[10px] font-semibold uppercase tracking-[0.25em] rounded-full border transition-all duration-300 ${
+                    category === cat
+                      ? 'bg-[#3E6FB5] text-white border-[#3E6FB5] shadow-sm'
+                      : 'bg-white text-[#0B2D5B]/70 border-[#0B2D5B]/20 hover:border-[#3E6FB5] hover:text-[#0B2D5B]'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            <div className="space-y-16">
+              {projects
+                .filter((p) => category === 'All' || p.category === category)
+                .map((project) => (
+                  <div key={project.slug}>
+                    <div className="flex items-end justify-between gap-4 border-b border-[#CBD5E1] pb-4 mb-6">
+                      <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#0B2D5B]">
+                        <span translate="no" className="notranslate">{project.title}</span>
+                      </h3>
+                      <span className="shrink-0 text-[10px] uppercase tracking-[0.25em] font-bold text-[#3E6FB5]">{project.category}</span>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {project.images.map((src, i) => (
+                        <button
+                          key={src}
+                          onClick={() => setLightbox(src)}
+                          aria-label={`View project ${i + 1}`}
+                          className={`group relative overflow-hidden rounded-2xl shadow-md hover:shadow-deep transition-shadow duration-500 ${
+                            i === 0 ? 'col-span-2 row-span-2' : ''
+                          }`}
+                        >
+                          <img
+                            src={src}
+                            alt={project.title}
+                            loading="lazy"
+                            className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                              i === 0 ? 'h-64 md:h-[416px]' : 'h-40 md:h-[200px]'
+                            }`}
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
         </section>
       </SectionFlip>
@@ -230,10 +165,10 @@ export default function PortfolioPage() {
       {/* ================= CTA ================= */}
       <SectionFlip>
         <CTA
-          image={heroImages[0]}
-          kicker="Construction • Renovation"
+          image="/images/projects/villa-saif/01.webp"
+          kicker="Residential • Commercial"
           title="Ready to Start Your Project?"
-          subtitle="For new builds and renovations, call +971 58 929 9581 or email info@joodbuildingcontracting.ae today."
+          subtitle="For residential and commercial projects, call +971 58 929 9581 or email info@joodbuildingcontracting.ae today."
           primaryLabel="Book a Free Consultation"
           onPrimary={() => setShowContact(true)}
         />
