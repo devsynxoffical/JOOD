@@ -81,7 +81,7 @@ export default function Footer({ onContactClick }) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
           <div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Residential and commercial construction in Ajman and Umm Al Quwain,
+              Residential and commercial construction across the UAE,
               delivered by one accountable team.
             </p>
           </div>
@@ -114,8 +114,8 @@ export default function Footer({ onContactClick }) {
 
           <div>
             <h4 className="text-xs tracking-[0.3em] uppercase text-white/50 font-semibold mb-6">Location</h4>
-            <p className="text-white/85 text-sm leading-relaxed">Ajman &amp; Umm Al Quwain, UAE</p>
-            <p className="text-white/60 text-sm mt-4">Serving Ajman and Umm Al Quwain</p>
+            <p className="text-white/85 text-sm leading-relaxed">United Arab Emirates</p>
+            <p className="text-white/60 text-sm mt-4">Serving clients across the UAE</p>
           </div>
         </div>
 

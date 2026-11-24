@@ -1,6 +1,6 @@
 # Jood Building Contracting
 
-Website for Jood Building Contracting, a building contractor for residential and commercial projects in Ajman and Umm Al Quwain, UAE.
+Website for Jood Building Contracting, a building contractor for residential and commercial projects across the UAE.
 
 ## Pages
 

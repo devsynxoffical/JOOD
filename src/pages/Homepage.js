@@ -69,7 +69,7 @@ export default function HomePage() {
             className="text-white font-medium leading-[1.8] max-w-[680px] mb-9"
             style={{ fontSize: 'clamp(13px, 1.4vw, 17px)', textShadow: '1px 1px 3px rgba(7,31,64,0.95), 0 0 10px rgba(7,31,64,0.7)' }}
           >
-            Jood Building Contracting delivers high-quality residential and commercial projects in Ajman and Umm Al Quwain, built on trust, expertise, and attention to detail.
+            Jood Building Contracting delivers high-quality residential and commercial projects across the UAE, built on trust, expertise, and attention to detail.
           </p>
           <div
             className="text-white uppercase font-semibold tracking-[0.3em] mb-6"

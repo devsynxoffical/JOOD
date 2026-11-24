@@ -163,7 +163,7 @@ export default function ServicesPage() {
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pt-20 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-[#CBD5E1]" />
-            <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#CBD5E1] font-bold">Ajman &amp; Umm Al Quwain</span>
+            <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#CBD5E1] font-bold">Across the UAE</span>
             <span className="w-8 h-px bg-[#CBD5E1]" />
           </div>
           <h1 className="font-serif text-white font-bold leading-[1.1] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-4xl mb-6">

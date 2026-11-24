@@ -77,12 +77,12 @@ export default function AboutPage() {
               className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-6 max-w-xl text-center"
               style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
             >
-              A building contractor for residential and commercial projects in Ajman and Umm Al Quwain, with one accountable team from first drawing to final handover.
+              A building contractor for residential and commercial projects across the UAE, with one accountable team from first drawing to final handover.
             </p>
             <span className="block w-24 h-[3px] bg-[#3E6FB5] rounded-full mb-10" aria-hidden="true" />
 
             <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-              {["Residential", "Commercial", "Design & Build", "Ajman & UAQ"].map((f) => (
+              {["Residential", "Commercial", "Design & Build", "UAE-Wide"].map((f) => (
                 <span
                   key={f}
                   className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/50 bg-black/40 backdrop-blur-md shadow-md"
@@ -116,7 +116,7 @@ export default function AboutPage() {
           { text: "280+ Projects" },
           { text: "Residential" },
           { text: "Commercial" },
-          { text: "Ajman • Umm Al Quwain" },
+          { text: "Across the UAE" },
           { text: "Quality you trust. Results you see" },
         ]}
       />
@@ -157,7 +157,7 @@ export default function AboutPage() {
                   Trusted for Residential<br />and Commercial Construction
                 </h2>
                 <p className="text-base md:text-lg text-[#64748B] font-normal leading-relaxed mb-6">
-                  We are a building contractor serving Ajman and Umm Al Quwain. We build residential
+                  We are a building contractor serving clients across the UAE. We build residential
                   villas and commercial projects such as industrial sheds and labour camps. From the
                   first drawing to the final handover, our engineers and site teams manage every stage.
                 </p>
