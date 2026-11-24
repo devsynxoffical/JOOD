@@ -17,11 +17,11 @@ export default function Logo({ className = '', showTagline = false, title = 'Joo
       <title>{title}</title>
       {/* Building mark */}
       <g>
-        <polygon points="56,82 56,52 73,44 73,82" />
-        <polygon points="76,82 76,30 93,19 93,82" />
-        <polygon points="96,82 96,13 113,0 113,82" />
-        <polygon points="116,82 116,10 131,21 131,82" opacity="0.82" />
-        <polygon points="134,82 134,42 147,49 147,82" />
+        <polygon points="56.6,82 56.6,66 69.9,60.7 69.9,82" />
+        <polygon points="61.4,60.6 61.4,51.7 85.4,28.2 85.4,82 72.6,82 72.6,56.1" />
+        <polygon points="92.3,82 92.3,13.8 109.9,0 109.9,82" />
+        <polygon points="116.2,82 116.2,14.9 123.2,18.6 123.2,28.8 129.6,40.5 129.6,82" />
+        <polygon points="131.9,82 131.9,52.2 143.4,57.5 143.4,82" />
       </g>
       {/* JOOD wordmark */}
       <g fill="none" stroke="currentColor" strokeWidth="9" strokeLinejoin="round">
