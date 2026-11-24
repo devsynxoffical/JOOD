@@ -155,6 +155,23 @@ export default function PortfolioPage() {
                         </button>
                       ))}
                     </div>
+                    {project.videos && project.videos.length > 0 && (
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                        {project.videos.map((v) => (
+                          <video
+                            key={v.src}
+                            controls
+                            playsInline
+                            preload="none"
+                            poster={v.poster}
+                            aria-label={`${project.title} video`}
+                            className="w-full h-64 md:h-72 rounded-2xl bg-[#06172F] object-contain shadow-md"
+                          >
+                            <source src={v.src} type="video/mp4" />
+                          </video>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
             </div>

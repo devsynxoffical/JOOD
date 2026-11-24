@@ -83,6 +83,9 @@ export const projects = [
       '/images/projects/sham-07-amal-ghareeb/03.webp',
       '/images/projects/sham-07-amal-ghareeb/04.webp',
     ],
+    videos: [
+      { src: '/images/projects/sham-07-amal-ghareeb/video-01.mp4', poster: '/images/projects/sham-07-amal-ghareeb/video-01-poster.webp' },
+    ],
   },
   {
     title: "Kaber Container",
@@ -94,6 +97,11 @@ export const projects = [
       '/images/projects/kaber-container/03.webp',
       '/images/projects/kaber-container/04.webp',
       '/images/projects/kaber-container/05.webp',
+    ],
+    videos: [
+      { src: '/images/projects/kaber-container/video-01.mp4', poster: '/images/projects/kaber-container/video-01-poster.webp' },
+      { src: '/images/projects/kaber-container/video-02.mp4', poster: '/images/projects/kaber-container/video-02-poster.webp' },
+      { src: '/images/projects/kaber-container/video-03.mp4', poster: '/images/projects/kaber-container/video-03-poster.webp' },
     ],
   },
   {
