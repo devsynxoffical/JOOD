@@ -36,7 +36,7 @@ function LanguageMenu({ className = '', mobile = false, onSelect }) {
                   type="button"
                   disabled={l.soon}
                   onClick={() => { setLang(l.code); setOpen(false); setLanguage(l.code); onSelect && onSelect(l.code); }}
-                  className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-xs tracking-wider normal-case text-left transition-colors ${lang === l.code ? 'text-[#0B2D5B] font-semibold bg-[#F1F5F9]' : 'text-[#0B2D5B]/80 hover:bg-[#F1F5F9]'} ${l.soon ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-sm tracking-wider normal-case text-left transition-colors ${lang === l.code ? 'text-[#0B2D5B] font-semibold bg-[#F1F5F9]' : 'text-[#0B2D5B]/80 hover:bg-[#F1F5F9]'} ${l.soon ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <span>{l.label}</span>
                   {l.soon && <span className="text-[9px] uppercase tracking-widest text-[#64748B]">Soon</span>}
@@ -116,7 +116,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
               <Link
                 key={link.label}
                 to={link.to}
-                className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${isActive(link.to)
+                className={`nav-link whitespace-nowrap text-[13px] xl:text-sm uppercase tracking-[0.18em] font-medium transition-colors duration-300 ${isActive(link.to)
                   ? `${solid ? 'text-white border-b border-white' : 'text-[#0B2D5B] border-b border-[#0B2D5B]'} pb-1 font-semibold`
                   : navLinkClass
                   }`}
@@ -124,7 +124,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                 {link.label}
               </Link>
             ))}
-            <LanguageMenu className={`nav-link whitespace-nowrap text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${navLinkClass}`} />
+            <LanguageMenu className={`nav-link whitespace-nowrap text-[13px] xl:text-sm uppercase tracking-[0.18em] font-medium transition-colors duration-300 ${navLinkClass}`} />
           </nav>
 
           <div className="flex-1 flex items-center justify-end gap-2 md:gap-3">
@@ -143,9 +143,9 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
               </svg>
             </a>
             <a
-              href="tel:+971564455996"
-              aria-label="Call Muhammad Hasan"
-              title="Call — Muhammad Hasan: +971 56 445 5996"
+              href="tel:+971566664982"
+              aria-label="Call Abdullah Hasan"
+              title="Call — Abdullah Hasan: +971 56 666 4982"
               className={`inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full transition-all ${whatsappBtnClass}`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -178,7 +178,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             }`}
         >
           <div className="p-8 pt-24 flex flex-col h-full">
-            <div className="text-[#3E6FB5] text-xs tracking-[0.4em] uppercase font-semibold mb-8 flex items-center gap-3">
+            <div className="text-[#3E6FB5] text-sm tracking-[0.4em] uppercase font-semibold mb-8 flex items-center gap-3">
               <span className="w-8 h-[1px] bg-[#3E6FB5]" />
               Navigation
             </div>
@@ -188,7 +188,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                   key={link.label}
                   to={link.to}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between py-4 border-b border-[#3E6FB5]/10 transition-all duration-300 text-base uppercase tracking-widest font-medium ${isActive(link.to)
+                  className={`flex items-center justify-between py-4 border-b border-[#3E6FB5]/10 transition-all duration-300 text-lg uppercase tracking-widest font-medium ${isActive(link.to)
                     ? 'text-[#3E6FB5] pl-2 font-semibold'
                     : 'text-[#0B2D5B]/80 hover:text-[#3E6FB5] hover:pl-2'
                     }`}
@@ -201,7 +201,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
                 </Link>
               ))}
               <div className="py-4 border-b border-[#3E6FB5]/10">
-                <LanguageMenu mobile className="text-base uppercase tracking-widest font-medium text-[#0B2D5B]/80 hover:text-[#3E6FB5]" />
+                <LanguageMenu mobile className="text-lg uppercase tracking-widest font-medium text-[#0B2D5B]/80 hover:text-[#3E6FB5]" />
               </div>
             </nav>
           </div>

@@ -207,7 +207,7 @@ export default function AboutPage() {
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
               kicker="Why Choose Us"
-              title="Building Trust. Delivering Excellence"
+              title="Built well, built on time"
               subtitle="On every residential and commercial project, our engineers and site teams work with quality materials, clear schedules and careful attention to detail. Quality, punctuality and honesty."
             />
 

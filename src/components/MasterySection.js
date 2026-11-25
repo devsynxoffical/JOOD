@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../data/projects';
+import Lightbox from './Lightbox';
 
 const galleryItems = projects.map((p, i) => ({
   id: i + 1,
@@ -46,11 +47,20 @@ function ProjectCard({ item, onClick, delay = 0 }) {
 
 export default function MasterySection({ onContactClick }) {
   const [selectedCat, setSelectedCat] = useState('All');
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const filtered = selectedCat === 'All'
     ? galleryItems
     : galleryItems.filter((i) => i.category === selectedCat);
+
+  // Every photo of the projects in the current filter, in order
+  const photos = projects
+    .filter((p) => selectedCat === 'All' || p.category === selectedCat)
+    .flatMap((p) => p.images.map((src) => ({ src, title: p.title, category: p.category })));
+  const openProject = (item) => {
+    const i = photos.findIndex((ph) => ph.src === item.image);
+    setActiveIndex(i < 0 ? 0 : i);
+  };
 
   return (
     <section className="py-24 md:py-32 bg-[#F8FAFC] text-[#0B2D5B] relative overflow-hidden">
@@ -112,7 +122,7 @@ export default function MasterySection({ onContactClick }) {
             {filtered.length > 0 && (
               <div className="grid md:grid-cols-2 gap-4 mb-4">
                 {filtered.slice(0, 2).map((item, idx) => (
-                  <ProjectCard key={item.id} item={item} onClick={setActiveItem} delay={idx * 0.1} />
+                  <ProjectCard key={item.id} item={item} onClick={openProject} delay={idx * 0.1} />
                 ))}
               </div>
             )}
@@ -121,7 +131,7 @@ export default function MasterySection({ onContactClick }) {
             {filtered.length > 2 && (
               <div className={`grid gap-4 ${filtered.length - 2 === 1 ? 'md:grid-cols-1 max-w-2xl mx-auto' : filtered.length - 2 === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
                 {filtered.slice(2, 5).map((item, idx) => (
-                  <ProjectCard key={item.id} item={item} onClick={setActiveItem} delay={idx * 0.08} />
+                  <ProjectCard key={item.id} item={item} onClick={openProject} delay={idx * 0.08} />
                 ))}
               </div>
             )}
@@ -129,47 +139,30 @@ export default function MasterySection({ onContactClick }) {
         </AnimatePresence>
       </div>
 
-      {/* Lightbox */}
-      {activeItem && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-5"
-          onClick={() => setActiveItem(null)}
-        >
-          <div
-            className="relative bg-[#0B2D5B] text-[#CBD5E1] max-w-3xl w-full overflow-hidden border border-[#3E6FB5]/25 shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 bg-[#3E6FB5] text-[#0B2D5B] flex items-center justify-center hover:bg-white transition-colors text-sm font-bold"
-            >
-              ✕
-            </button>
-            <div className="h-72 md:h-[420px] overflow-hidden">
-              <img
-                src={activeItem.image}
-                alt={activeItem.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      {/* Lightbox: browse every photo of the visible projects */}
+      {activeIndex !== null && (
+        <Lightbox
+          items={photos}
+          index={activeIndex}
+          onIndex={setActiveIndex}
+          onClose={() => setActiveIndex(null)}
+          footer={(photo) => (
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#3E6FB5] font-medium">
-                  {activeItem.category}
-                </span>
+                <span className="text-[10px] uppercase tracking-widest text-[#A9C1E3] font-semibold">{photo.category}</span>
                 <h3 className="font-serif text-2xl text-white font-light mt-1 tracking-tight">
-                  {activeItem.title}
+                  <span translate="no" className="notranslate">{photo.title}</span>
                 </h3>
               </div>
               <button
-                onClick={() => { setActiveItem(null); onContactClick(); }}
+                onClick={() => { setActiveIndex(null); onContactClick(); }}
                 className="btn-gold text-[10px] uppercase tracking-[0.25em] px-7 py-3 shrink-0"
               >
                 Inquire Similar Build
               </button>
             </div>
-          </div>
-        </div>
+          )}
+        />
       )}
     </section>
   );

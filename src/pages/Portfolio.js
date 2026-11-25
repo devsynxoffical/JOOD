@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
-import Icon from '../components/Icon';
 import SectionHeading from '../components/SectionHeading';
 import Marquee from '../components/Marquee';
 import CTA from '../components/CTA';
@@ -11,11 +10,16 @@ import SectionFlip from '../components/SectionFlip';
 
 import { navLinks } from '../data/content';
 import { projects, projectCategories } from '../data/projects';
+import Lightbox from '../components/Lightbox';
 
 export default function PortfolioPage() {
   const [showContact, setShowContact] = useState(false);
   const [lightbox, setLightbox] = useState(null);
   const [category, setCategory] = useState('All');
+
+  const visibleProjects = projects.filter((p) => category === 'All' || p.category === category);
+  const photos = visibleProjects.flatMap((p) => p.images.map((src) => ({ src, title: p.title, category: p.category })));
+  const openPhoto = (src) => setLightbox(Math.max(0, photos.findIndex((ph) => ph.src === src)));
 
   return (
     <div className="font-sans overflow-x-hidden bg-[#F8FAFC] text-[#0B2D5B]">
@@ -124,9 +128,7 @@ export default function PortfolioPage() {
             </div>
 
             <div className="space-y-16">
-              {projects
-                .filter((p) => category === 'All' || p.category === category)
-                .map((project) => (
+              {visibleProjects.map((project) => (
                   <div key={project.slug}>
                     <div className="flex items-end justify-between gap-4 border-b border-[#CBD5E1] pb-4 mb-6">
                       <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#0B2D5B]">
@@ -138,7 +140,7 @@ export default function PortfolioPage() {
                       {project.images.map((src, i) => (
                         <button
                           key={src}
-                          onClick={() => setLightbox(src)}
+                          onClick={() => openPhoto(src)}
                           aria-label={`View project ${i + 1}`}
                           className={`group relative overflow-hidden rounded-2xl shadow-md hover:shadow-deep transition-shadow duration-500 ${
                             i === 0 ? 'col-span-2 row-span-2' : ''
@@ -198,20 +200,21 @@ export default function PortfolioPage() {
       <ContactModal open={showContact} onClose={() => setShowContact(false)} />
 
       {/* ================= LIGHTBOX ================= */}
-      {lightbox && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div className="modal-backdrop absolute inset-0 bg-[#0B2D5B]/80 backdrop-blur-md" onClick={() => setLightbox(null)} />
-          <div className="modal-card relative max-w-4xl w-full">
-            <img src={lightbox} alt="Portfolio preview" className="w-full max-h-[80vh] object-contain rounded-3xl shadow-2xl border border-[#3E6FB5]/40" />
-            <button
-              onClick={() => setLightbox(null)}
-              className="absolute -top-4 -right-4 w-11 h-11 rounded-full bg-[#3E6FB5] text-white flex items-center justify-center hover:rotate-90 transition-transform duration-300 shadow-xl font-bold"
-              aria-label="Close"
-            >
-              <Icon name="close" size={18} strokeWidth={2.4} />
-            </button>
-          </div>
-        </div>
+      {lightbox !== null && (
+        <Lightbox
+          items={photos}
+          index={lightbox}
+          onIndex={setLightbox}
+          onClose={() => setLightbox(null)}
+          footer={(photo) => (
+            <div className="flex items-center justify-between gap-4">
+              <h3 className="font-serif text-xl md:text-2xl text-white font-light tracking-tight">
+                <span translate="no" className="notranslate">{photo.title}</span>
+              </h3>
+              <span className="text-[10px] uppercase tracking-widest text-[#A9C1E3] font-semibold">{photo.category}</span>
+            </div>
+          )}
+        />
       )}
     </div>
   );

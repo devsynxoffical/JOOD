@@ -29,19 +29,6 @@ const pillars = [
     ],
   },
   {
-    id: 'bespoke',
-    label: 'Design & Build',
-    title: 'Design That Fits How You Live and Work',
-    subtitle: 'Practical, well-planned designs for residential and commercial projects.',
-    description:
-      'Our designers and engineers plan layouts, structure and finishes around your needs and budget, whether you are building a family villa, an industrial shed or a labour camp.',
-    features: [
-      'Architectural & Structural Design',
-      'Authority Approvals & NOCs',
-      'Finishes Selected for UAE Conditions',
-    ],
-  },
-  {
     id: 'handover',
     label: 'Final Handover',
     title: 'Seamless Final Handover',
@@ -76,7 +63,7 @@ export default function FourPillarsSection() {
             <span className="w-8 h-px bg-[#3E6FB5]/60" />
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#0B2D5B] font-light leading-[1.08] tracking-tight">
-            Four Core Services.{' '}
+            Three Core Services.{' '}
             <em className="not-italic font-normal text-[#3E6FB5] block">One Complete Building Solution.</em>
           </h2>
         </div>

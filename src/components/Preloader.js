@@ -40,7 +40,7 @@ export default function Preloader({ onDone }) {
         <span style={{ width: `${progress}%` }} className="!bg-gradient-to-r !from-[#CBD5E1] !to-[#3E6FB5]" />
       </div>
       <div className="loader-brand font-serif text-[#0B2D5B] tracking-[0.2em] text-2xl mt-6">JOOD <span className="text-[#3E6FB5]">Building Contracting</span></div>
-      <div className="loader-text text-[#64748B] tracking-[0.4em] text-[10px] uppercase font-semibold mt-2">Building Trust. Delivering Excellence</div>
+      <div className="loader-text text-[#64748B] tracking-[0.4em] text-[10px] uppercase font-semibold mt-2">Built well, built on time</div>
       <div className="mt-4 text-xs tracking-[0.3em] text-[#0B2D5B]/70 font-mono font-semibold">{progress}%</div>
     </div>
   );
