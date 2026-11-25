@@ -9,7 +9,8 @@ import Reveal from '../components/Reveal';
 import TiltCard from '../components/TiltCard';
 import Counter from '../components/Counter';
 import SectionHeading from '../components/SectionHeading';
-import Marquee from '../components/Marquee';
+import LogoMarquee from '../components/LogoMarquee';
+import { partnerLogos } from '../data/partners';
 import Stats from '../components/Stats';
 import SmartImage from '../components/SmartImage';
 import CTA from '../components/CTA';
@@ -82,7 +83,7 @@ export default function AboutPage() {
             <span className="block w-24 h-[3px] bg-[#3E6FB5] rounded-full mb-10" aria-hidden="true" />
 
             <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-              {["Residential", "Commercial", "Design & Build", "UAE-Wide"].map((f) => (
+              {["Residential", "Commercial", "UAE-Wide"].map((f) => (
                 <span
                   key={f}
                   className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#3E6FB5]/50 bg-black/40 backdrop-blur-md shadow-md"
@@ -109,17 +110,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= MARQUEE ================= */}
-      <Marquee
-        dark={false}
-        items={[
-          { text: "15+ Years" },
-          { text: "280+ Projects" },
-          { text: "Residential" },
-          { text: "Commercial" },
-          { text: "Across the UAE" },
-          { text: "Quality you trust. Results you see" },
-        ]}
-      />
+      <LogoMarquee logos={partnerLogos} />
 
       {/* ================= STORY ================= */}
       <SectionFlip id="story">

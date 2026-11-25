@@ -4,7 +4,7 @@ const steps = [
   {
     num: '1',
     phase: 'Phase I',
-    title: 'Survey, Design & Approvals',
+    title: 'Survey & Approvals',
     desc: 'We study your plot, prepare the drawings and costing, and secure the authority approvals needed before construction starts.',
   },
   {

@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import SectionHeading from '../components/SectionHeading';
-import Marquee from '../components/Marquee';
+import LogoMarquee from '../components/LogoMarquee';
+import { partnerLogos } from '../data/partners';
 import CTA from '../components/CTA';
 import SectionFlip from '../components/SectionFlip';
 
@@ -89,16 +90,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* ================= MARQUEE ================= */}
-      <Marquee
-        dark={false}
-        items={[
-          { text: "Residential" },
-          { text: "Commercial" },
-          { text: "Design & Build" },
-          { text: "Turnkey Execution" },
-          { text: "Ajman • Umm Al Quwain" },
-        ]}
-      />
+      <LogoMarquee logos={partnerLogos} />
 
       {/* ================= GALLERY ================= */}
       <SectionFlip id="gallery">
