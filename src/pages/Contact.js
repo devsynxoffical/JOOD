@@ -16,7 +16,7 @@ import { navLinks, contactInfo } from '../data/content';
 
 const contactChannels = [
   { icon: 'phone', title: 'Call Us', desc: contactInfo.phone, href: `tel:${contactInfo.phoneRaw}` },
-  { icon: 'whatsapp', title: 'WhatsApp', desc: contactInfo.phone, href: `https://wa.me/${contactInfo.whatsappRaw}` },
+  { icon: 'whatsapp', title: 'WhatsApp', desc: '+971 56 666 4982', href: `https://wa.me/${contactInfo.whatsappRaw}` },
   { icon: 'mail', title: 'Email Us', desc: contactInfo.email, href: `mailto:${contactInfo.email}` },
   { icon: 'globe', title: 'Website', desc: contactInfo.website, href: null },
 ];

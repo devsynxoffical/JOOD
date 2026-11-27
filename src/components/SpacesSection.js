@@ -121,7 +121,7 @@ export default function SpacesSection({ onContactClick }) {
 
             {/* CTA */}
             <a
-              href="https://wa.me/971564455996"
+              href="https://wa.me/971566664982"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-[#0B2D5B] text-white text-[10px] uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-colors duration-300 hover:bg-[#3E6FB5] hover:text-white"

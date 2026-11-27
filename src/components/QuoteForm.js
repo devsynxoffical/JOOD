@@ -53,7 +53,6 @@ export default function QuoteForm({ onSuccess, onCancel }) {
                 <option>Commercial Construction</option>
                 <option>Industrial Shed</option>
                 <option>Labour Camp</option>
-                <option>Design & Build</option>
               </select>
             </div>
           </div>

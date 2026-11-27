@@ -11,7 +11,7 @@ import { navLinks } from '../data/content';
 
 const J = '/images/jood/';
 
-/* ---------- Design & Construction pillars ---------- */
+/* ---------- Building services pillars ---------- */
 function PlanIcon() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -49,8 +49,8 @@ const pillars = [
   },
   {
     icon: <BlueprintIcon />,
-    title: 'Architectural Design, Engineering & Approvals',
-    desc: 'Our architects and engineers prepare detailed architectural, structural and MEP drawings, and we manage the authority approvals and NOCs for you. The result is a design that balances appearance, function, cost and long-term durability.',
+    title: 'Engineering, Drawings & Approvals',
+    desc: 'Our architects and engineers prepare detailed architectural, structural and MEP drawings, and we manage the authority approvals and NOCs for you. The result is a building plan that balances appearance, function, cost and long-term durability.',
   },
   {
     icon: <CraneIcon />,
@@ -73,7 +73,7 @@ const showcase = [
 /* ---------- Journey ---------- */
 const journey = [
   { title: 'Concept & Planning', image: `${J}design-planning.webp`, desc: 'Brief, site study, budget and programme agreed with you.' },
-  { title: 'Design & Approvals', image: '/images/projects/shed-shady/06.webp', desc: 'Architectural, structural and MEP drawings, plus authority approvals.' },
+  { title: 'Drawings & Approvals', image: '/images/projects/shed-shady/06.webp', desc: 'Architectural, structural and MEP drawings, plus authority approvals.' },
   { title: 'Construction', image: '/images/projects/shed-shady/05.webp', desc: 'Foundations, structure and MEP, built to a clear schedule.' },
   { title: 'Finishing & Handover', image: '/images/projects/sham-07-amal-ghareeb/01.webp', desc: 'Finishes, testing, snagging and a smooth handover of your keys.' },
 ];
@@ -167,7 +167,7 @@ export default function ServicesPage() {
             <span className="w-8 h-px bg-[#CBD5E1]" />
           </div>
           <h1 className="font-serif text-white font-bold leading-[1.1] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-4xl mb-6">
-            Design &amp; Build Services
+            Building Services
           </h1>
           <p className="max-w-2xl text-base md:text-lg text-white/90 leading-relaxed">
             From the first drawing to the final handover, we take your project through one seamless
@@ -177,10 +177,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ================= DESIGN & CONSTRUCTION ================= */}
+      {/* ================= CONSTRUCTION SERVICES ================= */}
       <section className="pt-10 md:pt-14 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#0B2D5B] text-center mb-12">Design &amp; Construction</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#0B2D5B] text-center mb-12">Construction Services</h2>
           <div className="grid md:grid-cols-3">
             {pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 120}>
@@ -229,7 +229,7 @@ export default function ServicesPage() {
       {/* ================= JOURNEY ================= */}
       <section className="pb-20 md:pb-28">
         <div className="max-w-4xl mx-auto px-6 text-center mb-10">
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] mb-4">Our Design &amp; Build Journey</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[#0B2D5B] mb-4">Our Building Journey</h2>
           <p className="text-sm text-[#64748B] leading-relaxed">
             From the first drawing to the final handover, we bring your project to life through a seamless
             process that combines planning, precision and quality construction.

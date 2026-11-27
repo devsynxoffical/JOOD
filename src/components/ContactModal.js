@@ -34,7 +34,7 @@ export default function ContactModal({ open, onClose }) {
             Let’s Talk About Your Project
           </h2>
           <p className="text-[#1E293B]/60 mt-3 font-light text-sm">
-            Tell us what you need — a residential or commercial project, or full design and build. We reply within 24 hours.
+            Tell us what you need — a residential or commercial building project. We reply within 24 hours.
           </p>
         </div>
 

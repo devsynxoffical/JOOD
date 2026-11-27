@@ -235,7 +235,7 @@ export default function AboutPage() {
           image="/images/projects/villa-harmodi/01.webp"
           kicker="Join Our Clients"
           title="Let's Build Your Next Project Together"
-          subtitle="From design to construction and handover — experience the Jood Building Contracting difference."
+          subtitle="From planning to construction and handover — experience the Jood Building Contracting difference."
           primaryLabel="Book a Free Consultation"
           onPrimary={() => setShowContact(true)}
         />

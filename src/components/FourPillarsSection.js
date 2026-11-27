@@ -11,7 +11,7 @@ const pillars = [
       'One team manages your project from start to finish — drawings, approvals, procurement, site works and handover — so you always know what is happening and when.',
     features: [
       'End-to-End Project Management',
-      'Design Coordination & Procurement',
+      'Coordination & Procurement',
       'On-Schedule Milestone Delivery',
     ],
   },

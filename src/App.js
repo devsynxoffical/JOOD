@@ -21,7 +21,7 @@ function ScrollToTop() {
 function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/971564455996?text=Hello!%20I%27m%20interested%20in%20your%20services."
+      href="https://wa.me/971566664982?text=Hello!%20I%27m%20interested%20in%20your%20services."
       target="_blank"
       rel="noreferrer"
       className="whatsapp-float w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_8px_30px_rgba(37,211,102,0.5)] transition-all duration-300 border-2 border-white/20"

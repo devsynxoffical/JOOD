@@ -30,14 +30,14 @@ export const stats = [
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Design and Build", to: "/services" },
+  { label: "Building Services", to: "/services" },
   { label: "Projects", to: "/portfolio" },
 ];
 
 export const contactInfo = {
   phone: "+971 58 929 9581",
   phoneRaw: "971589299581",
-  whatsappRaw: "971564455996",
+  whatsappRaw: "971566664982",
   email: "info@joodbuildingcontracting.ae",
   website: "www.joodbuildingcontracting.ae",
   hours: "Mon – Sat · 9am – 5pm",

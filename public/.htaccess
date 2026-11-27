@@ -22,9 +22,14 @@
     Header set Expires "0"
   </FilesMatch>
 
-  # Cache static assets with unique hashes
-  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2?)$">
+  # Scripts and styles have unique hashed names, so cache them for a year
+  <FilesMatch "\.(js|css|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Images and videos keep the same name when replaced, so cache for 1 day only
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico|mp4)$">
+    Header set Cache-Control "public, max-age=86400"
   </FilesMatch>
 </IfModule>
 

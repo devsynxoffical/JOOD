@@ -5,7 +5,7 @@ import Logo from './Logo';
 const quickLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Design and Build', to: '/services' },
+  { label: 'Building Services', to: '/services' },
   { label: 'Projects', to: '/portfolio' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -15,14 +15,13 @@ const serviceLinks = [
   { label: 'Commercial Construction', to: '/services' },
   { label: 'Industrial Sheds', to: '/services' },
   { label: 'Labour Camps', to: '/services' },
-  { label: 'Design & Build', to: '/services' },
 ];
 
 const socials = [
-  { label: 'WhatsApp', href: 'https://wa.me/971564455996', icon: 'whatsapp' },
+  { label: 'WhatsApp', href: 'https://wa.me/971566664982', icon: 'whatsapp' },
   { label: 'Instagram', href: 'https://www.instagram.com/joodcontractinguae', icon: 'instagram' },
-  // TODO: replace these two with Jood's own profile URLs when provided
-  { label: 'TikTok', href: 'https://www.tiktok.com/', icon: 'tiktok' },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@jood.building.con', icon: 'tiktok' },
+  // TODO: replace with Jood's LinkedIn page URL when provided
   { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
 ];
 
